@@ -1,0 +1,13 @@
+<package>
+    <description brief="strands_morse_2dnav">
+        strands_morse_2dnav is a sample ROS node used to demo 2D planar
+        navigation in the MORSE simulator that was adapted from the 'ROS and
+        MORSE tutorail' (http://www.openrobots.org/morse/doc/latest/user/beginner_tutorials/ros_tutorial.html). </description>
+    <author>Lars Kunze</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    <url>http://www.strands-project.eu</url>
+    <depend package="move_base"/>
+    <depend package="map_server"/>
+    <depend package="robot_state_publisher"/>
+</package>
