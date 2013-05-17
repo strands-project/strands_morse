@@ -36,7 +36,7 @@ Start four terminals and run the commands below
 
 3. Launch the ROS-based navigation:
    
-       $ roslaunch strands_morse_2dnav
+       $ roslaunch strands_morse_2dnav nav.launch
        
 4. Run and configure RVIZ
 
