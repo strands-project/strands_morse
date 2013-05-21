@@ -52,4 +52,8 @@ Start four terminals and run the commands below
 
 
 
+To start run the MORSE simulation of the UB CS building with a ScitosA5:
+      
+       $ rosrun strands_sim simulator.sh bham_cs.py
+
 
