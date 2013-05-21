@@ -33,6 +33,10 @@ Start four terminals and run the commands below
 2. Run the MORSE simulation:
    
        $ morse run strands_sim 
+      
+  Alternatively, run:
+      
+       $ rosrun strands_sim simulator.sh
 
 3. Launch the ROS-based navigation:
    
