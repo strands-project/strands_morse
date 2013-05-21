@@ -1,0 +1,9 @@
+<package>
+    <description brief="strands_sim">
+      This package includes the SCITOS A5 robot model
+    </description>
+    <author>Lars Kunze</author>
+    <license>BSD</license>
+    <review status="unreviewed" notes=""/>
+    <url>http://www.strands-project.eu</url>
+</package>
