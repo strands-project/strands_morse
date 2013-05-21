@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # To allow rosrun to launch the morse simulator..
+environment_name="strands_sim"
 
-pth=`rospack find strands_sim`
-cd $pth
-cd ..
-echo "Running morse on $pth"
-morse run strands_sim
+path=`rospack find strands_sim`
+#cd $pth
+#cd ..
+added=`$path/morse_config.py $environment_name $path`
+echo "Running morse on $path"
+morse run $environment_name
