@@ -29,7 +29,7 @@ robot.append(ptu)
 ptu_pose = PTUPosture('ptu_pose')
 ptu.append(ptu_pose)
 
-kinect = Kinect()
+kinect = DepthCamera() # Kinect()
 kinect.translate(0, 0, 0.055)
 kinect.rotate(0, 0, 0)
 ptu.append(kinect)
