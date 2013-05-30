@@ -49,38 +49,51 @@ def simple_nav(x=0.0, y=0.0, z=0.0, qx=0.0, qy=0.0, qz=0.0, qw=1.0,
     return client
 
 def perceive():
+    """Add Semantic camera here!"""
     rospy.loginfo("PERCEIVE")
     rospy.sleep(1)
     pass
 
 
+def places():
+    return {
+        'counter_behind'   : {'x':0.0, 'y':-3.0, 'z':0.0, 'qx':0.0, 'qy':0.0, 'qz':0.0, 'qw':1.0},
+        'counter_in_front' : {'x':3.0, 'y':-3.0, 'z':0.0, 'qx':0.0, 'qy':0.0, 'qz':1.0, 'qw':0.0},
+        'workplace_one'    : {'x':0.0, 'y':3.0,  'z':0.0, 'qx':0.0, 'qy':0.0, 'qz':0.9, 'qw':0.4},
+        'workplace_two   ' : {'x':3.0, 'y':3.0,  'z':0.0, 'qx':0.0, 'qy':0.0, 'qz':0.7, 'qw':0.7},
+        }
+
+def pose_at(place):
+    return places().get(place, {'x':0.0, 'y':0.0, 'z':0.0, 'qx':0.0, 'qy':0.0, 'qz':0.0, 'qw':1.0}) # default pose
+
 if __name__ == '__main__':
     try:
         rospy.init_node('simple_nav')
 
-        place = random.randint(1,4)
-        
-        if (place == 1):
-            rospy.loginfo("Goal: behind counter")
-            ac = simple_nav(x=0.0, y=-3.0, z=0.0, qx=0.0, qy=0.0, qz=0.0, qw=1.0,frame_id="/map")
-        elif (place == 2):
-            rospy.loginfo("Goal: in front of counter")
-            ac = simple_nav(x=3.0, y=-3.0, z=0.0, qx=0.0, qy=0.0, qz=1.0, qw=0.0,frame_id="/map")
-        elif (place == 3):
-            rospy.loginfo("Goal: workplace one")
-            ac = simple_nav(x=0.0, y=3.0, z=0.0, qx=0.0, qy=0.0, qz=0.9, qw=0.4,frame_id="/map")       
-        else: #(place==4)
-            rospy.loginfo("Goal: workplace two")
-            ac = simple_nav(x=3.0, y=3.0, z=0.0, qx=0.0, qy=0.0, qz=0.7, qw=0.7,frame_id="/map")
+        plan_length = random.randint(1,len(places()))
 
+        plan = random.sample(places().keys(), plan_length)
+
+        rospy.loginfo("Plan: %s", plan)
         
+        for place in plan:
+            rospy.loginfo("Current goal: %s", place)
+            pose = pose_at(place)
+            ac = simple_nav(pose['x'], pose['y'], pose['z'],
+                            pose['qx'], pose['qy'], pose['qz'], pose['qw'],
+                            frame_id="/map")
+            if (ac.get_state() == actionlib_msgs.msg.GoalStatus.SUCCEEDED):
+                rospy.loginfo("Reached goal")
+                perceive()
+
+        rospy.loginfo("Accomplished plan. Go home...")
+        
+        pose = pose_at('default place')
+        ac = simple_nav(pose['x'], pose['y'], pose['z'],
+                        pose['qx'], pose['qy'], pose['qz'], pose['qw'],
+                        frame_id="/map")
         if (ac.get_state() == actionlib_msgs.msg.GoalStatus.SUCCEEDED):
-            rospy.loginfo("Succeeded!")
-            perceive()
-            rospy.loginfo("Goal: go home")
-            ac2 = simple_nav(x=0.0, y=0.0, z=0.0, qx=0.0, qy=0.0, qz=0.0, qw=1.0, frame_id="/map")
-            if (ac2.get_state() == actionlib_msgs.msg.GoalStatus.SUCCEEDED):
-                rospy.loginfo("Succeeded! At home!")
-        
+            rospy.loginfo("At home. Done!")
+                
     except rospy.ROSInterruptException:
         rospy.logerror("program interrupted before completion")
