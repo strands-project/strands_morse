@@ -1,5 +1,4 @@
 #! /usr/bin/env morseexec
-
 """ Basic MORSE simulation scene for <strands_sim> environment
 
 Please note: For using the Kinect sensor, or any depth camera, Python 3.3 is required.
@@ -37,38 +36,44 @@ robot.append(ptu)
 ptu_pose = PTUPosture('ptu_pose')
 ptu.append(ptu_pose)
 
-kinect = DepthCamera() # Kinect() RVIZ crashes when kinect data is visualized!?
-kinect.translate(0.04, -0.04, 0.065)
-kinect.rotate(0, 0, 0)
-ptu.append(kinect)
-kinect.add_interface('ros', topic='/kinect')
+depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
+depthcam.translate(0.04, -0.04, 1.65)
+#depthcam.translate(0.04, -0.04, 0.065)
+depthcam.rotate(0, 0, 0)
+robot.append(depthcam)
+#ptu.append(depthcam)
+depthcam.add_interface('ros', topic='/depthcam')
 
 # Semantic Camera
 semanticcamera = SemanticCamera()
-semanticcamera.translate(0.04, 0.04, 0.065)
-semanticcamera.rotate(0.0, 0.4, 0.0)
-
-ptu.append(semanticcamera)
+semanticcamera.translate(0.04, 0.04, 1.65)
+# semanticcamera.translate(0.04, 0.04, 0.065)
+semanticcamera.rotate(0.0, 0.0, 0.0)
+robot.append(semanticcamera)
+#ptu.append(semanticcamera)
 semanticcamera.add_interface('ros', topic='/semcam')
-#semanticcamera.add_interface('socket')
 
 ###############################################################################
 # OBJECTS
 ###############################################################################
 # cup on counter
-cup1 = PassiveObject('/home/lars/work/devel/share/morse/data/props/kitchen_objects','Cup_Blue')
+cup1 = PassiveObject('props/kitchen_objects','Cup_Blue')
+cup1.properties(Object = True, Type = 'Cup')
 cup1.translate(x=random.uniform(3.1,3.5),
                y=random.uniform(-0.35,1.6),
                z=0.95)
 
+
 # cup on workplace one
-cup2 = PassiveObject('/home/lars/work/devel/share/morse/data/props/kitchen_objects','Cup_Gray')
+cup2 = PassiveObject('props/kitchen_objects','Cup_Gray')
+cup2.properties(Object = True, Type = 'Cup')
 cup2.translate(x=random.uniform(1.1,2.5),
                y=random.uniform(7.6,8.4),
                z=0.8)
 
 # cup on workplace two 
-cup3 = PassiveObject('/home/lars/work/devel/share/morse/data/props/kitchen_objects','Cup_Ocher')
+cup3 = PassiveObject('props/kitchen_objects','Cup_Ocher')
+cup3.properties(Object = True, Type = 'Cup')
 cup3.translate(x=random.uniform(4.5,5.9),
                y=random.uniform(7.6,8.4),
                z=0.8)
