@@ -19,7 +19,8 @@ The current software has been tested under the following configuration:
 * MORSE (latest)
 * Blender 2.63a
 * ROS Groovy
-* Ubuntu 12.04 LTS 
+* Python 3.2.3 (3.3.0)
+* Ubuntu 12.04 LTS  
 
 Getting Started
 ---------------
@@ -37,6 +38,10 @@ Start four terminals and run the commands below
   Alternatively, run:
       
        $ rosrun strands_sim simulator.sh
+       
+  Please note: Using a depth camera requires Python 3.3 and a corresponding Blender version:
+
+       $ morse run strands_sim default-with-kinect.py
 
 3. Launch the ROS-based navigation:
    
