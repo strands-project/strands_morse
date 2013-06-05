@@ -11,7 +11,7 @@ from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
 
 import random
-###############################################################################
+#######################b########################################################
 # ROBOT
 ###############################################################################
 robot = Scitosa5()
@@ -33,6 +33,15 @@ robot.append(ptu)
 ###############################################################################
 # SENSORS
 ###############################################################################
+
+# Battery discharging rate, in percent per seconds
+# The battery state is published to /battery
+robot.battery.properties(DischargingRate=1.0)
+
+pose = Pose()
+robot.append(pose)
+pose.add_interface('ros', topic='/pose')
+
 ptu_pose = PTUPosture('ptu_pose')
 ptu.append(ptu_pose)
 
@@ -57,6 +66,16 @@ semanticcamera.add_interface('ros', topic='/semcam')
 # OBJECTS
 ###############################################################################
 # cup on counter
+
+
+# table = PassiveObject('environments/tum_kitchen/tum_kitchen','Desk.002')
+# table.properties(Object = True)
+# table.translate(x=random.uniform(2.0,2.0),
+#                y=random.uniform(6.0,6.1),
+#                z=0.0)
+# table.rotate(z=0.7)
+
+
 cup1 = PassiveObject('props/kitchen_objects','Cup_Blue')
 cup1.properties(Object = True, Type = 'Cup')
 cup1.translate(x=random.uniform(3.1,3.5),
