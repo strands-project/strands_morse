@@ -33,6 +33,11 @@ robot.append(ptu)
 ###############################################################################
 # SENSORS
 ###############################################################################
+
+# Battery discharging rate, in percent per seconds
+# The battery state is published to /battery
+robot.battery.properties(DischargingRate=1.0)
+
 pose = Pose()
 robot.append(pose)
 pose.add_interface('ros', topic='/pose')

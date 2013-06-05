@@ -31,6 +31,12 @@ class Scitosa5(Robot):
         ###################################
         # Sensors
         ###################################
+        
+        # Battery
+        self.battery = Battery()
+        self.battery.translate(x=-0.3,z=0.386)
+        self.append(self.battery)
+        self.battery.add_interface('ros', topic="/battery")
 
         # Odometry
         self.odometry = Odometry()
