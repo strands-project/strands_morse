@@ -21,10 +21,10 @@ from strands_sim.builder.robots import Scitosa5
 from bham_cs_sim.builder.robots import Elevator
 
 robot = Scitosa5()
-robot.translate(x=-3.3, y=3.2, z=0.0)
+robot.translate(x=-1.35, y=0.56, z=7.5)
 
 lift = Elevator()
-lift.translate(-5.05, 7.9, -6.04)
+lift.translate(3.81419,2.51356,0)
 
 # At lowest level, the lift is controlled through a socket interface
 # by lift_controller.py, which in turn provides a ros interface...
