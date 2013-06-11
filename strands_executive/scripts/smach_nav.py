@@ -76,7 +76,7 @@ class GoTo(smach.State):
 class ChargeBattery(smach.State):
     def __init__(self, base_goal):
         smach.State.__init__(self,
-            outcomes    = ['goto1', 'goto2','goto3','goto4',],
+            outcomes    = ['goto1', 'goto2','goto3','goto4','failure'],
             input_keys=['battery_input'],
             output_keys=['battery_output']
             
@@ -222,7 +222,7 @@ def main():
 
 
         smach.StateMachine.add('CHARGE_BATTERY', ChargeBattery(battery_charger), 
-                               transitions={'goto1':'GOTO1','goto2':'GOTO2','goto3':'GOTO3','goto4':'GOTO4'},
+                               transitions={'goto1':'GOTO1','goto2':'GOTO2','goto3':'GOTO3','goto4':'GOTO4','failure':'aborted'},
                                remapping={'battery_output':'battery_input'})
 
 

@@ -55,10 +55,28 @@ Start four terminals and run the commands below
 
 6. Well done!
 
+-----------------
 
+To run the patrolling of fixed points implementation in SMACH
+
+1. Run steps 1., 2. and 3. above to start MORSE and navigation
+
+2. Run the SMACH patrolling implementation
+
+       $ rosrun strands_executive smach_nav.py
+
+3. Use SMACH viewer to follow the execution of the state machine:
+
+       $ rosrun smach_viewer smach_viewer.py
+
+-----------------
 
 To start run the MORSE simulation of the UB CS building with a ScitosA5:
+For the whole building:
       
        $ rosrun strands_sim simulator.sh bham_cs.py
+
+Only for the lower ground floor:
+       $ rosrun strands_sim simulator.sh bham_cs_LG.py
 
 
