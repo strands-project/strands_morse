@@ -33,6 +33,7 @@ class SlidingDoor(morse.core.actuator.Actuator):
         self.right_positions=[-.16904,-.16904-0.5]
 
         self.target_state = 0
+        self.left_done=self.right_done=False
 
 
 

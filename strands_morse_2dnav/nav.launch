@@ -4,7 +4,7 @@
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
 
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find strands_morse_2dnav)/map.yaml"/>
+    <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find strands_morse_2dnav)/map1.yaml"/>
 
     <node name="amcl" pkg="amcl" type="amcl" />
 
@@ -23,5 +23,5 @@
       <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
       <rosparam file="$(find strands_morse_2dnav)/strands_morse_move_base/dwa_planner_ros.yaml" command="load" />
     </node>
-
+-->
 </launch>
