@@ -11,6 +11,7 @@ from morse.core.services import service, async_service, interruptible
 from morse.middleware.ros_request_manager import ros_action, ros_service,MorseAnyService
 from morse.core import status
 from morse.helpers.components import add_data, add_property
+from math import sqrt
 
 class SlidingDoor(morse.core.actuator.Actuator):
     _name = "SlidingDoor"
@@ -26,15 +27,19 @@ class SlidingDoor(morse.core.actuator.Actuator):
         # Call the constructor of the parent class
         super(self.__class__, self).__init__(obj, parent)
         self.parent=parent
-        print (self._properties)
-
-#        self.left_positions=[.33096,.33096+0.5]
-        self.left_positions=[.33096, -.16904-0.5]
-        self.right_positions=[-.16904,-.16904-0.5]
 
         self.target_state = 0
         self.left_done=self.right_done=False
 
+        self.left_bge = self.parent.bge_object.children[self.left_panel]
+        self.right_bge = self.parent.bge_object.children[self.right_panel]
+
+        self.left_positions=[list(self.left_bge.localPosition),
+                             list(self.parent.bge_object.children[self.left_panel+"_open"].localPosition)
+                             ] 
+        self.right_positions=[list(self.right_bge.localPosition),
+                              list(self.parent.bge_object.children[self.right_panel+"_open"].localPosition)
+                              ]
 
 
     @async_service
@@ -51,36 +56,37 @@ class SlidingDoor(morse.core.actuator.Actuator):
         # check if we have an on-going asynchronous task...
         if self.target_state == self.local_data['current_state']:
             self.completed(status.SUCCESS, self.local_data['current_state'])
-
-        left_bge = self.parent.bge_object.children[self.left_panel]
-        right_bge = self.parent.bge_object.children[self.right_panel]
+#        print(self.left_positions)
             
-        # slide the doors....
-        pos = left_bge.position[0]
-        distance =  (self.left_positions[self.target_state] + self.bge_object.position[0]) - pos 
-        direction = -1 if distance < 0 else 1
-        
-        if distance**2 > 0.00001:
-            vx = direction * 0.2 / self.frequency # 0.9m/s
+        # LEFT DOOR
+        pos = self.left_bge.localPosition
+        direction=[a - b for a,b in zip(self.left_positions[self.target_state], list(pos)) ]
+        distance=sqrt(sum( [ a**2 for a in direction ]))
+        if distance > 5e-3:
+            for i in range(0,3):
+                direction[i] /= distance
+            vel=[a * (0.2 / self.frequency) for a in direction]
+            for i in range(0,3):
+                self.left_bge.localPosition[i]+=vel[i]
         else:
-            vx=0
+            vel=[0,0,0]
             self.left_done=True
 
-        left_bge.position[0]+=vx
+        # RIGHT DOOR
+        pos = self.right_bge.localPosition
+        direction=[a - b for a,b in zip(self.right_positions[self.target_state], list(pos)) ]
+        distance=sqrt(sum( [ a**2 for a in direction ]))
+        if distance > 5e-3:
+            for i in range(0,3):
+                direction[i] /= distance
+            vel=[a * (0.2 / self.frequency) for a in direction]
 
-        pos = right_bge.position[0]
-        distance =  (self.right_positions[self.target_state] + self.bge_object.position[0]) - pos 
-        direction = -1 if distance < 0 else 1
-        
-        if distance**2 > 0.00001:
-            vx = direction * 0.2 / self.frequency # 0.9m/s
+            for i in range(0,3):
+                self.right_bge.localPosition[i]+=vel[i]
         else:
-            vx=0
+            vel=[0,0,0]
             self.right_done=True
-
-        right_bge.position[0]+=vx
-        
-        
+            
 
         if self.left_done and self.right_done:
             self.local_data['current_state'] = self.target_state
