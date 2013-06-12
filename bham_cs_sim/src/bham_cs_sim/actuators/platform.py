@@ -68,8 +68,8 @@ class Platform(morse.core.actuator.Actuator):
             self.completed(status.SUCCESS, self.local_data['current_floor'])
 
         # move the platform at given speed to target level.
-        pos = self.lift_cage.position
-        distance =  (self.floor_height[self.target_floor] + self.bge_object.position[2]) - pos[2] - 6.0 
+        pos = self.lift_cage.localPosition
+        distance =  self.floor_height[self.target_floor]  - pos[2]
         direction = -1 if distance < 0 else 1
         
         if distance**2 > T:
@@ -78,6 +78,6 @@ class Platform(morse.core.actuator.Actuator):
             vz=0
             self.local_data['current_floor'] = self.target_floor
 
-        self.lift_cage.position[2]+=vz
+        self.lift_cage.localPosition[2]+=vz
         
         
