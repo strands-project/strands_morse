@@ -34,7 +34,7 @@ class Scitosa5(Robot):
         
         # Battery
         self.battery = Battery()
-        self.battery.translate(x=-0.3,z=0.386)
+        self.battery.translate(x=0.0,z=0.0)
         self.append(self.battery)
         self.battery.add_interface('ros', topic="/battery")
 
