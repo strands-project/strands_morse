@@ -20,7 +20,7 @@ class Scitosa5(Robot):
         ###################################
 
         # Motion control
-        self.motion = MotionXYW()
+        self.motion = MotionVW()
         self.append(self.motion)
         self.motion.add_interface('ros', topic='/cmd_vel')
 
