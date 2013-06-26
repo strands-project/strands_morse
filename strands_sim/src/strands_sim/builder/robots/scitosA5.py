@@ -56,6 +56,12 @@ class Scitosa5(Robot):
         self.scan.create_laser_arc()
         self.scan.add_interface('ros', topic='/scan')
 
+        self.videocam = VideoCamera() 
+        self.videocam.translate(0.04, -0.04, 1.65)
+        self.videocam.rotate(0, 0, 0)
+        self.append(self.videocam)
+        self.videocam.add_interface('ros', topic='/videocam')
+
         #self.pose = Pose()
         #self.append(self.pose)
 
