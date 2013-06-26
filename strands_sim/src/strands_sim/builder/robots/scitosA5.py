@@ -28,6 +28,12 @@ class Scitosa5(Robot):
         self.keyboard = Keyboard()
         self.append(self.keyboard)
 
+        self.ptu = PTU() # creates a new instance of the actuator
+        self.append(self.ptu)
+        self.ptu.translate(0, 0, 1.585)
+        self.ptu.rotate(0, 0, 0)
+        self.ptu.add_interface('ros', topic='/ptu')
+
         ###################################
         # Sensors
         ###################################
@@ -56,12 +62,11 @@ class Scitosa5(Robot):
         self.scan.create_laser_arc()
         self.scan.add_interface('ros', topic='/scan')
 
-        self.videocam = VideoCamera() 
-        self.videocam.translate(0.04, -0.04, 1.65)
+        self.videocam = VideoCamera()
+        self.ptu.append(self.videocam)
+        self.videocam.translate(0.04, -0.04, 0.065)
+        #self.videocam.translate(0.04, -0.04, 1.65)
         self.videocam.rotate(0, 0, 0)
-        self.append(self.videocam)
         self.videocam.add_interface('ros', topic='/videocam')
 
-        #self.pose = Pose()
-        #self.append(self.pose)
 
