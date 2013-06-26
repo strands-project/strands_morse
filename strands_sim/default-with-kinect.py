@@ -21,14 +21,6 @@ robot.translate(x=2.5, y=3.2, z=0.0)
 # sandbox
 #robot.translate(1.0, 0.0, 0.0)
 
-###############################################################################
-# ACTUATORS
-###############################################################################
-ptu = PTU() # creates a new instance of the actuator
-ptu.translate(0, 0, 1.585)
-ptu.rotate(0, 0, 0)
-ptu.add_interface('ros', topic='/ptu')
-robot.append(ptu)
 
 ###############################################################################
 # SENSORS
@@ -43,23 +35,21 @@ robot.append(pose)
 pose.add_interface('ros', topic='/pose')
 
 ptu_pose = PTUPosture('ptu_pose')
-ptu.append(ptu_pose)
+robot.ptu.append(ptu_pose)
 
 depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
-depthcam.translate(0.04, -0.04, 1.65)
-#depthcam.translate(0.04, -0.04, 0.065)
+robot.ptu.append(depthcam)
+#depthcam.translate(0.04, -0.04, 1.65)
+depthcam.translate(0.04, -0.04, 0.065)
 depthcam.rotate(0, 0, 0)
-robot.append(depthcam)
-#ptu.append(depthcam)
 depthcam.add_interface('ros', topic='/depthcam')
 
 # Semantic Camera
 semanticcamera = SemanticCamera()
-semanticcamera.translate(0.04, 0.04, 1.65)
-# semanticcamera.translate(0.04, 0.04, 0.065)
+robot.ptu.append(semanticcamera)
+#semanticcamera.translate(0.04, 0.04, 1.65)
+semanticcamera.translate(0.04, 0.04, 0.065)
 semanticcamera.rotate(0.0, 0.0, 0.0)
-robot.append(semanticcamera)
-#ptu.append(semanticcamera)
 semanticcamera.add_interface('ros', topic='/semcam')
 
 ###############################################################################
