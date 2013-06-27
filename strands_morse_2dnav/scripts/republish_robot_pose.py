@@ -11,10 +11,11 @@ class PoseRepublisher():
 		rospy.init_node('pose_republisher')
 		self.pub = rospy.Publisher('/robot_pose', Pose) 
 		rospy.Subscriber("/amcl_pose", PoseWithCovarianceStamped, self.callback) 
-		rospy.loginfo(rospy.get_name() + " setting up")
+		rospy.logdebug(rospy.get_name() + " setting up")
 
 	def callback(self,pose): 
-		rospy.loginfo(rospy.get_name() + ": I heard %s" % pose)
+		rospy.logdebug(rospy.get_name() + ": I heard %s" % pose)
+		self.pub.publish(pose.pose.pose)
 
 if __name__ == '__main__':
     republisher = PoseRepublisher()
