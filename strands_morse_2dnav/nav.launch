@@ -23,4 +23,9 @@
       <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
       <rosparam file="$(find strands_morse_2dnav)/strands_morse_move_base/dwa_planner_ros.yaml" command="load" />
     </node>
+
+    <!-- Utilities -->
+    <!-- Republish Pose as PoseWithCovarianceStamped -->
+    <node pkg="strands_morse_2dnav" name="republish_robot_pose" type="republish_robot_pose.py"/>
+
 </launch>
