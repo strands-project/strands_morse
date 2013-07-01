@@ -24,7 +24,7 @@ common="$strands_morse/strands_sim"
 
 
 PYTHONPATH="$path/src:$common/src:$PYTHONPATH"
-MORSE_RESOURCE_PATH="$common/data:$common/robots:$path/data:$MORSE_RESOURCE_PATH"
+MORSE_RESOURCE_PATH="$strands_morse:$common/data:$common/robots:$path/data:$MORSE_RESOURCE_PATH"
 export MORSE_RESOURCE_PATH PYTHONPATH
 #cd $pth
 #cd ..
