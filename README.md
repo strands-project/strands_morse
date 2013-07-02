@@ -38,6 +38,10 @@ Start four terminals and run the commands below
   Please note: Using a depth camera requires Python 3.3 and a corresponding Blender version:
 
        $ rosrun strands_morse simulator.sh tum_kitchen default-with-kinect.py
+       
+3. Launch the 2D navigation:
+
+       $ roslaunch strands_morse tum_kitchen_nav2d.launch
 
 
 -----------------
