@@ -20,63 +20,34 @@ The current software has been tested under the following configuration:
 * Blender 2.63a
 * ROS Groovy
 * Python 3.2.3 (3.3.0)
-* Ubuntu 12.04 LTS  
+* Ubuntu 12.04 LTS
 
 Getting Started
 ---------------
 
-Start four terminals and run the commands below  
+Start four terminals and run the commands below
 
 1. Fire up roscore:
    
        $ roscore
        
 2. Run the MORSE simulation:
-   
-       $ morse run strands_sim 
       
-  Alternatively, run:
-      
-       $ rosrun strands_sim simulator.sh
+       $ rosrun strands_morse simulator.sh tum_kitchen
        
   Please note: Using a depth camera requires Python 3.3 and a corresponding Blender version:
 
-       $ morse run strands_sim default-with-kinect.py
+       $ rosrun strands_morse simulator.sh tum_kitchen default-with-kinect.py
 
-3. Launch the ROS-based navigation:
-   
-       $ roslaunch strands_morse_2dnav nav.launch
-       
-4. Run and configure RVIZ
-
-       $ rosrun rviz rviz 
-    
-5. Use RVIZ to navigate to places the environment. 
-
-6. Well done!
-
------------------
-
-To run the patrolling of fixed points implementation in SMACH
-
-1. Run steps 1., 2. and 3. above to start MORSE and navigation
-
-2. Run the SMACH patrolling implementation
-
-       $ rosrun strands_executive smach_nav.py
-
-3. Use SMACH viewer to follow the execution of the state machine:
-
-       $ rosrun smach_viewer smach_viewer.py
 
 -----------------
 
 To start run the MORSE simulation of the UB CS building with a ScitosA5:
 For the whole building:
       
-       $ rosrun strands_sim simulator.sh bham_cs.py
+       $ rosrun strands_morse simulator.sh bham_cs_sim bham_cs.py
 
 Only for the lower ground floor:
-       $ rosrun strands_sim simulator.sh bham_cs_LG.py
+       $ rosrun strands_morse simulator.sh bham_cs_sim bham_cs_LG.py
 
 

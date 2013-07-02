@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package>
+  <name>strands_morse</name>
+  <version>0.0.1</version>
+  <description>The strands_morse package</description>
+
+  <maintainer email="marc@hanheide.net">Marc Hanheide</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+
+  <url type="website">http://www.strands-project.eu</url>
+  <url type="repository">https://github.com/strands-project/strands_morse</url>
+  <url type="bugtracker">https://github.com/strands-project/strands_morse/issues</url>
+
+
+  <author email="kunzel@cs.bham.ac.uk">Lars Kunze</author>
+
+  <build_depend>std_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
