@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot name="cs_lg">
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://strands_morse/bham/meshes/cs_lg.dae"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="base_footprint"/>
+  <joint name="base_footprint_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0.0"/>
+    <child link="base_link"/>
+    <parent link="base_footprint"/>
+  </joint>
+</robot>

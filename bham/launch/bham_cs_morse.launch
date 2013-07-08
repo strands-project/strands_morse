@@ -1,0 +1,6 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="cs_lg"/> 
+
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="bham $(arg env).py"/>
+</launch>
