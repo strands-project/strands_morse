@@ -33,20 +33,18 @@ Start four terminals and run the commands below
        
 2. Run the MORSE simulation:
       
-        $ rosrun strands_morse <environment.launch>
-   
-   Please note: Using a depth camera requires Python 3.3 and a corresponding
-   Blender version. For example:
-   
-        $ rosrun strands_morse bham_cs.launch
+        $ roslaunch strands_morse bham_cs_morse.launch
        
   For simulating a different level of the CS building run:
 
-        $ rosrun strands_morse bham_cs.launch env:=cs_1 
+        $ roslaunch strands_morse bham_cs_morse.launch env:=cs_1 
 
   The lower ground floor is the default floor. Available environments are:
-  cs_lg, cs_ug, cs_1, cs_2, cs (for the whole building)
-       
+  <strong>cs_lg</strong>, <strong>cs_ug</strong>, <strong>cs_1</strong>, <strong>cs_2</strong>, <strong>cs</strong> (for the whole building)
+
+  Please note: Using a depth camera requires Python 3.3 and a corresponding
+ Blender version. 
+   
 3. (optional) Launch the 2D navigation:
 
         $ roslaunch strands_morse bham_cs_nav2d.launch
@@ -63,6 +61,10 @@ Start four terminals and run the commands below
 
 To start run the MORSE simulation of the TUM kitchen with a ScitosA5:
       
-       $ rosrun strands_morse tum_kitchen.launch
+       $ roslaunch strands_morse tum_kitchen_morse.launch
+
+  Alternatively:
+
+       $ roslaunch strands_morse tum_kitchen_morse.launch env:=tum_kitchen_with_depthcam
 
 
