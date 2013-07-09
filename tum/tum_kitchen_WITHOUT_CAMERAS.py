@@ -16,6 +16,8 @@ import random
 ###############################################################################
 
 robot = Scitosa5(Scitosa5.WITHOUT_CAMERAS)
+#robot = Scitosa5(Scitosa5.WITHOUT_DEPTHCAMS)
+
 
 # tum_kitchen
 robot.translate(x=2.5, y=3.2, z=0.0)

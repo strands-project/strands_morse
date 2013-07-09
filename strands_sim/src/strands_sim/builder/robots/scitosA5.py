@@ -2,13 +2,14 @@ from morse.builder import *
 
 
 class Scitosa5(Robot):
-    WITH_CAMERAS = True
-    WITHOUT_CAMERAS = False
+    WITH_CAMERAS = 1
+    WITHOUT_DEPTHCAMS = 2
+    WITHOUT_CAMERAS = 3
 
     """
     A template robot model for scitosA5
     """
-    def __init__(self, with_cameras = True):
+    def __init__(self, with_cameras = 1):
 
         # scitosA5.blend is located in the data/robots directory
         Robot.__init__(self, 'strands_sim/robots/scitosA5.blend')
@@ -64,26 +65,28 @@ class Scitosa5(Robot):
         self.scan.create_laser_arc()
         self.scan.add_interface('ros', topic='/scan')
 
-        if with_cameras:
+        if with_cameras < Scitosa5.WITHOUT_CAMERAS:
             self.videocam = VideoCamera()
             self.ptu.append(self.videocam)
             self.videocam.translate(0.04, -0.04, 0.065)
             self.videocam.rotate(0, 0, 0)
             self.videocam.add_interface('ros', topic='/videocam')
-
-            # Depth camera
-            self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
-            self.ptu.append(self.depthcam)
-            self.depthcam.translate(0.04, -0.04, 0.065)
-            self.depthcam.rotate(0, 0, 0)
-            self.depthcam.add_interface('ros', topic='/depthcam')
-
+            
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
             self.semanticcamera.translate(0.04, 0.04, 0.065)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic='/semcam')
+            
+            if with_cameras < Scitosa5.WITHOUT_DEPTHCAMS:
+                # Depth camera
+                self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
+                self.ptu.append(self.depthcam)
+                self.depthcam.translate(0.04, -0.04, 0.065)
+                self.depthcam.rotate(0, 0, 0)
+                self.depthcam.add_interface('ros', topic='/depthcam')
+
 
 
 
