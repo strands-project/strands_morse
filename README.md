@@ -41,8 +41,10 @@ Start some terminals and run the commands below:
 
         $ roslaunch strands_morse bham_cs_nav2d.launch
 
-4. (optional) To visualize the the environment model in RVIZ run 
+4. (optional) To visualize the environment model in RVIZ run 
 
+        $ rosrun rviz rviz
+      
         $ roslaunch strands_morse bham_cs_rviz.launch
         
    and add a new display of type `RobotModel` in RVIZ. Set the robot_description to
