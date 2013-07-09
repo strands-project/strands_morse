@@ -1,0 +1,22 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="cs_lg"/> 
+  
+  <group ns="env">
+   
+  <param name="env_description"
+    command="cat '$(find strands_morse)/bham/urdf/$(arg env).urdf'"
+  />  
+  
+  <node pkg="tf" type="static_transform_publisher" name="env_broadcaster" 
+        args="1.35 -0.56 0 0 0 0 /map /env/base_link 200">
+  </node>
+
+  <node pkg="robot_state_chain_publisher" type="state_chain_publisher"
+    name="env_state_publisher" output="screen">
+    <param name="tf_prefix" value="env"/>
+    <param name="publish_frequency" value="2"/>
+    <remap from="robot_description" to="env_description" />
+  </node>
+    </group>
+</launch>
