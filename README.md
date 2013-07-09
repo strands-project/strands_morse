@@ -71,6 +71,36 @@ To start run the MORSE simulation of the TUM kitchen with a ScitosA5:
 
   Alternatively:
 
-       $ roslaunch strands_morse tum_kitchen_morse.launch env:=tum_kitchen_with_depthcam
+       $ roslaunch strands_morse tum_kitchen_morse.launch env:=tum_kitchen_WITHOUT_CAMERAS
 
+-----------------
+
+The Scitos robot model is equipped with a video, depth and semantic camera by
+default. 
+
+If you wish to start the robot without any camera provide
+`Scitosa5.WITHOUT_CAMERAS` in the robot's constructor (see example below).
+Starting the robot without any camera is useful to run MORSE in
+<strong>fast_mode</strong>.
+
+If you only want to disable the depth camera, provide
+`Scitosa5.WITHOUT_DEPTHCAM` in the constructor. This might be useful if you run
+MORSE on MacOSX, because users have reported problems when using a depth
+camera.
+
+Example usage in the MORSE builder script:
+
+* with cameras:
+
+        robot = Scitosa5()
+        # Alterntively
+        # robot = Scitosa5(Scitosa5.WITH_CAMERAS)
+
+* without cameras
+                            
+        robot = Scitosa5(Scitosa5.WITHOUT_CAMERAS)
+
+* without depth camera
+        
+        robot = Scitosa5(Scitosa5.WITHOUT_DEPTHCAMS)
 
