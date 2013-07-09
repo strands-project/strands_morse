@@ -71,6 +71,6 @@ To start run the MORSE simulation of the TUM kitchen with a ScitosA5:
 
   Alternatively:
 
-       $ roslaunch strands_morse tum_kitchen_morse.launch env:=tum_kitchen_with_depthcam
+       $ roslaunch strands_morse tum_kitchen_morse.launch env:=tum_kitchen_WITHOUT_CAMERAS
 
 
