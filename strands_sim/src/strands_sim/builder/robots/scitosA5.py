@@ -1,14 +1,18 @@
 from morse.builder import *
 
+
 class Scitosa5(Robot):
+    WITH_CAMERAS = True
+    WITHOUT_CAMERAS = False
+
     """
-    A template robot model for scitosA5, with a motion controller and a pose sensor.
+    A template robot model for scitosA5
     """
-    def __init__(self, debug = True):
+    def __init__(self, with_cameras = True):
 
         # scitosA5.blend is located in the data/robots directory
         Robot.__init__(self, 'strands_sim/robots/scitosA5.blend')
-        #Robot.__init__(self, '/home/lars/work/strands/ranger_sim/data/ranger_sim/robots/ranger.blend')
+
         self.properties(classpath = "strands_sim.robots.scitosA5.Scitosa5")
 
         # The list of the main methods to manipulate your components
@@ -51,8 +55,6 @@ class Scitosa5(Robot):
 
         # Laserscanner
         self.scan = Hokuyo()
-        #scan.translate(x=0.275, z=0.252)
-        #scan.translate(x=0.65, z=-0.60)
         self.scan.translate(x=0.30, z=0.386)
         self.append(self.scan)
         self.scan.properties(Visible_arc = False)
@@ -62,11 +64,26 @@ class Scitosa5(Robot):
         self.scan.create_laser_arc()
         self.scan.add_interface('ros', topic='/scan')
 
-        self.videocam = VideoCamera()
-        self.ptu.append(self.videocam)
-        self.videocam.translate(0.04, -0.04, 0.065)
-        #self.videocam.translate(0.04, -0.04, 1.65)
-        self.videocam.rotate(0, 0, 0)
-        self.videocam.add_interface('ros', topic='/videocam')
+        if with_cameras:
+            self.videocam = VideoCamera()
+            self.ptu.append(self.videocam)
+            self.videocam.translate(0.04, -0.04, 0.065)
+            self.videocam.rotate(0, 0, 0)
+            self.videocam.add_interface('ros', topic='/videocam')
+
+            # Depth camera
+            self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
+            self.ptu.append(self.depthcam)
+            self.depthcam.translate(0.04, -0.04, 0.065)
+            self.depthcam.rotate(0, 0, 0)
+            self.depthcam.add_interface('ros', topic='/depthcam')
+
+            # Semantic Camera
+            self.semanticcamera = SemanticCamera()
+            self.ptu.append(self.semanticcamera)
+            self.semanticcamera.translate(0.04, 0.04, 0.065)
+            self.semanticcamera.rotate(0.0, 0.0, 0.0)
+            self.semanticcamera.add_interface('ros', topic='/semcam')
+
 
 

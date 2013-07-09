@@ -14,49 +14,50 @@ import random
 #######################b########################################################
 # ROBOT
 ###############################################################################
-robot = Scitosa5()
+
+robot = Scitosa5(Scitosa5.WITHOUT_CAMERAS)
 
 # tum_kitchen
 robot.translate(x=2.5, y=3.2, z=0.0)
-# sandbox
-#robot.translate(1.0, 0.0, 0.0)
-
 
 ###############################################################################
 # SENSORS
 ###############################################################################
+#######################################
+# ADD CAMERA SENSORS MANUALLY IF NEEDED
+#######################################
+
+# ## Video camera
+# videocam = VideoCamera()
+# robot.ptu.append(videocam)
+# videocam.translate(0.04, -0.04, 0.065)
+# videocam.rotate(0, 0, 0)
+# videocam.add_interface('ros', topic='/videocam')
+
+# # Depth Camera
+# depthcam = DepthCamera() # 
+# robot.ptu.append(depthcam)
+# #depthcam.translate(0.04, -0.04, 1.65)
+# depthcam.translate(0.04, -0.04, 0.065)
+# depthcam.rotate(0, 0, 0)
+# depthcam.add_interface('ros', topic='/depthcam')
+
+# # Semantic Camera
+# semanticcamera = SemanticCamera()
+# robot.ptu.append(semanticcamera)
+# #semanticcamera.translate(0.04, 0.04, 1.65)
+# semanticcamera.translate(0.04, 0.04, 0.065)
+# semanticcamera.rotate(0.0, 0.0, 0.0)
+# semanticcamera.add_interface('ros', topic='/semcam')
 
 # Battery discharging rate, in percent per seconds
 # The battery state is published to /battery
-robot.battery.properties(DischargingRate=1.0)
-
-pose = Pose()
-robot.append(pose)
-pose.add_interface('ros', topic='/pose')
-
-ptu_pose = PTUPosture('ptu_pose')
-robot.ptu.append(ptu_pose)
-
-depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
-robot.ptu.append(depthcam)
-#depthcam.translate(0.04, -0.04, 1.65)
-depthcam.translate(0.04, -0.04, 0.065)
-depthcam.rotate(0, 0, 0)
-depthcam.add_interface('ros', topic='/depthcam')
-
-# Semantic Camera
-semanticcamera = SemanticCamera()
-robot.ptu.append(semanticcamera)
-#semanticcamera.translate(0.04, 0.04, 1.65)
-semanticcamera.translate(0.04, 0.04, 0.065)
-semanticcamera.rotate(0.0, 0.0, 0.0)
-semanticcamera.add_interface('ros', topic='/semcam')
+# robot.battery.properties(DischargingRate=1.0)
 
 ###############################################################################
 # OBJECTS
 ###############################################################################
 # cup on counter
-
 
 # table = PassiveObject('environments/tum_kitchen/tum_kitchen','Desk.002')
 # table.properties(Object = True)
