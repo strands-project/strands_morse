@@ -22,10 +22,12 @@ The current software has been tested under the following configuration:
 * Python 3.2.3 (3.3.0)
 * Ubuntu 12.04 LTS
 
+Please note: Using a depth camera requires Python 3.3.0 and a corresponding Blender version (>2.65). 
+
 Getting Started
 ---------------
 
-Start four terminals and run the commands below
+Start some terminals and run the commands below:
 
 1. Fire up roscore:
    
@@ -34,17 +36,7 @@ Start four terminals and run the commands below
 2. Run the MORSE simulation:
       
         $ roslaunch strands_morse bham_cs_morse.launch
-       
-  For simulating a different level of the CS building run:
-
-        $ roslaunch strands_morse bham_cs_morse.launch env:=cs_1 
-
-  The lower ground floor is the default floor. Available environments are:
-  <strong>cs_lg</strong>, <strong>cs_ug</strong>, <strong>cs_1</strong>, <strong>cs_2</strong>, <strong>cs</strong> (for the whole building)
-
-  Please note: Using a depth camera requires Python 3.3 and a corresponding
- Blender version. 
-   
+      
 3. (optional) Launch the 2D navigation:
 
         $ roslaunch strands_morse bham_cs_nav2d.launch
@@ -53,10 +45,22 @@ Start four terminals and run the commands below
 
         $ roslaunch strands_morse bham_cs_rviz.launch
         
-   and add a new display of type `RobotModel` in RVIZ. Set the topic to
+   and add a new display of type `RobotModel` in RVIZ. Set the robot_description to
    `/env/env_description` and TF prefix to `env`. (requires [strands_utils](https://github.com/strands-project/strands_utils))
 
+The commands above use the lower ground floor of the Computer Science building
+by default. For simulating a different level of the building please run:
 
+        $ roslaunch strands_morse bham_cs_morse.launch env:=cs_1
+
+   Other available environments are: <strong>cs_lg</strong>, <strong>cs_ug</strong>, <strong>cs_1</strong>, <strong>cs_2</strong>, <strong>cs</strong> (for the whole building)
+
+   Similarly, you have to run the navigation and visualization with an extra argument as follows:
+
+        $ roslaunch strands_morse bham_cs_nav2d.launch env:=cs_1               
+
+        $ roslaunch strands_morse bham_cs_rviz.launch env:=cs_1
+   
 -----------------
 
 To start run the MORSE simulation of the TUM kitchen with a ScitosA5:
