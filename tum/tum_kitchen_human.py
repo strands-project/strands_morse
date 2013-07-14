@@ -19,6 +19,14 @@ robot.translate(x=2.5, y=3.2, z=0.0)
 robot.battery.properties(DischargingRate=1.0)
 
 human=Human()
+human.use_world_camera()
+human.translate(x=4.5, y=3.2, z=0.0)
+
+pose = Pose()
+human.append(pose)
+
+pose.add_stream('ros')
+
 
 # Set the environment
 env = Environment('tum_kitchen/tum_kitchen')
