@@ -7,6 +7,7 @@ Feel free to edit this template as you like!
 
 from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
+from strands_sim.builder.robots import Human2
 
 #robot = Ranger()
 robot = Scitosa5()
@@ -18,7 +19,7 @@ robot.translate(x=2.5, y=3.2, z=0.0)
 # The bateery state is published to /battery
 robot.battery.properties(DischargingRate=1.0)
 
-human=Human()
+human=Human2()
 human.use_world_camera()
 human.translate(x=4.5, y=3.2, z=0.0)
 
