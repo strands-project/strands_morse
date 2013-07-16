@@ -3,7 +3,7 @@ from morse.core import blenderapi
 from morse.robots.grasper import RobotGrasper
 from morse.core.services import service
 
-class Human2(RobotGrasper):
+class HumanStrands(RobotGrasper):
     """ Class definition for the human as a robot entity
         Sub class of Morse_Object. """
 

@@ -2,7 +2,7 @@ import logging; logger = logging.getLogger("morserobots." + __name__)
 from morse.builder import bpymorse
 from morse.builder import Armature, Robot
 
-class Human2(Robot):
+class HumanStrands(Robot):
     """ Append a human model to the scene.
 
     The human model currently available in MORSE comes with its
@@ -27,7 +27,7 @@ class Human2(Robot):
 
     Currently, only one human per simulation is supported.
     """
-    def __init__(self, filename='human2.blend'):
+    def __init__(self, filename='humanStrands.blend'):
         """ The 'style' parameter is only to switch to the mocap_human file.
 
         :param filename: 'human' (default) or 'mocap_human'
