@@ -29,7 +29,7 @@ class Scitosa5(Robot):
     def __init__(self, with_cameras = 1):
 
         # scitosA5.blend is located in the data/robots directory
-        Robot.__init__(self, 'strands_sim/robots/scitosA5.blend')
+        Robot.__init__(self, 'strands_sim/robots/scitos.blend')
 
         self.properties(classpath = "strands_sim.robots.scitosA5.Scitosa5")
 
@@ -52,7 +52,7 @@ class Scitosa5(Robot):
 
         self.ptu = PTU() # creates a new instance of the actuator
         self.append(self.ptu)
-        self.ptu.translate(0, 0, 1.585)
+        self.ptu.translate(-0.075, 0, 1.585)
         self.ptu.rotate(0, 0, 0)
         self.ptu.add_interface('ros', topic= Scitosa5.PTU_TOPIC)
 
@@ -78,7 +78,7 @@ class Scitosa5(Robot):
 
         # Laserscanner
         self.scan = Hokuyo()
-        self.scan.translate(x=0.30, z=0.386)
+        self.scan.translate(x=0.07, z=0.365)
         self.append(self.scan)
         self.scan.properties(Visible_arc = False)
         self.scan.properties(laser_range = 30.0)
@@ -90,14 +90,14 @@ class Scitosa5(Robot):
         if with_cameras < Scitosa5.WITHOUT_CAMERAS:
             self.videocam = VideoCamera()
             self.ptu.append(self.videocam)
-            self.videocam.translate(0.09, 0.045, 0.0945)
+            self.videocam.translate(0.00, 0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
             self.videocam.add_interface('ros', topic= Scitosa5.VIDEOCAM_TOPIC, frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
             
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.09, 0.02, 0.0945)
+            self.semanticcamera.translate(0.00, 0.02, 0.0945)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
@@ -105,7 +105,7 @@ class Scitosa5(Robot):
                 # Depth camera
                 self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
                 self.ptu.append(self.depthcam)
-                self.depthcam.translate(0.09, 0.02, 0.0945)
+                self.depthcam.translate(0.00, 0.02, 0.0945)
                 #self.append(self.depthcam)
                 #self.depthcam.translate(0.09, 0.02, 1.6795)
                 self.depthcam.properties(cam_width = 128, cam_height = 128)
