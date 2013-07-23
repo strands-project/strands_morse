@@ -1,5 +1,5 @@
 from morse.builder import *
-
+from morse.builder.bpymorse import * 
 
 class Scitosa5(Robot):
     # camera configuration
@@ -90,14 +90,14 @@ class Scitosa5(Robot):
         if with_cameras < Scitosa5.WITHOUT_CAMERAS:
             self.videocam = VideoCamera()
             self.ptu.append(self.videocam)
-            self.videocam.translate(0.09, 0.045, 0.115)
+            self.videocam.translate(0.09, 0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
             self.videocam.add_interface('ros', topic= Scitosa5.VIDEOCAM_TOPIC, frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
             
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.09, 0.02, 0.115)
+            self.semanticcamera.translate(0.09, 0.02, 0.0945)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
@@ -105,9 +105,14 @@ class Scitosa5(Robot):
                 # Depth camera
                 self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
                 self.ptu.append(self.depthcam)
-                self.depthcam.translate(0.09, 0.02, 0.115)
+                self.depthcam.translate(0.09, 0.02, 0.0945)
                 #self.append(self.depthcam)
-                #self.depthcam.translate(0.09, 0.02, 1.3)
+                #self.depthcam.translate(0.09, 0.02, 1.6795)
+                self.depthcam.properties(cam_width = 128, cam_height = 128)
+                bpy.context.scene.render.resolution_x = 128
+                bpy.context.scene.render.resolution_y = 128
+
+                
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
 
