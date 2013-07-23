@@ -2,8 +2,7 @@
   <!-- declare arg to be passed in -->
   <arg name="env" default="uol_mht"/> 
 
-  <!-- Robot -->
-  <include file="$(find scitos_description)/launch/scitos_state_publisher.launch"/>
+
 
   <!-- 2D Navigation -->
   <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">

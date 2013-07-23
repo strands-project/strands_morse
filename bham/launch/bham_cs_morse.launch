@@ -1,6 +1,10 @@
 <launch>
   <!-- declare arg to be passed in -->
-  <arg name="env" default="cs_lg"/> 
+  <arg name="env" default="cs_lg"/>
+  
+      <!-- Robot -->
+  <include file="$(find scitos_description)/launch/scitos_state_publisher.launch"/>
 
   <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="bham $(arg env).py"/>
+  
 </launch>
