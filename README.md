@@ -16,7 +16,7 @@ Please refer to the respective installation guides to install them on your syste
 
 The current software has been tested under the following configuration:
 
-* MORSE (latest)
+* MORSE (strands-project/morse)
 * Blender 2.63a
 * ROS Groovy
 * Python 3.2.3 (3.3.0)
