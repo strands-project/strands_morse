@@ -11,7 +11,7 @@ class Scitosa5(Robot):
     MOTION_TOPIC      = '/cmd_vel'
     ODOMETRY_TOPIC    = '/odom'
     PTU_TOPIC         = '/ptu'
-    PTU_POSE_TOPIC    = '/ptu_pose'
+    PTU_POSE_TOPIC    = '/ptu/state'
     BATTERY_TOPIC     = '/battery'
     SCAN_TOPIC        = '/scan'
     VIDEOCAM_TOPIC    = '/videocam'
