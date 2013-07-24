@@ -19,9 +19,9 @@ class Scitosa5(Robot):
     DEPTHCAM_TOPIC    = '/head_xtion/depth/points'
 
     # frame id's
-    DEPTHCAM_FRAME_ID = 'head_xtion_depth_optical_frame'
-    VIDEOCAM_FRAME_ID = 'head_xtion_rgb_optical_frame'
-    SEMANTICCAM_FRAME_ID = 'head_xtion_rgb_optical_frame'
+    DEPTHCAM_FRAME_ID = '/head_xtion_depth_optical_frame'
+    VIDEOCAM_FRAME_ID = '/head_xtion_rgb_optical_frame'
+    SEMANTICCAM_FRAME_ID = '/head_xtion_rgb_optical_frame'
         
     """
     A template robot model for scitosA5
@@ -90,8 +90,9 @@ class Scitosa5(Robot):
         if with_cameras < Scitosa5.WITHOUT_CAMERAS:
             self.videocam = VideoCamera()
             self.ptu.append(self.videocam)
-            self.videocam.translate(0.00, 0.045, 0.0945)
+            self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
+            self.videocam.properties(cam_width = 128, cam_height = 128)
             self.videocam.add_interface('ros', topic= Scitosa5.VIDEOCAM_TOPIC, frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
             
             # Semantic Camera
