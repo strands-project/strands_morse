@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-import roslib; roslib.load_manifest('strands_executive')
+import roslib; roslib.load_manifest('strands_morse')
 import rospy
 
 # Brings in the SimpleActionClient
