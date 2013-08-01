@@ -12,9 +12,12 @@ from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
 from bham.builder.robots import Elevator
 
-robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
-#robot.translate(x=-1.35, y=0.56, z=7.5)
+
+robot = Scitosa5()
+#robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
+
 robot.translate(x=1, y=-6.50, z=1.5)
+#robot.translate(x=-1.35, y=0.56, z=7.5)
 robot.rotate(z=1.57)
 
 lift = Elevator()
