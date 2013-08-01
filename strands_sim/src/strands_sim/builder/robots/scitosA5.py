@@ -1,5 +1,5 @@
 from morse.builder import *
-from morse.builder.bpymorse import * 
+from morse.builder.bpymorse import *
 
 class Scitosa5(Robot):
     # camera configuration
@@ -8,15 +8,16 @@ class Scitosa5(Robot):
     WITHOUT_CAMERAS = 3
 
     # topic names
-    MOTION_TOPIC      = '/cmd_vel'
-    ODOMETRY_TOPIC    = '/odom'
-    PTU_TOPIC         = '/ptu'
-    PTU_POSE_TOPIC    = '/ptu/state'
-    BATTERY_TOPIC     = '/battery'
-    SCAN_TOPIC        = '/scan'
-    VIDEOCAM_TOPIC    = '/videocam'
-    SEMANTICCAM_TOPIC = '/semcam'
-    DEPTHCAM_TOPIC    = '/head_xtion/depth/points'
+    MOTION_TOPIC          = '/cmd_vel'
+    ODOMETRY_TOPIC        = '/odom'
+    PTU_TOPIC             = '/ptu'
+    PTU_POSE_TOPIC        = '/ptu/state'
+    BATTERY_TOPIC         = '/battery_state'
+    SCAN_TOPIC            = '/scan'
+    VIDEOCAM_TOPIC        = '/head_xtion/rgb'
+    VIDEOCAM_TOPIC_SUFFIX = '/image_mono'
+    SEMANTICCAM_TOPIC     = '/semcam'
+    DEPTHCAM_TOPIC        = '/head_xtion/depth/points'
 
     # frame id's
     DEPTHCAM_FRAME_ID = '/head_xtion_depth_optical_frame'
@@ -66,8 +67,9 @@ class Scitosa5(Robot):
         self.ptu_pose.add_interface('ros', topic= Scitosa5.PTU_POSE_TOPIC)
         
         # Battery
-        self.battery = Battery()
-        self.battery.translate(x=0.0,z=0.0)
+        self.battery = BatteryStateSensor()
+        self.battery.translate(x=0.00,y=0.0,z=0.0)
+        self.battery.properties(Range = 0.45)
         self.append(self.battery)
         self.battery.add_interface('ros', topic= Scitosa5.BATTERY_TOPIC)
 
@@ -92,8 +94,13 @@ class Scitosa5(Robot):
             self.ptu.append(self.videocam)
             self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
-            self.videocam.properties(cam_width = 128, cam_height = 128)
-            self.videocam.add_interface('ros', topic= Scitosa5.VIDEOCAM_TOPIC, frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
+            self.videocam.properties(cam_width=128, cam_height=128)
+            #self.videocam.properties(cam_width=320, cam_height=240)
+                
+            self.videocam.add_interface('ros',
+                                        topic= Scitosa5.VIDEOCAM_TOPIC,
+                                        topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
+                                        frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
             
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
