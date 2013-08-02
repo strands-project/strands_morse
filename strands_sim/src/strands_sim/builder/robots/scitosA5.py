@@ -77,7 +77,8 @@ class Scitosa5(Robot):
         self.odometry = Odometry()
         self.append(self.odometry)
         self.odometry.add_interface('ros', topic= Scitosa5.ODOMETRY_TOPIC)
-
+        #self.odometry.frequency(9.9)
+        
         # Laserscanner
         self.scan = Hokuyo()
         self.scan.translate(x=0.07, z=0.365)
@@ -94,9 +95,10 @@ class Scitosa5(Robot):
             self.ptu.append(self.videocam)
             self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
-            self.videocam.properties(cam_width=128, cam_height=128)
-            #self.videocam.properties(cam_width=320, cam_height=240)
-                
+            # image size must be power of two
+            #self.videocam.properties(cam_width=128, cam_height=128)
+            self.videocam.properties(cam_width=256, cam_height=256)
+            self.videocam.frequency(30)
             self.videocam.add_interface('ros',
                                         topic= Scitosa5.VIDEOCAM_TOPIC,
                                         topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
@@ -105,7 +107,7 @@ class Scitosa5(Robot):
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.00, 0.02, 0.0945)
+            self.semanticcamera.translate(0.00, 0.02, 0.1545)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
@@ -116,6 +118,7 @@ class Scitosa5(Robot):
                 self.depthcam.translate(0.00, 0.02, 0.0945)
                 #self.append(self.depthcam)
                 #self.depthcam.translate(0.09, 0.02, 1.6795)
+
                 self.depthcam.properties(cam_width = 128, cam_height = 128)
                 bpy.context.scene.render.resolution_x = 128
                 bpy.context.scene.render.resolution_y = 128
