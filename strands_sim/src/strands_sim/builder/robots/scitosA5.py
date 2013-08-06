@@ -1,5 +1,5 @@
 from morse.builder import *
-from morse.builder.bpymorse import * 
+from morse.builder.bpymorse import *
 
 class Scitosa5(Robot):
     # camera configuration
@@ -8,15 +8,16 @@ class Scitosa5(Robot):
     WITHOUT_CAMERAS = 3
 
     # topic names
-    MOTION_TOPIC      = '/cmd_vel'
-    ODOMETRY_TOPIC    = '/odom'
-    PTU_TOPIC         = '/ptu'
-    PTU_POSE_TOPIC    = '/ptu/state'
-    BATTERY_TOPIC     = '/battery'
-    SCAN_TOPIC        = '/scan'
-    VIDEOCAM_TOPIC    = '/videocam'
-    SEMANTICCAM_TOPIC = '/semcam'
-    DEPTHCAM_TOPIC    = '/head_xtion/depth/points'
+    MOTION_TOPIC          = '/cmd_vel'
+    ODOMETRY_TOPIC        = '/odom'
+    PTU_TOPIC             = '/ptu'
+    PTU_POSE_TOPIC        = '/ptu/state'
+    BATTERY_TOPIC         = '/battery_state'
+    SCAN_TOPIC            = '/scan'
+    VIDEOCAM_TOPIC        = '/head_xtion/rgb'
+    VIDEOCAM_TOPIC_SUFFIX = '/image_mono'
+    SEMANTICCAM_TOPIC     = '/semcam'
+    DEPTHCAM_TOPIC        = '/head_xtion/depth/points'
 
     # frame id's
     DEPTHCAM_FRAME_ID = '/head_xtion_depth_optical_frame'
@@ -66,8 +67,9 @@ class Scitosa5(Robot):
         self.ptu_pose.add_interface('ros', topic= Scitosa5.PTU_POSE_TOPIC)
         
         # Battery
-        self.battery = Battery()
-        self.battery.translate(x=0.0,z=0.0)
+        self.battery = BatteryStateSensor()
+        self.battery.translate(x=0.00,y=0.0,z=0.0)
+        self.battery.properties(Range = 0.45)
         self.append(self.battery)
         self.battery.add_interface('ros', topic= Scitosa5.BATTERY_TOPIC)
 
@@ -75,7 +77,8 @@ class Scitosa5(Robot):
         self.odometry = Odometry()
         self.append(self.odometry)
         self.odometry.add_interface('ros', topic= Scitosa5.ODOMETRY_TOPIC)
-
+        #self.odometry.frequency(9.9)
+        
         # Laserscanner
         self.scan = Hokuyo()
         self.scan.translate(x=0.07, z=0.365)
@@ -92,13 +95,19 @@ class Scitosa5(Robot):
             self.ptu.append(self.videocam)
             self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
-            self.videocam.properties(cam_width = 128, cam_height = 128)
-            self.videocam.add_interface('ros', topic= Scitosa5.VIDEOCAM_TOPIC, frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
+            # image size must be power of two
+            #self.videocam.properties(cam_width=128, cam_height=128)
+            self.videocam.properties(cam_width=256, cam_height=256)
+            self.videocam.frequency(30)
+            self.videocam.add_interface('ros',
+                                        topic= Scitosa5.VIDEOCAM_TOPIC,
+                                        topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
+                                        frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
             
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.00, 0.02, 0.0945)
+            self.semanticcamera.translate(0.00, 0.02, 0.1745)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
@@ -109,11 +118,16 @@ class Scitosa5(Robot):
                 self.depthcam.translate(0.00, 0.02, 0.0945)
                 #self.append(self.depthcam)
                 #self.depthcam.translate(0.09, 0.02, 1.6795)
+
+                # set the near clip very low,
+                # otherwise the depthcam scans through objects within the clipping area!
+                self.depthcam.properties(cam_near = 0.1)
+
+                # workaround for point cloud with offset
                 self.depthcam.properties(cam_width = 128, cam_height = 128)
                 bpy.context.scene.render.resolution_x = 128
                 bpy.context.scene.render.resolution_y = 128
 
-                
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
 
