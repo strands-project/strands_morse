@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="strands_morse" type="scitos_node.py" name="scitos_node" output="screen"/>
+</launch>
