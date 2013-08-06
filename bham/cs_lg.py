@@ -28,11 +28,13 @@ lift.translate(3.81419,2.51356,0)
 lift.add_default_interface('socket')
 
 docking_station = PassiveObject('strands_sim/robots/docking_station.blend','dockingStation')
+docking_station.properties(Object = True)
 docking_station.properties(ChargingZone = True)
 docking_station.translate(1,-4.65,0.335)
 docking_station.rotate(0,0,1.57)
 
 docking_station_label = PassiveObject('strands_sim/robots/docking_station_label.blend','dockingStationLabel')
+docking_station_label.properties(Object = True)
 docking_station_label.translate(1,-4.55,1.8)
 docking_station_label.rotate(1.57,0,0)
 
