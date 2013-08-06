@@ -2,7 +2,7 @@
 import time
 import random
 
-import roslib; roslib.load_manifest('strands_executive')
+import roslib; roslib.load_manifest('strands_morse')
 import rospy
 
 
