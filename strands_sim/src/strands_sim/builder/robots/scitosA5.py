@@ -107,7 +107,7 @@ class Scitosa5(Robot):
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.00, 0.02, 0.1545)
+            self.semanticcamera.translate(0.00, 0.02, 0.1745)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
@@ -119,11 +119,15 @@ class Scitosa5(Robot):
                 #self.append(self.depthcam)
                 #self.depthcam.translate(0.09, 0.02, 1.6795)
 
+                # set the near clip very low,
+                # otherwise the depthcam scans through objects within the clipping area!
+                self.depthcam.properties(cam_near = 0.1)
+
+                # workaround for point cloud with offset
                 self.depthcam.properties(cam_width = 128, cam_height = 128)
                 bpy.context.scene.render.resolution_x = 128
                 bpy.context.scene.render.resolution_y = 128
 
-                
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
 
