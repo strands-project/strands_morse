@@ -1,0 +1,7 @@
+<launch>
+  <!-- robot state publisher -->
+  <include file="$(find scitos_description)/launch/scitos_state_publisher.launch"/>
+
+  <!-- scitos node for handling topics and services not provided by MORSE -->
+  <include file="$(find strands_morse)/launch/scitos_node.launch"/>
+</launch>
