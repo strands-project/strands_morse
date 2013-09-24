@@ -189,9 +189,12 @@ class RootNode(AbstractNode):
         super(RootNode, self).__init__(object)
         self.children = []
         self.anchors = dict()
+        self.scenes = list()
+        self.objects = list()
         self.positions = dict()
         self.orientations = dict()
         self.global_bboxes = dict()
+        self.global_bboxes_json = dict()
         
     def add(self,node, anchor):
         """ Appends an object sub-tree to the current node
@@ -230,7 +233,7 @@ class RootNode(AbstractNode):
 
         return False
         
-    def place_objects(self):
+    def place_objects(self, no):
         """ Places objects in the scene according to their specified
         relations.
         """
@@ -257,15 +260,17 @@ class RootNode(AbstractNode):
                     morse.rpc('simulation','set_object_pose',
                               c.name, str(pos), str(orientation))
                     # get global bounding box
-                    global_bbox = BBox(json.loads(morse.rpc('simulation',
-                                                            'get_object_global_bbox',c.name)))
+                    json_bbox = json.loads(morse.rpc('simulation','get_object_global_bbox',c.name))
+                    global_bbox = BBox(json_bbox)
 
                     # Second test: is object in collision with other objects?
                     if not self.in_collision(global_bbox):
                         # Hooray! Object could be placed
-                        self.positions[c] = pos
-                        self.orientations[c] = orientation
-                        self.global_bboxes[c] = global_bbox
+                        self.objects.append(c.name)
+                        self.positions[c.name] = pos
+                        self.orientations[c.name] = orientation
+                        self.global_bboxes[c.name] = global_bbox
+                        self.global_bboxes_json[c.name] = json_bbox
                         break
                 i = i + 1
 
@@ -274,6 +279,15 @@ class RootNode(AbstractNode):
                         
             # place children
             c.place_children()
+
+
+        scene = ['scene' + str(no), json.dumps({'objects' : self.objects ,
+                                                'position' : self.positions,
+                                                'orientation' : self.orientations,
+                                                'bbox': self.global_bboxes_json})] 
+
+        print(scene)
+        self.scenes.append(scene)
 
 
 class ObjectNode(AbstractNode):
@@ -333,8 +347,8 @@ class ObjectNode(AbstractNode):
         
     def calc_distance_range(self, object):
         
-        [x,y,z] = self.get_root().positions[self]
-        obj_bbox = self.get_root().global_bboxes[self]
+        [x,y,z] = self.get_root().positions[self.name]
+        obj_bbox = self.get_root().global_bboxes[self.name]
 
         root_bbox =  BBox(json.loads(morse.rpc('simulation',
                                               'get_object_global_bbox',
@@ -409,7 +423,7 @@ class ObjectNode(AbstractNode):
 
             c.set_root(self.get_root())
 
-            [self_x,self_y,self_z] = self.get_root().positions[self]
+            [self_x,self_y,self_z] = self.get_root().positions[self.name]
 
             phi_mu = self.get_direction(self.directions[c])
 
@@ -453,15 +467,17 @@ class ObjectNode(AbstractNode):
                     morse.rpc('simulation','set_object_pose', c.name,
                               str(pos),str(orientation))
 
-                    global_bbox = BBox(json.loads(morse.rpc('simulation',
-                                                            'get_object_global_bbox',c.name)))
+                    json_bbox = json.loads(morse.rpc('simulation','get_object_global_bbox',c.name))
+                    global_bbox = BBox(json_bbox)
 
                     # Second test: is object in collision with other objects?
                     if not self.get_root().in_collision(global_bbox):
                         # Hooray! Object could be placed
-                        self.get_root().positions[c] = pos
-                        self.get_root().orientations[c] = orientation
-                        self.get_root().global_bboxes[c] = global_bbox
+                        self.get_root().objects.append(c.name)
+                        self.get_root().positions[c.name] = pos
+                        self.get_root().orientations[c.name] = orientation
+                        self.get_root().global_bboxes[c.name] = global_bbox
+                        self.get_root().global_bboxes_json[c.name] = json_bbox
                         break
                 i = i + 1
 
@@ -538,12 +554,18 @@ if __name__ == "__main__":
         
                     # Add object nodes to the root node
                     table.add(pc1,'north_west')
-                    table.add(laptop1,'east')
+                    #table.add(laptop1,'east')
                     table.add(mon1,'north')
 
                     # Add object nodes relative to other object nodes
                     mon1.add(key1,'front')
-            
+
+                    laptop_left_right = int(random.uniform(0,3))
+                    if laptop_left_right == 0:
+                        key1.add(laptop1, 'right')
+                    else:
+                        key1.add(laptop1, 'left')
+                    
                     cup_left_right = int(random.uniform(0,2))
                     if cup_left_right == 0:
                         mon1.add(cup1, 'right_front')
@@ -556,11 +578,9 @@ if __name__ == "__main__":
                     else:
                         mon1.add(bottle, 'left_front')
 
-                    #key1.add(laptop1,'left')
 
                     try:
-                        table.place_objects()
-                        print('%i. scene generated' % (i + 1))
+                        table.place_objects(i+1)
                         i = i + 1
                     except PlacementException as e:
                         print(e.msg)
