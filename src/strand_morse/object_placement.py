@@ -22,19 +22,24 @@ def ignored(*exceptions):
     except exceptions:
         pass
 
-
-MAX_NUM_OF_SAMPLES = 100
-
 # Constants
+
 # Offset for placing an object above a table 
 Z_DIST = 0.005
+
 # Offset for placing an object at the edge of the table
 XY_DIST = 0.02
+
 # Sigma allows for some variance for directional relations 
 DIRECTION_SIGMA = math.pi/16
+
 # Scale the bounding box of the object in order to prevent the object to be
 # spawned close to the table edge
 OBJECT_SCALE = 1.00
+
+# Number of samples used to place an object
+# If more samples would be needed for one object the overall scene is discarded 
+MAX_NUM_OF_SAMPLES = 100
 
 # epsilon for testing whether a number is close to zero
 _EPS = numpy.finfo(float).eps * 4.0
@@ -189,8 +194,8 @@ class RootNode(AbstractNode):
         super(RootNode, self).__init__(object)
         self.children = []
         self.anchors = dict()
-        self.scenes = list()
         self.objects = list()
+        self.types = dict()
         self.positions = dict()
         self.orientations = dict()
         self.global_bboxes = dict()
@@ -267,6 +272,8 @@ class RootNode(AbstractNode):
                     if not self.in_collision(global_bbox):
                         # Hooray! Object could be placed
                         self.objects.append(c.name)
+                        obj_type = json.loads(morse.rpc('simulation','get_object_type', c.name))
+                        self.types[c.name] = obj_type
                         self.positions[c.name] = pos
                         self.orientations[c.name] = orientation
                         self.global_bboxes[c.name] = global_bbox
@@ -281,13 +288,13 @@ class RootNode(AbstractNode):
             c.place_children()
 
 
-        scene = ['scene' + str(no), json.dumps({'objects' : self.objects ,
-                                                'position' : self.positions,
-                                                'orientation' : self.orientations,
-                                                'bbox': self.global_bboxes_json})] 
+        scene = ['scene' + str(no), {'objects' :     self.objects,
+                                     'type' :        self.types,
+                                     'position' :    self.positions,
+                                     'orientation' : self.orientations,
+                                     'bbox':         self.global_bboxes_json}]
 
-        print(scene)
-        self.scenes.append(scene)
+        return scene
 
 
 class ObjectNode(AbstractNode):
@@ -474,6 +481,9 @@ class ObjectNode(AbstractNode):
                     if not self.get_root().in_collision(global_bbox):
                         # Hooray! Object could be placed
                         self.get_root().objects.append(c.name)
+
+                        obj_type = json.loads(morse.rpc('simulation','get_object_type', c.name))
+                        self.get_root().types[c.name] = obj_type
                         self.get_root().positions[c.name] = pos
                         self.get_root().orientations[c.name] = orientation
                         self.get_root().global_bboxes[c.name] = global_bbox
@@ -498,9 +508,10 @@ class Usage(Exception):
 
 def help_msg():
     return """
-  Usage: object_placement.py [-h] <num_of_samples> 
+  Usage: object_placement.py [-h] <filename> <num_of_scenes> 
 
-    num_of_samples  number of samples to be generated 
+    filename        name of the output file
+    num_of_scenes   number of scenes to be generated 
 
     -h, --help for seeing this msg
 """
@@ -520,15 +531,16 @@ if __name__ == "__main__":
         except getopt.error as msg:
             raise Usage(msg)
 
-        if ('-h','') in opts or ('--help', '') in opts or len(args) != 1:
+        if ('-h','') in opts or ('--help', '') in opts or len(args) != 2:
             raise Usage(help_msg())
 
+        scenes = list()
 
-        num_of_samples = int(args[0])
-        if num_of_samples < 0:
-            num_of_samples = 0
+        num_of_scenes = int(args[1])
+        if num_of_scenes < 0:
+            num_of_scenes = 0
         i = 0
-        while i < num_of_samples:
+        while i < num_of_scenes:
             with ignored(IOError):
 
                 with pymorse.Morse() as morse:
@@ -580,11 +592,29 @@ if __name__ == "__main__":
 
 
                     try:
-                        table.place_objects(i+1)
+                        scene = table.place_objects(i+1)
+                        scenes.append(scene)
                         i = i + 1
                     except PlacementException as e:
-                        print(e.msg)
+                        print('Warning:',e.msg,'could not be placed -> discard scene')
                         pass
+
+
+        # Generate QSR labels
+        for s in scenes:
+            scn = s[1]
+            qsr = dict()
+            for o in scn['objects']:
+                obj_qsr = dict()
+                for o2 in scn['objects']:
+                    if o != o2:
+                        obj_qsr[o2] = list()
+                        
+                qsr[o] = obj_qsr
+            scn['qsr'] = qsr 
+        
+        with open(args[0], "w") as outfile:
+            outfile.write(json.dumps(scenes, outfile, indent=2))
 
     except Usage as err:
         print(err.msg)
