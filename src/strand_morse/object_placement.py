@@ -12,6 +12,7 @@ import numpy
 import errno 
 import getopt
 from operator import itemgetter
+import qsr
 
 from contextlib import contextmanager
 
@@ -24,6 +25,8 @@ def ignored(*exceptions):
 
 # Constants
 
+
+    
 # Offset for placing an object above a table 
 Z_DIST = 0.005
 
@@ -40,6 +43,9 @@ OBJECT_SCALE = 1.00
 # Number of samples used to place an object
 # If more samples would be needed for one object the overall scene is discarded 
 MAX_NUM_OF_SAMPLES = 100
+
+# Distance of the camera with respect to the center of the table
+CAMERA_DISTANCE = 2.5 
 
 # epsilon for testing whether a number is close to zero
 _EPS = numpy.finfo(float).eps * 4.0
@@ -242,6 +248,7 @@ class RootNode(AbstractNode):
         """ Places objects in the scene according to their specified
         relations.
         """
+         
         for c in self.children:
             c.set_root(self)
 
@@ -287,8 +294,31 @@ class RootNode(AbstractNode):
             # place children
             c.place_children()
 
+        # Add root object (table) to data structures 
+        
+        obj_type = json.loads(morse.rpc('simulation','get_object_type', self.name))
+        self.types[self.name] = obj_type
 
-        scene = ['scene' + str(no), {'objects' :     self.objects,
+        root_pose = json.loads(morse.rpc('simulation','get_object_pose',
+                                         self.name))
+        self.positions[self.name] = root_pose[0]
+        self.orientations[self.name] = root_pose[1]
+        json_bbox = json.loads(morse.rpc('simulation','get_object_global_bbox',c.name))
+        self.global_bboxes_json[self.name] = json_bbox
+
+        # TODO: replace the anlges 0 by the actual angle of the table!
+        x_rel = math.sin(math.pi / 2) * CAMERA_DISTANCE
+        y_rel = math.cos(math.pi / 2) * CAMERA_DISTANCE
+        
+        x =  root_pose[0][0] + x_rel
+        y =  root_pose[0][1] + y_rel
+        z =  1.698 # height of the xtion on the scitos robot
+        
+        camera_position =  [x, y, z]
+        
+        scene = ['scene' + str(no), {'supporting_object' : self.name,
+                                     'camera_position'   :  camera_position,
+                                     'objects' :     self.objects,
                                      'type' :        self.types,
                                      'position' :    self.positions,
                                      'orientation' : self.orientations,
@@ -326,13 +356,13 @@ class ObjectNode(AbstractNode):
 
     def init_directions(self):
         self.right       = 0 
-        self.right_front  = math.pi / 4
-        self.front         = math.pi / 2
-        self.left_front   = 3 * math.pi / 4
+        self.right_front = math.pi / 4
+        self.front       = math.pi / 2
+        self.left_front  = 3 * math.pi / 4
         self.left        = math.pi;
-        self.left_back  = 5 * math.pi / 4
+        self.left_back   = 5 * math.pi / 4
         self.back        = 3 * math.pi / 2
-        self.right_back = 7 * math.pi / 4
+        self.right_back  = 7 * math.pi / 4
         
     def get_direction(self,direction):
         if direction == 'back':
@@ -496,6 +526,7 @@ class ObjectNode(AbstractNode):
             
             c.place_children()
 
+            
 # Main
 
 class PlacementException(Exception):
@@ -556,7 +587,7 @@ if __name__ == "__main__":
                     key1 = ObjectNode('keyboard1')
                     laptop1 = ObjectNode('laptop1')
                     cup1 = ObjectNode('cup1')
-                    bottle = ObjectNode('bottle')
+                    bottle1 = ObjectNode('bottle1')
             
                     # Random rotations of objects
                     mon1.set_yaw(random.gauss(0.0,math.pi/16))
@@ -586,9 +617,9 @@ if __name__ == "__main__":
 
                     bottle_left_right = int(random.uniform(0,4))
                     if bottle_left_right == 0:
-                        mon1.add(bottle, 'right_front')
+                        mon1.add(bottle1, 'right_front')
                     else:
-                        mon1.add(bottle, 'left_front')
+                        mon1.add(bottle1, 'left_front')
 
 
                     try:
@@ -603,15 +634,19 @@ if __name__ == "__main__":
         # Generate QSR labels
         for s in scenes:
             scn = s[1]
-            qsr = dict()
-            for o in scn['objects']:
+            cam_pos = scn['camera_position']
+            scn_qsr = dict()
+            for o1 in scn['objects']:
                 obj_qsr = dict()
                 for o2 in scn['objects']:
-                    if o != o2:
-                        obj_qsr[o2] = list()
+                    if o1 != o2:
+                        pos1 = scn['position'][o1]
+                        pos2 = scn['position'][o2]
+                        #print(o1,o2)
+                        obj_qsr[o2] = qsr.calc_QSR(cam_pos,pos1,pos2)
                         
-                qsr[o] = obj_qsr
-            scn['qsr'] = qsr 
+                scn_qsr[o1] = obj_qsr
+            scn['qsr']  = scn_qsr 
         
         with open(args[0], "w") as outfile:
             outfile.write(json.dumps(scenes, outfile, indent=2))
