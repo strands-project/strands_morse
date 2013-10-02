@@ -31,7 +31,7 @@ def ignored(*exceptions):
 Z_DIST = 0.005
 
 # Offset for placing an object at the edge of the table
-XY_DIST = 0.02
+XY_DIST = 0.01
 
 # Sigma allows for some variance for directional relations 
 DIRECTION_SIGMA = math.pi/16
@@ -339,7 +339,7 @@ class ObjectNode(AbstractNode):
         self.directions = dict()
         self.distances = dict()
         self.init_directions()
-        self.set_yaw(0)
+        self.set_yaw_range([0,2*math.pi])
 
     def set_root(self, root):
         self.root = root
@@ -365,9 +365,9 @@ class ObjectNode(AbstractNode):
         self.right_back  = 7 * math.pi / 4
         
     def get_direction(self,direction):
-        if direction == 'center_behind':
+        if direction == 'center_back':
             return self.back
-        elif direction == 'right_behind':
+        elif direction == 'right_back':
             return self.right_back
         elif direction == 'right_center':
             return self.right
@@ -377,12 +377,12 @@ class ObjectNode(AbstractNode):
             return self.left_front
         elif direction == 'left_center':
             return self.left
-        elif direction == 'left_center':
+        elif direction == 'left_back':
             return self.left_back
         else: #elif direction == 'center_front':
             return self.front
         
-    def calc_distance_range(self, object):
+    def calc_distance_range(self, obj):
         
         [x,y,z] = self.get_root().positions[self.name]
         obj_bbox = self.get_root().global_bboxes[self.name]
@@ -391,14 +391,14 @@ class ObjectNode(AbstractNode):
                                               'get_object_global_bbox',
                                               self.get_root().name)))
 
-        direction = self.directions[object]
-
+        direction = self.directions[obj]
+        
         min_xy_dim = \
-            (min(object.local_bbox.get_x_max() - object.local_bbox.get_x_min(), \
-                object.local_bbox.get_y_max() - object.local_bbox.get_y_min()) \
+            (min(obj.local_bbox.get_x_max() - obj.local_bbox.get_x_min(), \
+                obj.local_bbox.get_y_max() - obj.local_bbox.get_y_min()) \
                 * OBJECT_SCALE ) / 2      
 
-        if direction == 'back':
+        if direction == 'center_back':
              min_dist = x - obj_bbox.get_x_min() + min_xy_dim
              max_dist = x - root_bbox.get_x_min() - min_xy_dim
 
@@ -409,7 +409,7 @@ class ObjectNode(AbstractNode):
             max_dist =  math.sqrt(2*min(x - root_bbox.get_x_min(),
                                  root_bbox.get_y_max() - y)**2)  - min_xy_dim
              
-        elif direction == 'right':
+        elif direction == 'right_center':
             min_dist = obj_bbox.get_y_max()  - y + min_xy_dim
             max_dist = root_bbox.get_y_max() - y - min_xy_dim
 
@@ -428,7 +428,7 @@ class ObjectNode(AbstractNode):
             max_dist =  math.sqrt(2*min(root_bbox.get_x_max() - x,
                                    y - root_bbox.get_y_min())**2) - min_xy_dim
 
-        elif direction == 'left':
+        elif direction == 'left_center':
             min_dist = y - obj_bbox.get_y_min()  + min_xy_dim
             max_dist = y - root_bbox.get_y_min() - min_xy_dim
             
@@ -439,20 +439,26 @@ class ObjectNode(AbstractNode):
             max_dist =  math.sqrt(2*min(x - root_bbox.get_x_min(),
                                    y - root_bbox.get_y_min())**2) - min_xy_dim
 
-        else: #elif direction == 'front':
+        else: #elif direction == 'center_front':
             min_dist = obj_bbox.get_x_max()  - x + min_xy_dim
             max_dist = root_bbox.get_x_max() - x - min_xy_dim
 
-        if self.distances[object] == 'close':
-            max_dist = (((max_dist + min_dist) / 2) + min_dist) /2
+        if self.distances[obj] == 'close':
+            max_dist = (max_dist + min_dist) / 2 
+        else:
+            min_dist = (max_dist + min_dist) / 2 
         
         return [min_dist,max_dist]
 
+
+    def set_yaw_range(self,yaw_range):
+        self.yaw_range = yaw_range
+    
     def set_yaw(self,yaw):
         self.yaw = yaw
 
     def get_yaw(self):
-        return self.yaw
+        return random.uniform(self.yaw_range[0],self.yaw_range[1])
 
     def place_children(self):
 
@@ -473,7 +479,7 @@ class ObjectNode(AbstractNode):
 
             i = 0
             while i < MAX_NUM_OF_SAMPLES:
-                
+                i = i + 1
                 phi = random.gauss(phi_mu, DIRECTION_SIGMA)
 
                 if phi < 0:
@@ -492,6 +498,7 @@ class ObjectNode(AbstractNode):
                     (c.local_bbox.get_z_max() - c.local_bbox.get_z_min()) / 2 + Z_DIST 
 
                 # First sanity check: is object position on table?
+                
                 if self.get_root().within_root_bbox(c,x,y):
             
                     pos =  morse.rpc('simulation','transform_to_obj_frame',
@@ -519,7 +526,8 @@ class ObjectNode(AbstractNode):
                         self.get_root().global_bboxes[c.name] = global_bbox
                         self.get_root().global_bboxes_json[c.name] = json_bbox
                         break
-                i = i + 1
+                #else:
+                    #print('not on table: ', c.name, min_dist, max_dist)
 
             if i >= MAX_NUM_OF_SAMPLES:
                 raise PlacementException(c.name)
@@ -589,7 +597,7 @@ if __name__ == "__main__":
         with open(args[0]) as qsr_file:    
             qsr_model = json.load(qsr_file)
 
-            #print('PRESENCE')
+            print('PRESENCE')
             for t in qsr_model['types']:
                 # total number of seen type instaces
                 presence_total[t] = sum(qsr_model['presence'][t][1:])
@@ -600,9 +608,9 @@ if __name__ == "__main__":
                     for j in range(qsr_model['presence'][t][i]):
                         presence_pop[t].append(i)
 
-                #print(presence_pop[t])
+                print(t,presence_pop[t])
 
-            #print('ANCHORS')
+            print('ANCHORS')
             for t in qsr_model['landmarks']:
                 anchor_pop[t] = list()
                 for i in range(len(qsr_model['anchors'][t])):
@@ -610,7 +618,7 @@ if __name__ == "__main__":
                         anchor_pop[t].append(anchor_name(i))
                 print(t, anchor_pop[t])
 
-            #print('QSR')
+            print('QSR')
             landmarks = list()
             for t1 in qsr_model['landmarks']:
                 lrc_pop[t1] = dict()
@@ -620,16 +628,16 @@ if __name__ == "__main__":
                 for t2 in qsr_model['types']:
                     qsr_val = qsr_model['qsr'][t1][t2]
 
-                    lr_center = presence_total[t2] - (qsr_val[0] + qsr_val[1])
+                    lr_center = max((qsr_val[4] + qsr_val [5]) - (qsr_val[0] + qsr_val[1]),0)
                     lrc_pop[t1][t2] = list()
                     lrc_pop[t1][t2] += ['left' for i in range(qsr_val[0])]
                     lrc_pop[t1][t2] += ['right' for i in range(qsr_val[1])]
                     lrc_pop[t1][t2] += ['center' for i in range(lr_center)]
 
-                    fb_center = presence_total[t2] - (qsr_val[2] + qsr_val[3])
+                    fb_center =  max((qsr_val[4] + qsr_val [5]) - (qsr_val[2] + qsr_val[3]),0)
                     fbc_pop[t1][t2] = list()
                     fbc_pop[t1][t2] += ['front' for i in range(qsr_val[2])]
-                    fbc_pop[t1][t2] += ['behind' for i in range(qsr_val[3])]
+                    fbc_pop[t1][t2] += ['back' for i in range(qsr_val[3])]
                     fbc_pop[t1][t2] += ['center' for i in range(fb_center)]
 
                     cd_pop[t1][t2] = list()
@@ -637,147 +645,212 @@ if __name__ == "__main__":
                     cd_pop[t1][t2] += ['distant' for i in range(qsr_val[5])]
 
                         
-                #print(t1,lrc_pop[t1])
-                #print(t1,fbc_pop[t1])
-                #print(t1,cd_pop[t1])
+                print(t1,lrc_pop[t1])
+                print("----------------------------")
+                print(t1,fbc_pop[t1])
+                print("----------------------------")
+                print(t1,cd_pop[t1])
+                print("============================")
 
             
 
         #print('Starting scene generation')
-        
+        #sys.exit()
         scenes = list()
         num_of_scenes = int(args[2])
+
+        num_of_trials_per_scene = 20
+        
         if num_of_scenes < 0:
             num_of_scenes = 0
         i = 0
         while i < num_of_scenes:
-            with ignored(IOError):
-
-                with pymorse.Morse() as morse:
-                    # Please note: all objects need to exist in the simulation beforehand!
-                    # Create a root note
-
-
-                    table = RootNode('table')
-
-                    objs_of_type = dict()
-                    for t in presence_pop:
-                        objs_of_type[t] = random.sample(presence_pop[t],1)[0]
-                        #print(t,objs_of_type[t])
-
-                    objs = dict()
-                    for t in objs_of_type:
-                        for j in range(objs_of_type[t]):
-                            if j == 0:
-                                objs[t.lower()] = t
-                            else:
-                                objs[t.lower() + ".00" + str(j)] = t
-                                
-                    print(objs)
-
-                    node = dict()
-                    for o in objs:
-                        # Create an object node 
-                        node[o] = ObjectNode(o)
-
-                        # Background knowledge: some objects do only vary very little in orientation
-                        if objs[o] in ['Monitor','Keyboard','PC','Laptop']:
-                            node[o].set_yaw(random.gauss(0.0,math.pi/16))
-                        else:
-                            node[o].set_yaw(random.uniform(0,2*math.pi))
-
-                    landmark_added = False
-                    landmark = None
-                    for o in objs:
-                        if objs[o] == 'Monitor':
-                            table.add(node[o],random.sample(anchor_pop[objs[o]],1)[0])
-                            landmark_added = True
-                            landmark = o
-                            break
-
-                    if not landmark_added:
-                        for o in objs:
-                            if objs[o] == 'Laptop':
-                                table.add(node[o],random.sample(anchor_pop[objs[o]],1)[0])
-                                landmark_added = True
-                                landmark = o
-                                break
-
-                    if not landmark_added:
-                        for o in objs:
-                            if objs[o] == 'Keyboard':
-                                table.add(node[o],random.sample(anchor_pop[objs[o]],1)[0])
-                                landmark_added = True
-                                landmark = o
-                                break
-
-                    if not landmark_added:
-                        raise PlacementException('No landmark -> Discard scene')
-
-
-                    for o in objs:
-                        if o != landmark:
-                            lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
-                            fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
-                            direction = lrc + "_" + fbc
-                            node[landmark].add(node[o],direction)
-
-                            
-    
-                                                
-                    # Create several object nodes
-                    # pc1 = ObjectNode('pc1')
-                    # mon1 = ObjectNode('monitor1')
-                    # key1 = ObjectNode('keyboard1')
-                    # laptop1 = ObjectNode('laptop1')
-                    # cup1 = ObjectNode('cup1')
-                    # bottle1 = ObjectNode('bottle1')
             
-                    # # Random rotations of objects
-                    # mon1.set_yaw(random.gauss(0.0,math.pi/16))
-                    # key1.set_yaw(random.gauss(0.0,math.pi/16))
-                    # cup1.set_yaw(random.uniform(0,2*math.pi))
-
-        
-                    # # Add object nodes to the root node
-                    # table.add(pc1,'north_west')
-                    # #table.add(laptop1,'east')
-                    # table.add(mon1,'north')
-
-                    # # Add object nodes relative to other object nodes
-                    # mon1.add(key1,'front')
-
-                    # laptop_left_right = int(random.uniform(0,3))
-                    # if laptop_left_right == 0:
-                    #     key1.add(laptop1, 'right')
-                    # else:
-                    #     key1.add(laptop1, 'left')
+            objs_of_type = dict()
+            for t in presence_pop:
+                objs_of_type[t] = random.sample(presence_pop[t],1)[0]
+                print(t,objs_of_type[t])
+                
+                objs = dict()
+                for t in objs_of_type:
+                    for j in range(objs_of_type[t]):
+                        if j == 0:
+                            objs[t.lower()] = t
+                        else:
+                            objs[t.lower() + ".00" + str(j)] = t
+                            
+            print(objs)
+            ii = 0
+            while ii < num_of_trials_per_scene:
+                
+                with ignored(IOError):
                     
-                    # cup_left_right = int(random.uniform(0,2))
-                    # if cup_left_right == 0:
-                    #     mon1.add(cup1, 'right_front')
-                    # else:
-                    #     mon1.add(cup1,'left_front',)
+                    with pymorse.Morse() as morse:
+                        # Please note: all objects need to exist in the simulation beforehand!
+                        # Create a root note
+                        table = RootNode('table')
 
-                    # bottle_left_right = int(random.uniform(0,4))
-                    # if bottle_left_right == 0:
-                    #     mon1.add(bottle1, 'right_front')
-                    # else:
-                    #     mon1.add(bottle1, 'left_front')
+                        node = dict()
+                        for o in objs:
+                            # Create an object node 
+                            node[o] = ObjectNode(o)
+
+                            # Background knowledge: some objects do only vary very little in orientation
+                            if objs[o] in ['Monitor']:
+                                node[o].set_yaw_range([0.0,math.pi/32])
+                            elif objs[o] in ['Telephone','Mouse','Keyboard','PC','Laptop']:
+                                node[o].set_yaw_range([0,math.pi/16])
+                            else:
+                                node[o].set_yaw_range([0,2*math.pi])
+
+                        landmark_added = False
+                        landmark = None
+                        for o in objs:
+                            if objs[o] == 'Monitor':
+                                table.add(node[o],random.sample(anchor_pop[objs[o]],1)[0])
+                                landmark_added = True
+                                landmark = o
+                                break
+
+                        if not landmark_added:
+                            for o in objs:
+                                if objs[o] == 'Laptop':
+                                    table.add(node[o],random.sample(anchor_pop[objs[o]],1)[0])
+                                    landmark_added = True
+                                    landmark = o
+                                    break
+                    
+                        try:
+                            if not landmark_added:
+                                ii =  num_of_trials_per_scene
+                                raise PlacementException('No landmark -> Discard scene')
+
+                            print("Landmark:", landmark)
+                            
+                            for o in objs:
+                                if objs[o] in ['Monitor'] and o != landmark:
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[landmark]][objs[o]],1)[0]
+                                    node[landmark].add(node[o],direction,cd)
+                                    print("QSR:",o,landmark,direction,cd)
+
+                            for o in objs:
+                                if objs[o] in ['PC'] and o != landmark:
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[landmark]][objs[o]],1)[0]
+                                    node[landmark].add(node[o],direction,cd)
+                                    print("QSR:",o,landmark,direction,cd)
+
+                            for o in objs:
+                                if objs[o] in ['Laptop'] and o != landmark:
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[landmark]][objs[o]],1)[0]
+                                    node[landmark].add(node[o],direction,cd)
+                                    print("QSR:",o,landmark,direction,cd)
+
+                            for o in objs:
+                                if objs[o] in ['Lamp'] and o != landmark:
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[landmark]][objs[o]],1)[0]
+                                    node[landmark].add(node[o],direction,cd)
+                                    print("QSR:",o,landmark,direction,cd)
+                            
+                            keyboard_added = False
+                            keyboard_landmark = None
+                            for o in objs:
+                                if objs[o] in ['Keyboard']: 
+                                    if objs[o] == 'Keyboard':
+                                        keyboard_landmark = o
+                                        keyboard_added = True
 
 
-                    try:
-                        scene = table.place_objects(i+1)
-                        scenes.append(scene)
-                        i = i + 1
-                        remove_objects(objs)
-                    except PlacementException as e:
-                        remove_objects(objs)
-                        print('Warning:',e.msg,'could not be placed -> discard scene')
-                        pass
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[landmark]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[landmark]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[landmark]][objs[o]],1)[0]
+                                    node[landmark].add(node[o],direction,cd)
+                                    print("QSR:",o,landmark,direction,cd)
+                                    break
+
+                            for o in objs:
+                                if objs[o] in ['Keyboard'] and o != keyboard_landmark and o != landmark: 
+                                    l = landmark
+                                    if keyboard_added == True:
+                                        l = keyboard_landmark
+
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[l]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[l]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+
+                                    cd = random.sample(cd_pop[objs[l]][objs[o]],1)[0]
+                                    node[l].add(node[o],direction,cd)
+                                    print("QSR:",o,l,direction,cd)
+                                
+                                    
+                            for o in objs:
+                                if o != landmark and objs[o] not in ['Lamp','Laptop','Monitor','Keyboard','PC']:
+                                    l = landmark
+                                    if keyboard_added:
+                                        l = keyboard_landmark
+
+                                    direction = "center_center"
+                                    while direction == "center_center":
+                                        lrc = random.sample(lrc_pop[objs[l]][objs[o]],1)[0]
+                                        fbc = random.sample(fbc_pop[objs[l]][objs[o]],1)[0]
+                                        direction = lrc + "_" + fbc
+                                        
+                                    cd = random.sample(cd_pop[objs[l]][objs[o]],1)[0]
+                                    node[l].add(node[o],direction,cd)
+                                    print("QSR:",o,l,direction,cd)
+
+                            ii = ii + 1
+                            scene = table.place_objects(i+1)
+                            scenes.append(scene)
+                            i = i + 1
+                            ii = num_of_trials_per_scene
+
+                            print("=========================================")
+                            print(i," scene generated")
+                            print("=========================================")
+                            
+                            print("Press 'Enter' to continue")
+                            #input()
+                            remove_objects(objs)
+                        except PlacementException as e:
+                            remove_objects(objs)
+                            print('Warning:',e.msg,'could not be placed -> retry generation')
+                            pass
+                        except:
+                            print("Unexpected error:", sys.exc_info()[0])
+                            raise
 
 
-        # Generate QSR labels
+        # Generate QSR labelszzzzzz
         for s in scenes:
             scn = s[1]
             cam_pos = scn['camera_position']
