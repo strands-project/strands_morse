@@ -11,7 +11,7 @@ import os
 from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
 from bham.builder.robots import Elevator
-
+from bham.add_objects import AddObjects
 
 robot = Scitosa5()
 #robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
@@ -37,6 +37,9 @@ docking_station_label = PassiveObject('strands_sim/robots/docking_station_label.
 docking_station_label.properties(Object = True)
 docking_station_label.translate(1,-4.55,1.8)
 docking_station_label.rotate(1.57,0,0)
+
+AddObjects.add_walls()
+AddObjects.add_table()
 
 # Set the environment
 model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/cs_lg.blend')
