@@ -839,7 +839,7 @@ if __name__ == "__main__":
                             print("=========================================")
                             
                             print("Press 'Enter' to continue")
-                            #input()
+                            input()
                             remove_objects(objs)
                         except PlacementException as e:
                             remove_objects(objs)
