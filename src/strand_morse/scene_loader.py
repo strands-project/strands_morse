@@ -13,6 +13,7 @@ import errno
 import getopt
 from operator import itemgetter
 import qsr
+import os
 
 
 from contextlib import contextmanager
@@ -60,7 +61,13 @@ def load_scene(scn, target, offset=0):
 
         orientation = scn['orientation'][o]
 
-        new_orientation = quaternion_multiply(target_ori,orientation) 
+        new_orientation = quaternion_multiply(target_ori,orientation)
+
+        if (o == 'monitor'):
+            cmd = 'rosparam set /qsr_landmark/id%i/pose "[%f, %f, %f, %f, %f, %f, %f]"' % (offset+1, float(pos[0] + 1.35), float(pos[1]) - 0.65, float(pos[2]), float(new_orientation[0]), float(new_orientation[1]), float(new_orientation[2]), float(new_orientation[3]))
+            print('Run:', cmd)
+            os.system(cmd)
+
         
         # set pose
         morse.rpc('simulation','set_object_pose',obj_name(o,offset), str(pos), str(new_orientation))
@@ -73,6 +80,7 @@ def delete_scene(scn,offset):
     objs = list()
     for o in scn['objects']:
         objs.append(obj_name(o,offset))
+
 
     remove_objects(objs)
 
@@ -139,7 +147,26 @@ if __name__ == "__main__":
                 with pymorse.Morse() as morse:
 
                     if args[0] == 'add':
-                        load_scene(scenes[int(args[2])][1], args[4], int(args[3]))
+                        
+                        
+                        load_scene(scenes[int(args[2])][1], args[3], int(0))
+                        load_scene(scenes[int(args[4])][1], args[5], int(1))
+                        load_scene(scenes[int(args[6])][1], args[7], int(2))
+
+                        # load onto parameter server
+                        
+                        input('Please press any key to continue.')
+
+                        # delete from parameter server
+                        for i in range(1,4):
+                            cmd = 'rosparam delete /qsr_landmark/id%i/pose' % (i)
+                            print('Run:', cmd)
+                            os.system(cmd)
+                        
+                        delete_scene(scenes[int(args[2])][1],int(0))
+                        delete_scene(scenes[int(args[4])][1],int(1))
+                        delete_scene(scenes[int(args[6])][1],int(2))
+                        
                     elif args[0] == 'del':
                         delete_scene(scenes[int(args[2])][1],int(args[3]))
                     else:
@@ -151,10 +178,11 @@ if __name__ == "__main__":
         print("for help use --help")
         #return 2
 
+# AAAI spring symposion setup
+        
 # SCENES
 # [143,242, 30,
 #  470, 378, 273,
-#  257, 141, 165,
 #  231, 174, 191,
 #  19, 184, 156,
 #  25, 275, 111,
@@ -162,26 +190,18 @@ if __name__ == "__main__":
 #  316, 188, 7,
 #  4, 271, 292,
 #  89, 235, 339,
-#  287, 86,330,
-#  424, 350, 81,
-#  442, 247, 215,
-#  374,102, 262,
-#  5, 45, 6]
+#  287, 86,330]
 
 
 # TABLES
 # [1, 5, 7]
 # [4, 6, 3]
-# [6, 2, 5]
 # [2, 5, 7]
 # [3, 1, 6]
 # [5, 2, 6]
 # [5, 4, 1]
 # [4, 3, 1]
 # [4, 7, 5]
-# [6, 2, 3]
+# [6, 3, 2]
 # [7, 2, 3]
-# [8, 6, 4]
-# [2, 5, 8]
-# [1, 3, 4]
-# [3, 6, 8]
+
