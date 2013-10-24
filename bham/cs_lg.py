@@ -7,6 +7,7 @@ Brings in the CS building simulation environment from bham and uses ScitosA5.
 import sys
 import subprocess 
 import os
+import random
 
 from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
@@ -15,6 +16,7 @@ from bham.add_objects import AddObjects
 
 robot = Scitosa5()
 #robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
+robot.battery.properties(DischargingRate=0.01)
 
 robot.translate(x=1, y=-6.50, z=1.5)
 #robot.translate(x=-1.35, y=0.56, z=7.5)
@@ -35,7 +37,7 @@ docking_station.rotate(0,0,1.57)
 
 docking_station_label = PassiveObject('strands_sim/robots/docking_station_label.blend','dockingStationLabel')
 docking_station_label.properties(Object = True)
-docking_station_label.translate(1,-4.55,1.8)
+docking_station_label.translate(1,-4.55,1.75)
 docking_station_label.rotate(1.57,0,0)
 
 AddObjects.add_walls()
