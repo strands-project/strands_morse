@@ -550,7 +550,7 @@ class Usage(Exception):
 
 def help_msg():
     return """
-  Usage: object_placement.py [-h] <qsrmodel> <outfile> <num_of_scenes> 
+  Usage: scene_generator.py [-h] <qsrmodel> <outfile> <num_of_scenes> 
 
     qsrmodel        file including the QSR model for generationg the scenes 
     outfile         name of the output file
