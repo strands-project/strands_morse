@@ -107,8 +107,9 @@ class Scitosa5(Robot):
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
-            self.semanticcamera.translate(0.00, 0.02, 0.1745)
+            self.semanticcamera.translate(0.00, 0.02, 0.0945)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
+            self.semanticcamera.properties(cam_width=640, cam_height=480, cam_far=2.5, cam_near= 0.8, cam_focal=69.5)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
             
             if with_cameras < Scitosa5.WITHOUT_DEPTHCAMS:
