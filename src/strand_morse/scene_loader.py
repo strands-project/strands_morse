@@ -150,22 +150,20 @@ if __name__ == "__main__":
                         
                         
                         load_scene(scenes[int(args[2])][1], args[3], int(0))
-                        load_scene(scenes[int(args[4])][1], args[5], int(1))
-                        load_scene(scenes[int(args[6])][1], args[7], int(2))
+                        #load_scene(scenes[int(args[4])][1], args[5], int(1))
+                        #load_scene(scenes[int(args[6])][1], args[7], int(2))
 
-                        # load onto parameter server
-                        
                         input('Please press any key to continue.')
 
-                        # delete from parameter server
+                        #delete from parameter server
                         for i in range(1,4):
                             cmd = 'rosparam delete /qsr_landmark/id%i/pose' % (i)
                             print('Run:', cmd)
                             os.system(cmd)
                         
                         delete_scene(scenes[int(args[2])][1],int(0))
-                        delete_scene(scenes[int(args[4])][1],int(1))
-                        delete_scene(scenes[int(args[6])][1],int(2))
+                        #delete_scene(scenes[int(args[4])][1],int(1))
+                        #delete_scene(scenes[int(args[6])][1],int(2))
                         
                     elif args[0] == 'del':
                         delete_scene(scenes[int(args[2])][1],int(args[3]))
@@ -178,7 +176,7 @@ if __name__ == "__main__":
         print("for help use --help")
         #return 2
 
-# AAAI spring symposion setup
+# AAAI
         
 # SCENES
 # [143,242, 30,
