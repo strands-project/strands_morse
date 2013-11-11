@@ -1,0 +1,6 @@
+free_thresh: 0.196
+image: uol_mht_III.pgm
+negate: 0
+occupied_thresh: 0.65
+origin: [-41.8, -95.35, 0.0]
+resolution: 0.05
