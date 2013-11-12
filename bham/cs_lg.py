@@ -16,11 +16,8 @@ from bham.add_objects import AddObjects
 
 robot = Scitosa5()
 #robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
-robot.battery.properties(DischargingRate=0.01)
-
-robot.translate(x=1, y=-6.50, z=1.5)
-#robot.translate(x=-1.35, y=0.56, z=7.5)
-robot.rotate(z=1.57)
+robot.translate(x=3.75,y=-4.1, z=1.5)
+robot.rotate(z=-1.57)
 
 lift = Elevator()
 lift.translate(3.81419,2.51356,0)
@@ -32,13 +29,13 @@ lift.add_default_interface('socket')
 docking_station = PassiveObject('strands_sim/robots/docking_station.blend','dockingStation')
 docking_station.properties(Object = True)
 docking_station.properties(ChargingZone = True)
-docking_station.translate(1,-4.65,0.335)
-docking_station.rotate(0,0,1.57)
+docking_station.translate(3.75,-4.375,0.335)
+docking_station.rotate(0,0,-1.57)
 
 docking_station_label = PassiveObject('strands_sim/robots/docking_station_label.blend','dockingStationLabel')
 docking_station_label.properties(Object = True)
-docking_station_label.translate(1,-4.55,1.75)
-docking_station_label.rotate(1.57,0,0)
+docking_station_label.translate(3.75,-4.475,1.75)
+docking_station_label.rotate(1.57,0,3.14)
 
 AddObjects.add_walls()
 AddObjects.add_table()
