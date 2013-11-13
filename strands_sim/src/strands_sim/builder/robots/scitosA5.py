@@ -72,6 +72,7 @@ class Scitosa5(Robot):
         self.battery.properties(Range = 0.45)
         self.append(self.battery)
         self.battery.add_interface('ros', topic= Scitosa5.BATTERY_TOPIC)
+        self.battery.properties(DischargingRate=0.01)
 
         # Odometry
         self.odometry = Odometry()
