@@ -2,5 +2,5 @@ free_thresh: 0.196
 image: cs_lg.pgm
 negate: 0
 occupied_thresh: 0.65
-origin: [-26.299999999999997, -14.099999999999994, 0.0]
+origin: [-18.349999999999994, -31.5, 0.0]
 resolution: 0.05
