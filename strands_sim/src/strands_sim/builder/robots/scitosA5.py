@@ -56,6 +56,7 @@ class Scitosa5(Robot):
         self.ptu.translate(-0.075, 0, 1.585)
         self.ptu.rotate(0, 0, 0)
         self.ptu.add_interface('ros', topic= Scitosa5.PTU_TOPIC)
+        self.ptu.properties(Tolerance= 0.00089759763795882463)
 
         ###################################
         # Sensors
