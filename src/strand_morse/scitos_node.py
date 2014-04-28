@@ -11,18 +11,23 @@ from scitos_msgs.srv import EnableMotors
 from scitos_msgs.srv import ResetOdometry
 from scitos_msgs.srv import ResetMotorStop
 
+from scitos_msgs.srv import EmergencyStopResponse
+from scitos_msgs.srv import EnableMotorsResponse
+from scitos_msgs.srv import ResetOdometryResponse
+from scitos_msgs.srv import ResetMotorStopResponse
 
-def emergency_stop():
-    return EmergencyStopResponce()
 
-def enable_motors():
-    return EnableMotorsResponce()
+def emergency_stop(req):
+    return EmergencyStopResponse()
 
-def reset_odometry():
-    return ResetOdometryResponce()
+def enable_motors(req):
+    return EnableMotorsResponse()
 
-def reset_motorstop():
-    return ResetMotorStopResponce()
+def reset_odometry(req):
+    return ResetOdometryResponse()
+
+def reset_motorstop(req):
+    return ResetMotorStopResponse()
         
 if __name__ == '__main__':
 
