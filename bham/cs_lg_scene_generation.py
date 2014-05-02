@@ -132,7 +132,7 @@ laptop = dict()
 monitor = dict()
 mouse = dict()
 ####pencil = dict()
-####pc = dict()
+pc = dict()
 ####stapler = dict()
 telephone = dict()
 ###
