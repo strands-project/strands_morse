@@ -119,9 +119,9 @@ int main(int argc, char** argv)
     listener = new tf::TransformListener();
     
     typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::PointCloud2> MySyncPolicy;
-    message_filters::Subscriber<sensor_msgs::Image> image_sub(n, image_input, 1);
-    message_filters::Subscriber<sensor_msgs::PointCloud2> cloud_sub(n, cloud_input, 1);
-    message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), image_sub, cloud_sub);
+    message_filters::Subscriber<sensor_msgs::Image> image_sub(n, image_input, 5);
+    message_filters::Subscriber<sensor_msgs::PointCloud2> cloud_sub(n, cloud_input, 5);
+    message_filters::Synchronizer<MySyncPolicy> sync(MySyncPolicy(1), image_sub, cloud_sub);
     sync.registerCallback(&callback);
     
 	//ros::Subscriber sub = n.subscribe(input, 1, callback);
