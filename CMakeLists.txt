@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(strands_morse)
 
+add_definitions(-std=c++0x)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -75,6 +77,7 @@ include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
 
 ## Declare a cpp executable
 add_executable(generate_disparity src/generate_topics/generate_disparity.cpp)
+add_executable(generate_rgb src/generate_topics/generate_rgb.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
@@ -84,6 +87,11 @@ add_executable(generate_disparity src/generate_topics/generate_disparity.cpp)
 target_link_libraries(generate_disparity
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
+  ${OpenCV_LIBS}
+)
+
+target_link_libraries(generate_rgb
+  ${catkin_LIBRARIES}
   ${OpenCV_LIBS}
 )
 

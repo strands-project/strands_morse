@@ -1,0 +1,34 @@
+<launch>
+  <arg name="manager" 		default="manager" />
+  <arg name="camera"   		default="head_xtion" />
+  <arg name="machine"   	default="localhost" />
+  <arg name="user"   	default="" />
+  <arg name="publish_tf" default="false" />
+ 
+  <machine name="$(arg machine)" address="$(arg machine)" env-loader="/opt/strands/strands_catkin_ws/devel/env.sh" user="$(arg user)"/>
+  
+  <node pkg="strands_morse" type="generate_rgb" name="generate_rgb" output="screen">
+    <param name="camera" type="string" value="$(arg camera)"/>
+  </node>
+  <node pkg="strands_morse" type="generate_disparity" name="generate_disparity" output="screen">
+    <param name="camera" type="string" value="$(arg camera)"/>
+  </node>
+
+  <!-- Load reasonable defaults for the relative pose between cameras -->
+  <include if="$(arg publish_tf)"
+           file="$(find openni_wrapper)/launch/kinect_frames.launch">
+    <arg name="camera" value="$(arg camera)" />
+    <arg name="machine"  value="$(arg machine)"/>
+  </include>
+
+  <include file="$(find openni_wrapper)/launch/processing.launch">
+    <arg name="camera" value="$(arg camera)" /> 
+    <arg name="manager" value="$(arg manager)_$(arg camera)" /> 
+    <arg name="rgb" value="$(arg camera)/rgb/image_raw" /> 
+    <arg name="depth" value="$(arg camera)/depth/image_raw" />
+    <arg name="rgb_camera_info" value="$(arg camera)/rgb/camera_info" /> 
+    <arg name="depth_camera_info" value="$(arg camera)/depth/camera_info" />  
+    <arg name="machine"  value="$(arg machine)"/>
+  </include>
+
+</launch>
