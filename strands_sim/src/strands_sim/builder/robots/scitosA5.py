@@ -14,10 +14,10 @@ class Scitosa5(Robot):
     PTU_POSE_TOPIC        = '/ptu/state'
     BATTERY_TOPIC         = '/battery_state'
     SCAN_TOPIC            = '/scan'
-    VIDEOCAM_TOPIC        = '/head_xtion/rgb'
-    VIDEOCAM_TOPIC_SUFFIX = '/image_mono'
+    VIDEOCAM_TOPIC        = '/head_xtion/rgb8'
+    VIDEOCAM_TOPIC_SUFFIX = '/image_raw'
     SEMANTICCAM_TOPIC     = '/semcam'
-    DEPTHCAM_TOPIC        = '/head_xtion/depth/points'
+    DEPTHCAM_TOPIC        = '/head_xtion/depth/points_raw'
 
     # frame id's
     DEPTHCAM_FRAME_ID = '/head_xtion_depth_optical_frame'
@@ -97,8 +97,8 @@ class Scitosa5(Robot):
             self.ptu.append(self.videocam)
             self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
-            self.videocam.properties(cam_width=640, cam_height=480)
-            self.videocam.frequency(30)
+            self.videocam.properties(cam_width=640, cam_height=480, cam_focal=26.25)
+            self.videocam.frequency(20)
             self.videocam.add_interface('ros',
                                         topic= Scitosa5.VIDEOCAM_TOPIC,
                                         topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
@@ -125,9 +125,9 @@ class Scitosa5(Robot):
                 self.depthcam.properties(cam_near = 0.1)
 
                 # workaround for point cloud with offset
-                self.depthcam.properties(cam_width = 128, cam_height = 128)
-                bpy.context.scene.render.resolution_x = 128
-                bpy.context.scene.render.resolution_y = 128
+                self.depthcam.properties(cam_width = 640, cam_height = 480, cam_focal = 28.5)
+                bpy.context.scene.render.resolution_x = 640
+                bpy.context.scene.render.resolution_y = 480
 
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
