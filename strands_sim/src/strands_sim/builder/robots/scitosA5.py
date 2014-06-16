@@ -16,7 +16,7 @@ class Scitosa5(Robot):
     BATTERY_TOPIC         = '/battery_state'
     SCAN_TOPIC            = '/scan'
     VIDEOCAM_TOPIC        = '/head_xtion/rgb'
-    VIDEOCAM_TOPIC_SUFFIX = '/image_raw'
+    VIDEOCAM_TOPIC_SUFFIX = '/image_mono'
     SEMANTICCAM_TOPIC     = '/semcam'
     DEPTHCAM_TOPIC        = '/head_xtion/depth/points'
 

@@ -37,7 +37,7 @@ int main(int argc, char** argv)
     std::string image_input;
     std::string camera;
     pn.param<std::string>("camera", camera, std::string("head_xtion"));
-    std::string input = std::string("/") + camera + std::string("/rgb8/image_raw");
+    std::string input = std::string("/") + camera + std::string("/rgb8/image_mono");
     std::string output = std::string("/") + camera + std::string("/rgb/image_raw");
     
     ros::Subscriber sub = n.subscribe(input, 1, img_callback);
