@@ -16,7 +16,7 @@ from bham.add_objects import AddObjects
 
 robot = Scitosa5()
 #robot = Scitosa5(with_cameras = Scitosa5.WITHOUT_DEPTHCAMS)
-robot.translate(x=3.75,y=-4.1, z=1.5)
+robot.translate(x=3.75,y=-4.1, z=0.1)
 robot.rotate(z=-1.57)
 
 lift = Elevator()

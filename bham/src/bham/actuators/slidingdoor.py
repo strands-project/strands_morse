@@ -8,7 +8,7 @@ import logging; logger = logging.getLogger("morse." + __name__)
 import morse.core.actuator
 
 from morse.core.services import service, async_service, interruptible
-from morse.middleware.ros_request_manager import ros_action, ros_service,MorseAnyService
+from morse.middleware.ros_request_manager import ros_action, ros_service
 from morse.core import status
 from morse.helpers.components import add_data, add_property
 from math import sqrt
