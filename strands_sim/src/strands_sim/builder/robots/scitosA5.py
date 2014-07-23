@@ -3,6 +3,7 @@ from morse.builder.bpymorse import *
 
 class Scitosa5(Robot):
     # camera configuration
+    WITH_OPENNI = 0
     WITH_CAMERAS = 1
     WITHOUT_DEPTHCAMS = 2
     WITHOUT_CAMERAS = 3
@@ -28,6 +29,9 @@ class Scitosa5(Robot):
     A template robot model for scitosA5
     """
     def __init__(self, with_cameras = 1):
+        if with_cameras == Scitosa5.WITH_OPENNI:
+            Scitosa5.VIDEOCAM_TOPIC        = '/head_xtion/rgb8'
+            Scitosa5.DEPTHCAM_TOPIC        = '/head_xtion/depth/points_raw'
 
         # scitosA5.blend is located in the data/robots directory
         Robot.__init__(self, 'strands_sim/robots/scitos.blend')
@@ -97,8 +101,12 @@ class Scitosa5(Robot):
             self.ptu.append(self.videocam)
             self.videocam.translate(0.00, -0.045, 0.0945)
             self.videocam.rotate(0, 0, 0)
-            self.videocam.properties(cam_width=640, cam_height=480)
-            self.videocam.frequency(30)
+            if with_cameras == Scitosa5.WITH_OPENNI:
+                self.videocam.properties(cam_width=640, cam_height=480, cam_focal=26.25)
+                self.videocam.frequency(20)
+            else:
+                self.videocam.properties(cam_width=640, cam_height=480)
+                self.videocam.frequency(30)
             self.videocam.add_interface('ros',
                                         topic= Scitosa5.VIDEOCAM_TOPIC,
                                         topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
@@ -125,9 +133,14 @@ class Scitosa5(Robot):
                 self.depthcam.properties(cam_near = 0.1)
 
                 # workaround for point cloud with offset
-                self.depthcam.properties(cam_width = 128, cam_height = 128)
-                bpy.context.scene.render.resolution_x = 128
-                bpy.context.scene.render.resolution_y = 128
+                if with_cameras == Scitosa5.WITH_OPENNI:
+                    self.depthcam.properties(cam_width = 640, cam_height = 480, cam_focal = 28.5)
+                    bpy.context.scene.render.resolution_x = 640
+                    bpy.context.scene.render.resolution_y = 480
+                else:
+                    self.depthcam.properties(cam_width = 128, cam_height = 128)
+                    bpy.context.scene.render.resolution_x = 128
+                    bpy.context.scene.render.resolution_y = 128
 
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
