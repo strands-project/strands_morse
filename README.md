@@ -104,3 +104,7 @@ Example usage in the MORSE builder script:
         
         robot = Scitosa5(Scitosa5.WITHOUT_DEPTHCAMS)
 
+* with OpenNI stack generating point clouds and images, be sure to launch `roslaunch strands_morse generate_camera_topics.launch` and
+        
+        robot = Scitosa5(Scitosa5.WITH_OPENNI)
+
