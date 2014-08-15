@@ -1,0 +1,9 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="indoors-1"/> 
+
+  <!-- 2D Navigation -->
+  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+      <arg name="map" value="$(find strands_morse)/indoors-1/maps/$(arg env).yaml"/>
+  </include>
+</launch>
