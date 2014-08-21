@@ -2,6 +2,11 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fixed rosdeps
+* Contributors: Marc Hanheide
+
 0.0.2 (2014-08-21)
 ------------------
 * Added simple setup based on tutorial indoors-1 environment where I know the robot drives ok.
