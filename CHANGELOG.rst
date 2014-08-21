@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.3 (2014-08-21)
+------------------
 * fixed rosdeps
 * Contributors: Marc Hanheide
 
