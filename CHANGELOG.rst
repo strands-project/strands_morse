@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.2 (2014-08-21)
+------------------
 * Added simple setup based on tutorial indoors-1 environment where I know the robot drives ok.
 * Merge pull request `#71 <https://github.com/strands-project/strands_morse/issues/71>`_ from nilsbore/patch-1
   Just added some descriptions to the readme. No harm done.
