@@ -1,0 +1,10 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="floorsix"/>
+  
+  <!-- Scitos robot -->
+  <include file="$(find strands_morse)/launch/scitos.launch"/>
+
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="kth $(arg env).py"/>
+  
+</launch>
