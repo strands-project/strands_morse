@@ -2,6 +2,20 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request #76 from cdondrup/install
+  Adding install targets and dependencies
+* Added morse-blender-bundle to run dependencies.
+* Added topic_republisher as run_dependency
+* Added install targets
+* Merge pull request #72 from nilsbore/hydro-devel
+  [kth] Created a KTH simulator environment
+* Added a map generated with gmapping
+* Fixed cameras in a good position
+* First version of KTH simulator environment
+* Contributors: Christian Dondrup, Lars Kunze, Nils Bore
+
 0.0.3 (2014-08-21)
 ------------------
 * fixed rosdeps
