@@ -99,9 +99,51 @@ target_link_libraries(generate_rgb
 ## Install ##
 #############
 
+install(DIRECTORY launch 
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY strands_sim
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY bham
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY uol 
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY indoors-1 
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY tum 
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY tabletop_scenes
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/groovy/api/catkin/html/adv_user_guide/variables.html
 
+install(PROGRAMS
+  simulator.sh
+  morse_config.py
+  src/strand_morse/scene_converter.py 
+  src/strand_morse/scene_generator.py
+  src/strand_morse/scene_loader.py
+  src/strand_morse/scitos_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(PROGRAMS
+  morse_config.py
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 # install(PROGRAMS
@@ -110,11 +152,11 @@ target_link_libraries(generate_rgb
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS strands_morse strands_morse_node
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(TARGETS generate_disparity generate_rgb
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
