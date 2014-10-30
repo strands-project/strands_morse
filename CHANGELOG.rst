@@ -2,6 +2,21 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* There is no definition for the morse-blender-bundle for fedora yet.
+  Bloom complains:
+  Could not resolve rosdep key 'morse-blender-bundle' for distro 'heisenbug':
+  No definition of [morse-blender-bundle] for OS [fedora]
+  rosdep key : morse-blender-bundle
+  OS name    : fedora
+  OS version : heisenbug
+  Data: ubuntu:
+  precise:
+  - morse-blender-2.65-py-3.3
+  removing run_dependency for now.
+* Contributors: Christian Dondrup
+
 0.0.4 (2014-10-30)
 ------------------
 * Merge pull request #76 from cdondrup/install
