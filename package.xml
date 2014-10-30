@@ -47,6 +47,7 @@
   <run_depend>std_msgs</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>tf</run_depend>
+  <run_depend>topic_republisher</run_depend>
   <run_depend>scitos_msgs</run_depend>
   <run_depend>scitos_description</run_depend>
 
