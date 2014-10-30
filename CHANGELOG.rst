@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.5 (2014-10-30)
+------------------
 * There is no definition for the morse-blender-bundle for fedora yet.
   Bloom complains:
   Could not resolve rosdep key 'morse-blender-bundle' for distro 'heisenbug':
