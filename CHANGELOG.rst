@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2014-10-30)
+------------------
 * Merge pull request #76 from cdondrup/install
   Adding install targets and dependencies
 * Added morse-blender-bundle to run dependencies.
