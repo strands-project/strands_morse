@@ -12,7 +12,7 @@ from strands_sim.builder.robots import Scitosa5
 robot = Scitosa5()
 
 # tum_kitchen
-robot.translate(x=2.5, y=3.2, z=0.0)
+robot.translate(x=2.5, y=3.2, z=0.1)
 #robot.translate(x=1, y=7.62, z=0.0)
 #robot.rotate(0,0,1.57)
 
