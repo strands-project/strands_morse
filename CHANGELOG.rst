@@ -2,6 +2,19 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#80 <https://github.com/strands-project/strands_morse/issues/80>`_ from cdondrup/human
+  Using the standard morse human model
+* Updated README with install and set-up instructions using the morse-blender-bundle
+* Switched to standard human model
+* Merge pull request `#78 <https://github.com/strands-project/strands_morse/issues/78>`_ from cdondrup/hydro-devel
+  Fixing the "stuck in the ground" bug.
+* Fixing the stuck in the ground bug.
+  fixing `#77 <https://github.com/strands-project/strands_morse/issues/77>`_
+  I the UoL environments the robot started at z = 0.0 which sometimes let it start in the ground and prevented movement.
+* Contributors: Christian Dondrup, Marc Hanheide
+
 0.0.5 (2014-10-30)
 ------------------
 * There is no definition for the morse-blender-bundle for fedora yet.
