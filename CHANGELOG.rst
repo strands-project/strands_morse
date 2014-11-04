@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.6 (2014-11-04)
+------------------
 * Merge pull request `#80 <https://github.com/strands-project/strands_morse/issues/80>`_ from cdondrup/human
   Using the standard morse human model
 * Updated README with install and set-up instructions using the morse-blender-bundle
