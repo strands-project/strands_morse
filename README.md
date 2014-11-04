@@ -12,6 +12,13 @@ For running the simulation you would need:
 * [Blender](http://www.blender.org/download/get-blender/)
 * [ROS](http://www.ros.org/wiki/ROS/Installation)
 
+We recommend to install the morse-blender-bundle from our debian server:
+
+* Set-up instructions: [Using the STRANDS repository](https://github.com/strands-project-releases/strands-releases/wiki#using-the-strands-repository)
+* Install the bundle: `sudo apt-get install morse-blender-2.65-py-3.3`
+* Source the environment: `source /opt/morse-blender-2.65-py-3.3/.bashrc` _You might want to add this to your ~/.bashrc_
+* Check if morse has installed correctly: `morse check`
+
 Please refer to the respective installation guides to install them on your system. 
 
 The current software has been tested under the following configuration:
