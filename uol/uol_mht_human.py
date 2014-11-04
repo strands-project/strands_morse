@@ -28,7 +28,7 @@ rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id
 # The bateery state is published to /battery
 robot.battery.properties(DischargingRate=1.0)
 
-human=HumanStrands()
+human=Human()
 human.use_world_camera()
 human.translate(x=4.5, y=3.2, z=0.1)
 human.properties(Object = True)
