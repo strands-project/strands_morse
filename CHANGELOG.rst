@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.7 (2014-11-07)
+------------------
 * Merge pull request `#83 <https://github.com/strands-project/strands_morse/issues/83>`_ from strands-project/install_pose_simulator
   added install target for human_pose_simulator
 * added install target for human_pose_simulator
