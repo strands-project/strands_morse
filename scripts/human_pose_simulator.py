@@ -16,14 +16,14 @@ class PoseTransformer:
 
 
     def callback(self,data):
-        rospy.loginfo(rospy.get_caller_id()+"I heard something from frame %s",data.header.frame_id)
+        rospy.logdebug(rospy.get_caller_id()+"I heard something from frame %s",data.header.frame_id)
         if self.visible:
             t = self.tf.getLatestCommonTime(self.target_tf, data.header.frame_id)
             data.header.stamp=t
             new_pose=self.tf.transformPose(self.target_tf,data)
             self.pub.publish(new_pose)
         else:
-            rospy.loginfo("human not visible at the moment")
+            rospy.logdebug("human not visible at the moment")
 
 
     def __init__(self):
@@ -36,7 +36,7 @@ class PoseTransformer:
         self.sub = rospy.Subscriber(self.sem_cam, String, self.set_visible)
         self.pub = rospy.Publisher(self.out_topic, PoseStamped)
         self.tf = TransformListener()
-        self.visible = False
+        self.visible = True
 
         # spin() simply keeps python from exiting until this node is stopped
         rospy.spin()
