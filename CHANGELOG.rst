@@ -2,6 +2,19 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#83 <https://github.com/strands-project/strands_morse/issues/83>`_ from strands-project/install_pose_simulator
+  added install target for human_pose_simulator
+* added install target for human_pose_simulator
+* Merge pull request `#82 <https://github.com/strands-project/strands_morse/issues/82>`_ from hawesie/hydro-devel
+  Added topological map file.
+* Added topological map file.
+* Merge pull request `#81 <https://github.com/strands-project/strands_morse/issues/81>`_ from nilsbore/hydro-devel
+  Added openni_wrapper as a run dependency
+* Added openni_wrapper as a run dependency since generate_camera_topics.launch uses it
+* Contributors: Marc Hanheide, Nick Hawes, Nils Bore
+
 0.0.6 (2014-11-04)
 ------------------
 * Merge pull request `#80 <https://github.com/strands-project/strands_morse/issues/80>`_ from cdondrup/human
