@@ -132,6 +132,7 @@ install(DIRECTORY tabletop_scenes
 
 install(PROGRAMS
   simulator.sh
+  scripts/human_pose_simulator.py
   morse_config.py
   src/strand_morse/scene_converter.py 
   src/strand_morse/scene_generator.py
