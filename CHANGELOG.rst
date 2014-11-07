@@ -2,8 +2,8 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.8 (2014-11-07)
+------------------
 * Merge pull request #89 from cdondrup/dependencies
   Adding scitos_2d_navigation as run_depend
 * Merge pull request #88 from cdondrup/no-cameras
