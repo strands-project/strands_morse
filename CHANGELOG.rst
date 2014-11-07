@@ -2,6 +2,25 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request #89 from cdondrup/dependencies
+  Adding scitos_2d_navigation as run_depend
+* Merge pull request #88 from cdondrup/no-cameras
+  Added several environments without cameras to speed up simulation
+* Adding scitos_2d_navigation as run_depend
+  Fixing #87
+* Merge pull request #86 from cdondrup/dependencies
+  Reintroducing morse-blender-bundle as run_depend
+* * Added human_pose_simulator to launch file
+  * Small changes to human_pose_simulator to work with and without semantic camera
+  * in wire frame mode the semantic camera doesn't really work. Therefor visible defaults to true if there is no semantic cam info coming in.
+  * moved output to debug.
+* Adding several uol environments without cameras to make simulation quicker.
+* Reintroducing morse-blender-bundle as run_depend
+  Fixing #84
+* Contributors: Christian Dondrup
+
 0.0.7 (2014-11-07)
 ------------------
 * Merge pull request `#83 <https://github.com/strands-project/strands_morse/issues/83>`_ from strands-project/install_pose_simulator
