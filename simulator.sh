@@ -30,4 +30,5 @@ export MORSE_RESOURCE_PATH PYTHONPATH
 #cd ..
 added=`$strands_morse/morse_config.py $environment_name $path`
 echo "Running morse on $path with PYTHONPATH=$PYTHONPATH and MORSE_RESOURCE_PATH=$MORSE_RESOURCE_PATH"
+PATH=/opt/strands-morse-simulator/bin:$PATH
 morse run $environment_name $simulation
