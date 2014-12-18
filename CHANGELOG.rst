@@ -261,8 +261,8 @@ Changelog for package strands_morse
 * updated roslaunch command for tum kitchen
 * added camera sensors (video, depth, semantic) to robot model
 * Merge pull request `#17 <https://github.com/strands-project/strands_morse/issues/17>`_ from strands-project/morse-config-bug
-  use /usr/bin/env to determine python3.3 location
-* use /usr/bin/env to determine python3.3 location
+  use /usr/bin/env to determine python3 location
+* use /usr/bin/env to determine python3 location
 * Merge pull request `#14 <https://github.com/strands-project/strands_morse/issues/14>`_ from strands-project/new-package-structure
   MAJOR refactoring of repository structure; cleaning up files;  new launch files ...
 * added command for rviz

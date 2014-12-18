@@ -1,4 +1,4 @@
-#! /usr/bin/env python3.3
+#! /usr/bin/env python3
 """
 Script to check that simulation is on the morse sites list.
 """

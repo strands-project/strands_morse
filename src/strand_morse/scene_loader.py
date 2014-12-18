@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 """
 Simple API for placing objects on tables according to directional spatial
 relations.

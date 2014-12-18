@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.3
+#!/usr/bin/env python3
 """
 Simple script for converting generated scenes into a slightly different JSON format defined here:
 https://github.com/strands-project/strands_qsr/wiki/Data-sets
