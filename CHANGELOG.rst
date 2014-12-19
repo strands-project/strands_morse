@@ -9,8 +9,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.10 (2014-12-19)
+-------------------
 * Update opencv dependency for indigo.
 * indigo-0.0.9
 * Update changelog.
