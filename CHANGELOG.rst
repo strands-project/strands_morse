@@ -2,6 +2,13 @@
 Changelog for package strands_morse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set run_depend for 14.04 STRANDS MORSE.
+* Set path for 14.04 package installed MORSE.
+* Switch to system python3.
+* Contributors: Chris Burbridge
+
 0.0.8 (2014-11-07)
 ------------------
 * Merge pull request #89 from cdondrup/dependencies
