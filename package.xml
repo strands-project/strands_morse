@@ -33,7 +33,7 @@
   <build_depend>message_filters</build_depend>
   <build_depend>cv_bridge</build_depend>
   <build_depend>python-opencv</build_depend>
-  <build_depend>opencv2</build_depend>
+  <build_depend>libopencv-dev</build_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>std_msgs</run_depend>
@@ -44,7 +44,7 @@
   <run_depend>strands-morse-simulator</run_depend>
   <run_depend>cv_bridge</run_depend>
   <run_depend>python-opencv</run_depend>
-  <run_depend>opencv2</run_depend>
+  <run_depend>libopencv-dev</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>tf</run_depend>
