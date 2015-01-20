@@ -49,6 +49,7 @@ class Scitosa5(Robot):
         # Motion control
         self.motion = MotionVW()
         self.append(self.motion)
+        self.motion.properties(ControlType = 'Position') # default 'Velocity' causes motion problems
         self.motion.add_interface('ros', topic= Scitosa5.MOTION_TOPIC)
 
         # Keyboard control
