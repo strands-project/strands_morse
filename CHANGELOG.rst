@@ -19,6 +19,21 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#93 <https://github.com/strands-project/strands_morse/issues/93>`_ from kunzel/indigo-devel
+  set control type to "Position"
+* set control type to "Position"
+* indigo-0.0.10
+* Update changelog.
+* Update opencv dependency for indigo.
+* indigo-0.0.9
+* Update changelog.
+* Set run_depend for 14.04 STRANDS MORSE.
+* Set path for 14.04 package installed MORSE.
+* Switch to system python3.
+* Contributors: Chris Burbridge, Lars Kunze
+
 0.0.8 (2014-11-07)
 ------------------
 * Merge pull request #89 from cdondrup/dependencies
