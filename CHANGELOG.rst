@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.11 (2015-02-10)
+-------------------
 * Merge pull request `#93 <https://github.com/strands-project/strands_morse/issues/93>`_ from kunzel/indigo-devel
   set control type to "Position"
 * set control type to "Position"
