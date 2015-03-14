@@ -10,7 +10,7 @@ class Scitosa5(Robot):
 
     # topic names
     MOTION_TOPIC          = '/cmd_vel'
-    ODOMETRY_TOPIC        = '/odom'
+    ODOMETRY_TOPIC        = '/odom_morse'
     PTU_TOPIC             = '/ptu'
     PTU_POSE_TOPIC        = '/ptu_state'
     BATTERY_TOPIC         = '/battery_state'
