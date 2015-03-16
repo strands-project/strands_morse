@@ -4,4 +4,7 @@
 
   <!-- scitos node for handling topics and services not provided by MORSE -->
   <include file="$(find strands_morse)/launch/scitos_node.launch"/>
+  
+  <!-- launch ptu action server by default--> 
+  <include file="$(find scitos_ptu)/launch/ptu_action_server.launch"/>
 </launch>

@@ -1,4 +1,6 @@
 <launch>
-	<node pkg="strands_morse" type="scitos_node.py" name="scitos_node" output="screen"/>
-	<node pkg="topic_republisher" type="republish_ptu_jointstate.py" name="ptu_jointstate_republisher" output="screen"/>
+  <node pkg="strands_morse" type="scitos_node.py" name="scitos_node" output="screen"/>
+  <node pkg="topic_republisher" type="republish_ptu_jointstate.py" name="ptu_jointstate_republisher" output="screen"/>
+  <node pkg="topic_republisher" type="republish_ptu_state.py" name="ptu_state_republisher" output="screen"/>
+  <node pkg="topic_republisher" type="republish_odometry.py" name="odometry_republisher" output="screen"/>
 </launch>
