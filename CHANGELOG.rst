@@ -19,6 +19,26 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#104 <https://github.com/strands-project/strands_morse/issues/104>`_ from Jailander/indigo-devel
+  Adding door gaps in South wing
+* Adding door gaps in South wing
+* Merge pull request `#103 <https://github.com/strands-project/strands_morse/issues/103>`_ from Jailander/indigo-devel
+  AAF simulations
+* nicer simulation environment (needs features)
+* adding aaf simulation
+* Merge pull request `#101 <https://github.com/strands-project/strands_morse/issues/101>`_ from kunzel/indigo-devel
+  start ptu action server by default; fix issue with ptu action server and...
+* Merge pull request `#102 <https://github.com/strands-project/strands_morse/issues/102>`_ from mudrole1/indigo-devel
+  G4S simulation environment
+* g4s simulation extended by population area2 with furniture
+* Blender models and scripts for g4s simulation. Only area1 is ready.
+* fix issue `#96 <https://github.com/strands-project/strands_morse/issues/96>`_ (morse odom vs dwa planner)
+* replace floor of environment with simple plane
+* start ptu action server by default; fix issue with ptu action server and morse topic using a republisher
+* Contributors: Jaime Pulido Fentanes, Lars Kunze, Lenka, Marc Hanheide
+
 0.0.11 (2015-02-10)
 -------------------
 * Merge pull request `#93 <https://github.com/strands-project/strands_morse/issues/93>`_ from kunzel/indigo-devel
