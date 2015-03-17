@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.12 (2015-03-17)
+-------------------
 * Merge pull request `#104 <https://github.com/strands-project/strands_morse/issues/104>`_ from Jailander/indigo-devel
   Adding door gaps in South wing
 * Adding door gaps in South wing
