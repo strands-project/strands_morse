@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.13 (2015-03-19)
+-------------------
 * Merge pull request `#105 <https://github.com/strands-project/strands_morse/issues/105>`_ from Jailander/indigo-devel
   map for 2d navigation and launch file
 * map for 2d navigation and launch file
