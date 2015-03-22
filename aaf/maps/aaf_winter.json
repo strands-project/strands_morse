@@ -1,0 +1,3485 @@
+[
+ {
+  "meta": {
+   "contains": [
+    {
+     "category": "office", 
+     "description": "WheelChair Assesment", 
+     "name": "EG-W-019",
+     "at_node": true
+    }, 
+    {
+     "category": "Meeting Rooms", 
+     "description": "Beware Monkeys tiping pages", 
+     "name": "Meeting Room 2",
+     "at_node": true
+    }
+   ], 
+   "description": "Wheel Chair Waiting Area", 
+   "map": "aaf_winter", 
+   "node": "WayPoint29", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint36"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint38"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint29", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.988523, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.151074
+    }, 
+    "position": {
+     "x": -32.479202, 
+     "y": 34.724735, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Feuerloescher", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint28"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint39"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Feuerloescher", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -25.508738, 
+     "y": -28.294081, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint35", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint17"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Eingang"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint26"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Rezeption"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint35", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.019125, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.999817
+    }, 
+    "position": {
+     "x": -5.749192, 
+     "y": -12.206238, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint36", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint27"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint29"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint36", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.700202, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.713944
+    }, 
+    "position": {
+     "x": -33.028648, 
+     "y": 24.264837, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Rezeption", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint2"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint17"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Eingang"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint35"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Rezeption", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -1.955808, 
+     "y": -7.243664, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint39", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Feuerloescher"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Konferenzraum"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint39", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -33.668907, 
+     "y": -28.650003, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "contains": [
+    {
+     "category": "Meeting Rooms", 
+     "description": "Main Meeting Room", 
+     "name": "Konferenzraum - Meeting Room",
+     "at_node": true
+    }
+   ],
+   "map": "aaf_winter", 
+   "node": "Konferenzraum", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint39"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint43"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Konferenzraum", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -33.314911, 
+     "y": -41.934368, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint42", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint31"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint33"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint42", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.003275, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.999995
+    }, 
+    "position": {
+     "x": -22.075617, 
+     "y": 51.717976, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint31", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Kindergarten"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint42"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint31", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -13.043733, 
+     "y": 51.515129, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint40", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint38"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint44"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint40", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.755375, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.655293
+    }, 
+    "position": {
+     "x": -32.93314, 
+     "y": 45.610622, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "ChargingPoint", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "undocking", 
+     "node": "Station"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "ChargingPoint", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.25, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.25, 
+     "y": -0.689999997616
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint2", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Station"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint8"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Rezeption"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint2", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -3.860404, 
+     "y": -2.504234, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint44", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint40"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint46"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint44", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.998247, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": 0.059183
+    }, 
+    "position": {
+     "x": -32.653122, 
+     "y": 51.838905, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint45", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint32"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint34"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint47"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint45", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -18.482796, 
+     "y": -69.933929, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint34", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift1"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint45"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint34", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.000004, 
+     "y": -69.960472, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint46", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint33"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint44"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint46", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -27.823563, 
+     "y": 51.947357, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "contains": [ 
+    {
+     "category": "office", 
+     "description": "Walking Therapist Office", 
+     "name": "Therapist Office",
+     "at_node": true
+    }, 
+    {
+     "category": "Meeting Rooms", 
+     "description": "Walking Group Assembly point", 
+     "name": "Therapist Office",
+     "at_node": true
+    }
+   ],
+   "map": "aaf_winter", 
+   "node": "WayPoint33", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint42"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint46"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint33", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -27.195721, 
+     "y": 51.473862, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint3", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint4"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint9"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint3", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -14.6834, 
+     "y": 15.346262, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "contains": [
+    {
+     "category": "Meeting Rooms", 
+     "description": "Resting are for Walking Group", 
+     "name": "Resting Area",
+     "at_node": true
+    }
+   ],
+   "map": "aaf_winter", 
+   "node": "WayPoint4", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint9"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint15"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint4", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -7.4167, 
+     "y": 14.08824, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Lift2", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint7"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Cafeteria"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Lift2", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -3.917568, 
+     "y": -28.932112, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint8", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint2"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint15"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Eingang"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint8", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.142842, 
+     "y": 3.68726, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint9", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint4"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint15"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint25"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint9", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.035848, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.999357
+    }, 
+    "position": {
+     "x": -15.317716, 
+     "y": 12.595679, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Cafeteria", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift2"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint17"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint26"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Cafeteria", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.48241, 
+     "y": -21.367867, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint11", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint20"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint11", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -3.566679, 
+     "y": 30.748114, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint13", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint20"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Kindergarten"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint13", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.027383, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.999625
+    }, 
+    "position": {
+     "x": -3.79322, 
+     "y": 47.620613, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint14", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint7"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint12"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift1"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint14", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.667727, 
+     "y": -54.240608, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint15", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint4"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift3"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint8"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint9"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint15", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.439055, 
+     "y": 9.893503, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint16", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint18"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint25"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint16", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.98775, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": -0.156046
+    }, 
+    "position": {
+     "x": -28.042179, 
+     "y": 13.340374, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint17", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Cafeteria"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint26"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint35"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Rezeption"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint17", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -2.793657, 
+     "y": -12.938447, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint18", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint16"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint27"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint18", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -32.803051, 
+     "y": 12.672955, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint19", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint7"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint12"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint21"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint19", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -12.134777, 
+     "y": -34.574406, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint20", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint11"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint13"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint20", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.706932, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.707281
+    }, 
+    "position": {
+     "x": -3.141523, 
+     "y": 34.540035, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint21", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint19"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint28"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint21", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -18.131012, 
+     "y": -34.294861, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "contains": [ 
+    {
+     "category": "Meeting Rooms", 
+     "description": "Childrens Playground", 
+     "name": "KinderGarten",
+     "at_node": false
+    }
+   ],
+   "map": "aaf_winter", 
+   "node": "Kindergarten", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint13"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint31"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Kindergarten", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -3.999997, 
+     "y": 51.337311, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Lift1", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint14"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint32"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint34"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Lift1", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -4.000004, 
+     "y": -64.0811, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Eingang", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint8"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint35"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Rezeption"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Eingang", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -6.877693, 
+     "y": -5.125481, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint25", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint9"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint16"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint25", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -25.660284, 
+     "y": 12.776917, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint26", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Cafeteria"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint17"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint35"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint26", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.444359, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.895849
+    }, 
+    "position": {
+     "x": -5.627319, 
+     "y": -15.775929, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint27", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint18"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint36"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint27", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -33.311916, 
+     "y": 14.627496, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint28", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint21"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Feuerloescher"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint28", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -24.880518, 
+     "y": -34.387688, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint47", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint43"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint45"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint47", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -34.320602, 
+     "y": -70.024582, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint43", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint32"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "Konferenzraum"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint47"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint43", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -34.285355, 
+     "y": -63.57336, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint32", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift1"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint43"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint45"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint32", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -18.807739, 
+     "y": -63.625977, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint12", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint7"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint14"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint19"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint12", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -6.639624, 
+     "y": -36.950642, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint7", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "Lift2"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint12"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint14"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint19"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint7", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -5.110877, 
+     "y": -35.196583, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "Station", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "docking", 
+     "node": "ChargingPoint"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint2"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Station", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -1.576249, 
+     "y": 0.0, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "map": "aaf_winter", 
+   "node": "WayPoint38", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint29"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint40"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "WayPoint38", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 0.999997, 
+     "x": 0.0, 
+     "y": -0.0, 
+     "z": -0.002403
+    }, 
+    "position": {
+     "x": -32.789444, 
+     "y": 42.341656, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }, 
+ {
+  "meta": {
+   "contains": [
+    {
+     "category": "office",
+     "description": "Offices of Care Center", 
+     "name": "2nd Floor offices",
+     "at_node": false
+    },
+    {
+     "category": "office",
+     "description": "3rd floor Offices", 
+     "name": "office Floor",
+     "at_node": false
+    }
+   ],
+   "map": "aaf_winter", 
+   "node": "Lift3", 
+   "pointset": "aaf_winter_bellbot"
+  }, 
+  "node": {
+   "edges": [
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint4"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint8"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint11"
+    }, 
+    {
+     "action": "human_aware_navigation", 
+     "node": "WayPoint15"
+    }
+   ], 
+   "map": "aaf_winter", 
+   "name": "Lift3", 
+   "pointset": "aaf_winter_bellbot", 
+   "pose": {
+    "orientation": {
+     "w": 1.0, 
+     "x": 0.0, 
+     "y": 0.0, 
+     "z": 0.0
+    }, 
+    "position": {
+     "x": -3.015774, 
+     "y": 15.32205, 
+     "z": 0.0
+    }
+   }, 
+   "verts": [
+    {
+     "x": 0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": 0.689999997616
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": 0.287000000477
+    }, 
+    {
+     "x": -0.689999997616, 
+     "y": -0.287000000477
+    }, 
+    {
+     "x": -0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.287000000477, 
+     "y": -0.689999997616
+    }, 
+    {
+     "x": 0.689999997616, 
+     "y": -0.287000000477
+    }
+   ]
+  }
+ }
+]
