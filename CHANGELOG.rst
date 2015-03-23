@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#107 <https://github.com/strands-project/strands_morse/issues/107>`_ from strands-project/marc-hanheide-patch-1
+  added aaf install target
+* added aaf install target
+* Contributors: Marc Hanheide
+
 0.0.13 (2015-03-19)
 -------------------
 * Merge pull request `#105 <https://github.com/strands-project/strands_morse/issues/105>`_ from Jailander/indigo-devel
