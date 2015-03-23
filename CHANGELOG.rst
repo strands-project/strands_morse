@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.15 (2015-03-23)
+-------------------
 * Merge pull request `#108 <https://github.com/strands-project/strands_morse/issues/108>`_ from Jailander/master
   improvements to simulation
 * improvements to simulation
