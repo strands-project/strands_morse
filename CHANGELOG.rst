@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.14 (2015-03-23)
+-------------------
 * Merge pull request `#107 <https://github.com/strands-project/strands_morse/issues/107>`_ from strands-project/marc-hanheide-patch-1
   added aaf install target
 * added aaf install target
