@@ -19,6 +19,27 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+0.0.15 (2015-03-23)
+-------------------
+* Merge pull request `#108 <https://github.com/strands-project/strands_morse/issues/108>`_ from Jailander/master
+  improvements to simulation
+* improvements to simulation
+* Contributors: Jaime Pulido Fentanes, Marc Hanheide
+
+0.0.14 (2015-03-23)
+-------------------
+* Merge pull request `#107 <https://github.com/strands-project/strands_morse/issues/107>`_ from strands-project/marc-hanheide-patch-1
+  added aaf install target
+* added aaf install target
+* Contributors: Marc Hanheide
+
+0.0.13 (2015-03-19)
+-------------------
+* Merge pull request `#105 <https://github.com/strands-project/strands_morse/issues/105>`_ from Jailander/indigo-devel
+  map for 2d navigation and launch file
+* map for 2d navigation and launch file
+* Contributors: Jaime Pulido Fentanes, Marc Hanheide
+
 0.0.12 (2015-03-17)
 -------------------
 * Merge pull request `#104 <https://github.com/strands-project/strands_morse/issues/104>`_ from Jailander/indigo-devel
