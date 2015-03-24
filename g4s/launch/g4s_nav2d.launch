@@ -1,0 +1,9 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="g4s_sim_cropped"/> 
+
+  <!-- 2D Navigation -->
+  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+      <arg name="map" value="$(find strands_morse)/g4s/maps/$(arg env).yaml"/>
+  </include>
+</launch>
