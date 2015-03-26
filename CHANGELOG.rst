@@ -19,6 +19,29 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#114 <https://github.com/strands-project/strands_morse/issues/114>`_ from nilsbore/no_machine_tags
+  Remove / from beginning of camera topics
+* Merge pull request `#113 <https://github.com/strands-project/strands_morse/issues/113>`_ from strands-project/no_machine_tags
+  changed AAF sim to use full-scale openNI simulation
+* Changed the camera frame so that they work with OpenNI topics generation
+* Merge pull request `#111 <https://github.com/strands-project/strands_morse/issues/111>`_ from strands-project/cburbridge-remove_abs_path
+  Remove absolute path for G4S map.
+* made aaf demo to use the full-scale OpenNI simulation including all its topics.
+* removed the machine tags as they stopped this to be included from another launch file (aaf_sim).
+  In fact, these tags don't make much sense in strands_morse, I believe.
+* Remove absolute path for G4S map.
+* Merge pull request `#110 <https://github.com/strands-project/strands_morse/issues/110>`_ from kunzel/indigo-devel
+  add map of simulated environment (g4s)
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into indigo-devel
+* add map of simulated environment
+* Merge pull request `#109 <https://github.com/strands-project/strands_morse/issues/109>`_ from kunzel/indigo-devel
+  add launch file for navigation and real-world map
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into indigo-devel
+* add launch file for navigation and real-world map
+* Contributors: Chris Burbridge, Lars Kunze, Marc Hanheide, Nick Hawes, Nils Bore
+
 0.0.15 (2015-03-23)
 -------------------
 * Merge pull request `#108 <https://github.com/strands-project/strands_morse/issues/108>`_ from Jailander/master
