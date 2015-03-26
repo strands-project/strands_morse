@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.16 (2015-03-26)
+-------------------
 * Merge pull request `#114 <https://github.com/strands-project/strands_morse/issues/114>`_ from nilsbore/no_machine_tags
   Remove / from beginning of camera topics
 * Merge pull request `#113 <https://github.com/strands-project/strands_morse/issues/113>`_ from strands-project/no_machine_tags
