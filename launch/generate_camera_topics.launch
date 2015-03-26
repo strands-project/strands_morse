@@ -5,6 +5,7 @@
   <arg name="user"   	default="" />
   <arg name="publish_tf" default="false" />
  
+  <machine name="$(arg machine)" address="$(arg machine)" user="$(arg user)"/>
   
   <node pkg="strands_morse" type="generate_rgb" name="generate_rgb" output="screen">
     <param name="camera" type="string" value="$(arg camera)"/>
