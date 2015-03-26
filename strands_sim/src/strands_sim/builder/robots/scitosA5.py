@@ -21,10 +21,10 @@ class Scitosa5(Robot):
     DEPTHCAM_TOPIC        = '/head_xtion/depth/points'
 
     # frame id's
-    DEPTHCAM_FRAME_ID = '/head_xtion_depth_optical_frame'
-    VIDEOCAM_FRAME_ID = '/head_xtion_rgb_optical_frame'
+    DEPTHCAM_FRAME_ID = 'head_xtion_depth_optical_frame'
+    VIDEOCAM_FRAME_ID = 'head_xtion_rgb_optical_frame'
     SEMANTICCAM_FRAME_ID = '/head_xtion_rgb_optical_frame'
-        
+
     """
     A template robot model for scitosA5
     """
@@ -71,7 +71,7 @@ class Scitosa5(Robot):
         self.ptu_pose = PTUPosture('ptu_pose')
         self.ptu.append(self.ptu_pose)
         self.ptu_pose.add_interface('ros', topic= Scitosa5.PTU_POSE_TOPIC)
-        
+
         # Battery
         self.battery = BatteryStateSensor()
         self.battery.translate(x=0.00,y=0.0,z=0.0)
@@ -85,7 +85,7 @@ class Scitosa5(Robot):
         self.append(self.odometry)
         self.odometry.add_interface('ros', topic= Scitosa5.ODOMETRY_TOPIC)
         #self.odometry.frequency(9.9)
-        
+
         # Laserscanner
         self.scan = Hokuyo()
         self.scan.translate(x=0.07, z=0.365)
@@ -112,7 +112,7 @@ class Scitosa5(Robot):
                                         topic= Scitosa5.VIDEOCAM_TOPIC,
                                         topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
                                         frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
-            
+
             # Semantic Camera
             self.semanticcamera = SemanticCamera()
             self.ptu.append(self.semanticcamera)
@@ -120,7 +120,7 @@ class Scitosa5(Robot):
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.properties(cam_width=640, cam_height=480, cam_far=2.5, cam_near= 0.8, cam_focal=69.5)
             self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
-            
+
             if with_cameras < Scitosa5.WITHOUT_DEPTHCAMS:
                 # Depth camera
                 self.depthcam = DepthCamera() # Kinect() RVIZ crashes when depthcam data is visualized!?
@@ -145,7 +145,3 @@ class Scitosa5(Robot):
 
                 self.depthcam.rotate(0, 0, 0)
                 self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
-
-
-
-
