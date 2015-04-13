@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#120 <https://github.com/strands-project/strands_morse/issues/120>`_ from cdondrup/indigo-devel
+  No camera, wireframe version of aaf.
+* No camera, wireframe version of aaf.
+* Contributors: Christian Dondrup, Marc Hanheide
+
 0.0.18 (2015-03-31)
 -------------------
 
