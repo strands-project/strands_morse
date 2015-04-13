@@ -19,6 +19,9 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+
 0.0.19 (2015-04-13)
 -------------------
 * Merge pull request `#120 <https://github.com/strands-project/strands_morse/issues/120>`_ from cdondrup/indigo-devel
