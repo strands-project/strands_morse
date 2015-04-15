@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.21 (2015-04-15)
+-------------------
 * Merge pull request `#121 <https://github.com/strands-project/strands_morse/issues/121>`_ from cburbridge/patch-1
   Adds G4S install target.
 * Merge pull request `#118 <https://github.com/strands-project/strands_morse/issues/118>`_ from hawesie/indigo-devel
