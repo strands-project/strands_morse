@@ -19,6 +19,25 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#121 <https://github.com/strands-project/strands_morse/issues/121>`_ from cburbridge/patch-1
+  Adds G4S install target.
+* Merge pull request `#118 <https://github.com/strands-project/strands_morse/issues/118>`_ from hawesie/indigo-devel
+  Added topological map file for g4s.
+* Add G4S install target.
+* Swithced to human aware
+* Added office-sized influence zones and corrected a couple of edges.
+* Added topological map file for g4s.
+  This should be added to teh datacentre as follows
+  ```
+  rosrun topological_utils insert_map.py `rospack find strands_morse`/g4s/mapsg4s_sim.tplg g4s_sim g4s_sim
+  rosrun topological_utils migrate.py
+  ```
+  The second command is needed to update the inserted map to the current format.
+  The map currently has no docking station to the charging point is reaching be normal movement (human-aware).
+* Contributors: Chris Burbridge, Marc Hanheide, Nick Hawes
+
 0.0.20 (2015-04-13)
 -------------------
 
