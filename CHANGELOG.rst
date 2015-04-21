@@ -19,6 +19,12 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Added topics to visualise main things.
+* Added rviz file for cs_lg sim
+* Contributors: Nick Hawes
+
 0.0.21 (2015-04-15)
 -------------------
 * Merge pull request `#121 <https://github.com/strands-project/strands_morse/issues/121>`_ from cburbridge/patch-1
