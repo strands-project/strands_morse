@@ -1,6 +1,6 @@
 <launch>
   <!-- declare arg to be passed in -->
-  <arg name="env" default="g4s_sim_cropped"/> 
+  <arg name="env" default="g4s_y2"/> 
 
   <!-- 2D Navigation -->
   <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
