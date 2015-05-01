@@ -275,7 +275,6 @@ node:
 		13.450971,9.459858,0.000000,0.000000,0.000000,0.915096,0.403237
 	edges:
 		 WayPoint20, human_aware_navigation
-		 WayPoint20, human_aware_navigation
 	vertices:
 		0.690000,0.287000
 		0.287000,0.690000
@@ -294,7 +293,6 @@ node:
 		 WayPoint25, doorPassing
 		 WayPoint27, human_aware_navigation
 		 WayPoint28, human_aware_navigation
-		 WayPoint28, human_aware_navigation
 	vertices:
 		0.690000,0.287000
 		0.287000,0.690000
@@ -309,7 +307,6 @@ node:
 	waypoint:
 		16.949112,12.924310,0.000000,0.000000,0.000000,0.934579,0.355756
 	edges:
-		 WayPoint24, human_aware_navigation
 		 WayPoint24, human_aware_navigation
 	vertices:
 		0.690000,0.287000
@@ -328,7 +325,6 @@ node:
 		 WayPoint24, human_aware_navigation
 		 WayPoint29, doorPassing
 		 WayPoint31, human_aware_navigation
-		 WayPoint32, human_aware_navigation
 		 WayPoint32, human_aware_navigation
 	vertices:
 		0.690000,0.287000
