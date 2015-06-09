@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.23 (2015-06-09)
+-------------------
 * Merge pull request `#127 <https://github.com/strands-project/strands_morse/issues/127>`_ from hawesie/indigo-devel
   Added ALOOF top map.
 * Added ALOOF top map.
