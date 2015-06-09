@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.0.24 (2015-06-09)
+-------------------
 * Merge pull request `#128 <https://github.com/strands-project/strands_morse/issues/128>`_ from hawesie/indigo-devel
   Added install target for aloof sim.
 * Added basic rviz file for aloof viz.
