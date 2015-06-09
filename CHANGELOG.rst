@@ -19,6 +19,23 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#127 <https://github.com/strands-project/strands_morse/issues/127>`_ from hawesie/indigo-devel
+  Added ALOOF top map.
+* Added ALOOF top map.
+* Merge pull request `#125 <https://github.com/strands-project/strands_morse/issues/125>`_ from kunzel/indigo-devel
+  add simple aloof environment
+* add simple aloof environment
+* Merge pull request `#124 <https://github.com/strands-project/strands_morse/issues/124>`_ from kunzel/indigo-devel
+  remove edge duplicates in g4s top. map
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into indigo-devel
+* fixed issues with waypoints
+* Merge pull request `#123 <https://github.com/strands-project/strands_morse/issues/123>`_ from kunzel/indigo-devel
+  add maps from g4s y2 deployment
+* add maps from g4s y2 deployment
+* Contributors: Lars Kunze, Nick Hawes
+
 0.0.22 (2015-04-21)
 -------------------
 * Added topics to visualise main things.
