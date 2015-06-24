@@ -28,13 +28,11 @@ docking_station.rotate(0,0,0)
 
 docking_station_label = PassiveObject('strands_sim/robots/docking_station_label.blend','dockingStationLabel')
 docking_station_label.properties(Object = True)
-docking_station_label.translate(-1.7,-2.45,1.65)
+docking_station_label.translate(-1.62,-2.45,1.65)
 docking_station_label.rotate(1.57,0.0,-1.57)
 
 # Set the environment aaf_outline
 model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/UMIC1st.blend')
-#model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/aaf_outline.blend')
-#model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/AAFSim.blend')
 
 #env = Environment(model_file,fastmode=False)
 env = Environment(model_file,fastmode=False)
