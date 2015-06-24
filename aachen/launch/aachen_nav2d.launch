@@ -1,0 +1,11 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="UMIC_first_floor"/> 
+
+
+
+  <!-- 2D Navigation -->
+  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+      <arg name="map" value="$(find strands_morse)/aachen/maps/$(arg env).yaml"/>
+  </include>
+</launch>
