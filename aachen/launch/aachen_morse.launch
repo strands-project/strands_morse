@@ -1,0 +1,9 @@
+<launch>
+  <arg name="env" default="aachen"/> 
+
+  <!-- Scitos robot -->
+  <include file="$(find strands_morse)/launch/scitos.launch"/>
+  
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="aachen $(arg env).py"/>
+
+</launch>
