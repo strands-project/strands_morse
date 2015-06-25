@@ -19,6 +19,18 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#131 <https://github.com/strands-project/strands_morse/issues/131>`_ from Jailander/aachen
+  AAChen simulation
+* fixes in blender file
+* adding topological map
+* AAChen simulation
+* Merge pull request `#130 <https://github.com/strands-project/strands_morse/issues/130>`_ from jayyoung/indigo-devel
+  ALOOF: Robot staring at a populated table
+* ALOOF: Robot staring at a populated table
+* Contributors: Jaime Pulido Fentanes, Marc Hanheide, Nick Hawes, jay
+
 0.0.24 (2015-06-09)
 -------------------
 * Merge pull request `#128 <https://github.com/strands-project/strands_morse/issues/128>`_ from hawesie/indigo-devel
