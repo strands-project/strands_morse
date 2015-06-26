@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.1 (2015-06-26)
+------------------
 * added fast_mode for Aachen sim
 * Contributors: Marc Hanheide
 
