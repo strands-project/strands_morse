@@ -35,6 +35,10 @@ human.properties(Object = True)
 
 pose = Pose()
 human.append(pose)
+motion = MotionVW()
+human.append(motion)
+motion.properties(ControlType = 'Velocity')
+motion.add_stream('ros')
 
 pose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id='/world', child_frame_id="/human")
 pose.add_stream('ros', frame_id='/world')
