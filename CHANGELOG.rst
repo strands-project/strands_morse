@@ -19,6 +19,14 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#133 <https://github.com/strands-project/strands_morse/issues/133>`_ from cdondrup/move_human
+  Adding movement controller to human for UOL_MHT enviroment
+* Adding static transform publisher from map to world for human position transformation.
+* Adding movement controller to human. Now accepts cmd_vels.
+* Contributors: Christian Dondrup, Marc Hanheide
+
 0.1.1 (2015-06-26)
 ------------------
 * added fast_mode for Aachen sim
