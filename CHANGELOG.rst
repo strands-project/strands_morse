@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.2 (2015-07-22)
+------------------
 * Merge pull request `#133 <https://github.com/strands-project/strands_morse/issues/133>`_ from cdondrup/move_human
   Adding movement controller to human for UOL_MHT enviroment
 * Adding static transform publisher from map to world for human position transformation.
