@@ -1,0 +1,11 @@
+<launch>
+  <arg name="env" default="uol_ww"/> 
+
+  <!-- Scitos robot -->
+  <include file="$(find strands_morse)/launch/scitos.launch"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="2.5 2.7 0.01 0 0 0 /world /map 50" respawn="true"/>
+  
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="uol $(arg env).py"/>
+  <node pkg="strands_morse" type="human_pose_simulator.py" respawn="true" name="human_pose_simulator" output="screen"/>
+</launch>
