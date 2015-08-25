@@ -12,9 +12,9 @@ from strands_sim.builder.robots import Scitosa5
 robot = Scitosa5()
 
 # tum_kitchen
-robot.translate(x=-9, y=-2, z=0.1)
+robot.translate(x=-11, y=-2.5, z=0.1)
 #robot.translate(x=1, y=7.62, z=0.0)
-#robot.rotate(0,0,1.57)
+robot.rotate(0,0,3.141592)
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
@@ -34,4 +34,5 @@ docking_station_label.rotate(1.57,0,1.57)
 # Set the environment
 model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/BL.blend')
 env = Environment(model_file,fastmode=False)
-env.aim_camera([1.0470, 0, 0.7854])
+env.place_camera([-2.0, 0.0, 6.0])
+env.aim_camera([1.0470, 0, 1.7854])
