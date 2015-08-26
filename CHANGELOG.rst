@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.3 (2015-08-26)
+------------------
 * Merge pull request `#135 <https://github.com/strands-project/strands_morse/issues/135>`_ from cdondrup/human_summer_school
   Adding bl environment containing human
 * Adding fast modes.
