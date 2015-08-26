@@ -1,5 +1,5 @@
 <launch>
-  <arg name="env" default="uol_mht"/> 
+  <arg name="env" default="uol_bl"/> 
 
   <!-- Scitos robot -->
   <include file="$(find strands_morse)/launch/scitos.launch"/>

@@ -2,10 +2,11 @@
   <!-- declare arg to be passed in -->
   <arg name="env" default="uol_mht"/> 
 
-
-
   <!-- 2D Navigation -->
   <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
       <arg name="map" value="$(find strands_morse)/uol/maps/$(arg env).yaml"/>
   </include>
+
+  <node pkg="tf" type="static_transform_publisher" name="static_transform_publisher" args="2.5 2.7 0.01 0 0 0 /world /map 100" respawn="true"/>
+
 </launch>

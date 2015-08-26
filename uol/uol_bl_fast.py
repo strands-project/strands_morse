@@ -9,7 +9,7 @@ from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
 
 #robot = Ranger()
-robot = Scitosa5(with_cameras=Scitosa5.WITH_OPENNI)
+robot = Scitosa5(with_cameras=Scitosa5.WITHOUT_CAMERAS)
 
 # tum_kitchen
 robot.translate(x=-11, y=-2.5, z=0.1)
@@ -33,6 +33,6 @@ docking_station_label.rotate(1.57,0,1.57)
 
 # Set the environment
 model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/BL.blend')
-env = Environment(model_file,fastmode=False)
+env = Environment(model_file,fastmode=True)
 env.place_camera([-2.0, 0.0, 6.0])
 env.aim_camera([1.0470, 0, 1.7854])
