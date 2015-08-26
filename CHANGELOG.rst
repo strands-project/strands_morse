@@ -19,6 +19,22 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#135 <https://github.com/strands-project/strands_morse/issues/135>`_ from cdondrup/human_summer_school
+  Adding bl environment containing human
+* Adding fast modes.
+* Adding bl_human environment
+* Adding openni support to bl environment
+* Moving static transform publisher for mht environment from morse launch file to nav launch file.
+* Fixing wrong rotation in static transform publisher and increasing publishing rate to prevent tf warnings.
+* Adding specific bl launch file
+* Merge pull request `#134 <https://github.com/strands-project/strands_morse/issues/134>`_ from Jailander/summer_school
+  Adding Summer School Location simulation
+* adding navigation launch file and maps for UOL B&L simulation
+* Adding Summer School Location simulation
+* Contributors: Christian Dondrup, Jaime Pulido Fentanes, Marc Hanheide
+
 0.1.2 (2015-07-22)
 ------------------
 * Merge pull request `#133 <https://github.com/strands-project/strands_morse/issues/133>`_ from cdondrup/move_human
