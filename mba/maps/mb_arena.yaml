@@ -1,0 +1,1108 @@
+- meta:
+    map: mb_arena
+    node: WayPoint6
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint6_WayPoint5
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint5
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint6_WayPoint7
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint7
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint6
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: -0.313013281586
+        x: 0.0
+        y: 0.0
+        z: 0.949748748644
+      position:
+        x: 4.00116672289
+        y: 4.09998374933
+        z: 5.92023652324e-11
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint7
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint7_WayPoint6
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint6
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint7_WayPoint8
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint8
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint7_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint7_WayPoint16
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint16
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint7
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: -0.000810280607204
+        x: 0.0
+        y: 0.0
+        z: 0.999999671723
+      position:
+        x: 0.0654996174646
+        y: 4.09914342793
+        z: -1.80098889968e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint8
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint8_WayPoint7
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint7
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint8_WayPoint9
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint9
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint8
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.957811433329
+        x: 0.0
+        y: 0.0
+        z: -0.287397387227
+      position:
+        x: -3.98084453958
+        y: 3.92253493908
+        z: -5.92846050029e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint11
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint11_WayPoint12
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint12
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint11_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint11
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.417018449588
+        x: 0.0
+        y: 0.0
+        z: 0.908898021069
+      position:
+        x: -1.97609732503
+        y: 1.56144908297
+        z: -9.94936841248e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint12
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint12_WayPoint1
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint12_WayPoint9
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint9
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint12_WayPoint11
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint11
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint12_WayPoint13
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint13
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint12_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint12
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.672768447581
+        x: 0.0
+        y: 0.0
+        z: -0.739853104298
+      position:
+        x: -1.96823597325
+        y: -1.28484079648
+        z: 1.42563992556e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint13
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint13_WayPoint12
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint12
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint13_WayPoint14
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint14
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint13
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.735456358368
+        x: 0.0
+        y: 0.0
+        z: 0.677572095747
+      position:
+        x: -2.0398626441
+        y: -2.64479102978
+        z: -1.34964688037e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint14
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint14_WayPoint13
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint13
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint14
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.707190442198
+        x: 0.0
+        y: 0.0
+        z: 0.707023110275
+      position:
+        x: -2.07650020304
+        y: -4.38537570001
+        z: -1.38777878078e-17
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint15
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint15_WayPoint9
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint9
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint7
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint7
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint1
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint11
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint11
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint12
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint12
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint16
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint16
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint15_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint15
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.999914927905
+        x: 0.0
+        y: 0.0
+        z: 0.0130436556176
+      position:
+        x: 0.0559467153349
+        y: 0.351129435293
+        z: 1.10115043472e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint4
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint4_WayPoint3
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint3
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint4_WayPoint5
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint5
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint4_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint4
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.71452136035
+        x: 0.0
+        y: 0.0
+        z: 0.699613625942
+      position:
+        x: 4.02642980503
+        y: -3.45440902745
+        z: -1.24369989307e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint10
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint10_WayPoint9
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint9
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint10
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.862297474381
+        x: 0.0
+        y: 0.0
+        z: -0.50640207906
+      position:
+        x: -3.97913741864
+        y: -3.54730209622
+        z: 1.95614184573e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint2
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint2_WayPoint1
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint2_WayPoint3
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint3
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint2
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.999026931963
+        x: 0.0
+        y: 0.0
+        z: -0.044104299242
+      position:
+        x: -0.554188780573
+        y: -4.33216395649
+        z: -2.31028016162e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint5
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint5_WayPoint4
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint4
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint5_WayPoint6
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint6
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint5_WayPoint16
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint16
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint5
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: -0.039769271944
+        x: 0.0
+        y: 0.0
+        z: 0.999208889577
+      position:
+        x: 4.09982374017
+        y: 0.439191991399
+        z: 2.09523504102e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint9
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint9_WayPoint8
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint8
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint9_WayPoint10
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint10
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint9_WayPoint12
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint12
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint9_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint9
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.68041182632
+        x: 0.0
+        y: 0.0
+        z: 0.732829957497
+      position:
+        x: -3.99404655759
+        y: -0.0699698367233
+        z: -1.26502364139e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint3
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint3_WayPoint2
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint3_WayPoint4
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint4
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint3_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint3
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.00273838595168
+        x: 0.0
+        y: 0.0
+        z: 0.999996250614
+      position:
+        x: 3.24044239382
+        y: -4.52215597631
+        z: -6.40119804385e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint1
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint1_WayPoint2
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint2
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint1_WayPoint12
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint12
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint1_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint1_WayPoint16
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint16
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint1_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint1
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.684937328442
+        x: 0.0
+        y: 0.0
+        z: -0.728601987443
+      position:
+        x: -0.478935675162
+        y: -1.40010157701
+        z: -2.77256828607e-11
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint16
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint16_WayPoint5
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint5
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint16_WayPoint7
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint7
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint16_WayPoint1
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint16_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint16_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint16
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.999986275955
+        x: 0.0
+        y: 0.0
+        z: -0.00523907446699
+      position:
+        x: 2.53356017088
+        y: 0.394403026362
+        z: -1.6235464223e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint17
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint17_WayPoint18
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint18
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint17
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: -0.276625268514
+        x: 0.0
+        y: 0.0
+        z: 0.960977866977
+      position:
+        x: 0.469348318115
+        y: -3.50168086572
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: WayPoint18
+    pointset: mb_arena
+  node:
+    edges:
+    - action: move_base
+      edge_id: WayPoint18_WayPoint15
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint15
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint18_WayPoint3
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint3
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint18_WayPoint1
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint18_WayPoint16
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint16
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint18_WayPoint17
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint17
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: WayPoint18_WayPoint4
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint4
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: WayPoint18
+    pointset: mb_arena
+    pose:
+      orientation:
+        w: 0.895895063877
+        x: 0.0
+        y: 0.0
+        z: -0.444265663624
+      position:
+        x: 2.14241075516
+        y: -2.37067818642
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1

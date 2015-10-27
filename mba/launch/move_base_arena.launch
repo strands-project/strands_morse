@@ -1,0 +1,9 @@
+<launch>
+  <arg name="env" default="mba"/> 
+
+  <!-- Scitos robot -->
+  <include file="$(find strands_morse)/launch/scitos.launch"/>
+
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="mba $(arg env).py"/>
+  <node pkg="strands_morse" type="human_pose_simulator.py" respawn="true" name="human_pose_simulator" output="screen"/>
+</launch>
