@@ -1,0 +1,92 @@
+- meta:
+    map: mb_arena
+    node: End
+    pointset: mb_test3
+  node:
+    edges:
+    - action: move_base
+      edge_id: End_Start
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: WayPoint1
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: End
+    pointset: mb_test3
+    pose:
+      orientation:
+        w: 0.999026931963
+        x: 0.0
+        y: 0.0
+        z: -0.044104299242
+      position:
+        x: -0.554188780573
+        y: -4.33216395649
+        z: -2.31028016162e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: Start
+    pointset: mb_test3
+  node:
+    edges:
+    - action: move_base
+      edge_id: Start_End
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: End
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: Start
+    pointset: mb_test3
+    pose:
+      orientation:
+        w: 0.00273838595168
+        x: 0.0
+        y: 0.0
+        z: 0.999996250614
+      position:
+        x: 3.24044239382
+        y: -4.52215597631
+        z: -6.40119804385e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
