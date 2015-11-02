@@ -1,0 +1,145 @@
+- meta:
+    map: mb_arena
+    node: Start
+    pointset: mb_test0
+  node:
+    edges:
+    - action: move_base
+      edge_id: Start_Intermediate
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: Start
+    pointset: mb_test0
+    pose:
+      orientation:
+        w: -0.000810280607204
+        x: 0.0
+        y: 0.0
+        z: 0.999999671723
+      position:
+        x: 0.0654996174646
+        y: 4.09914342793
+        z: -1.80098889968e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: Intermediate
+    pointset: mb_test0
+  node:
+    edges:
+    - action: move_base
+      edge_id: Intermediate_Start
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Start
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Intermediate_End
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: End
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: Intermediate
+    pointset: mb_test0
+    pose:
+      orientation:
+        w: 0.957811433329
+        x: 0.0
+        y: 0.0
+        z: -0.287397387227
+      position:
+        x: -3.98084453958
+        y: 3.92253493908
+        z: -5.92846050029e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: End
+    pointset: mb_test0
+  node:
+    edges:
+    - action: move_base
+      edge_id: End_Intermediate
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: End
+    pointset: mb_test0
+    pose:
+      orientation:
+        w: 0.68041182632
+        x: 0.0
+        y: 0.0
+        z: 0.732829957497
+      position:
+        x: -3.99404655759
+        y: -0.0699698367233
+        z: -1.26502364139e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1

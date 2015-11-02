@@ -11,8 +11,9 @@ from strands_sim.builder.robots import Scitosa5
 #robot = Ranger()
 robot = Scitosa5()
 
-robot.translate(x=0.1, y=0.1, z=0.1)
-
+#robot.translate(x=0.1, y=0.1, z=0.1)
+robot.translate(x=-1.5, y=2.6, z=0.1)
+robot.rotate(0,0,1.57)
 rpose = Pose()
 robot.append(rpose)
 rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id='/world', child_frame_id="/robot")

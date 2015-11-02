@@ -1,29 +1,29 @@
 - meta:
     map: mb_arena
-    node: Start
-    pointset: mb_test3
+    node: End
+    pointset: mb_test9
   node:
     edges:
     - action: move_base
-      edge_id: Start_End
+      edge_id: End_Start
       inflation_radius: 0.0
       map_2d: mb_arena
-      node: End
+      node: Start
       recovery_behaviours_config: ''
       top_vel: 0.55
     localise_by_topic: ''
     map: mb_arena
-    name: Start
-    pointset: mb_test3
+    name: End
+    pointset: mb_test9
     pose:
       orientation:
-        w: 0.38268
-        x: 0
-        y: 0
-        z: 0.92388
+        w: 0.0
+        x: 0.0
+        y: 0.0
+        z: 1.0
       position:
-        x: -1.5
-        y: 2.6
+        x: -0.55
+        y: -4.5
         z: 0.0
     verts:
     - x: 0.689999997616
@@ -46,30 +46,30 @@
     yaw_goal_tolerance: 0.1
 - meta:
     map: mb_arena
-    node: End
-    pointset: mb_test3
+    node: Start
+    pointset: mb_test9
   node:
     edges:
     - action: move_base
-      edge_id: End_Start
+      edge_id: Start_End
       inflation_radius: 0.0
       map_2d: mb_arena
-      node: Start
+      node: End
       recovery_behaviours_config: ''
       top_vel: 0.55
     localise_by_topic: ''
     map: mb_arena
-    name: End
-    pointset: mb_test3
+    name: Start
+    pointset: mb_test9
     pose:
       orientation:
-        w: 0.70711
+        w: 0.0
         x: 0.0
         y: 0.0
-        z: -0.70711
+        z: 1.0
       position:
-        x: -1.5
-        y: -0.5
+        x: 3.25
+        y: -4.5
         z: 0.0
     verts:
     - x: 0.689999997616
