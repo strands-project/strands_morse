@@ -5,10 +5,10 @@
   node:
     edges:
     - action: move_base
-      edge_id: Start_Middle
+      edge_id: Start_Intermediate
       inflation_radius: 0.0
       map_2d: mb_arena
-      node: Middle
+      node: Intermediate
       recovery_behaviours_config: ''
       top_vel: 0.55
     localise_by_topic: ''
@@ -46,19 +46,19 @@
     yaw_goal_tolerance: 0.1
 - meta:
     map: mb_arena
-    node: Middle
+    node: Intermediate
     pointset: mb_test1
   node:
     edges:
     - action: move_base
-      edge_id: Middle_Start
+      edge_id: Intermediate_Start
       inflation_radius: 0.0
       map_2d: mb_arena
       node: Start
       recovery_behaviours_config: ''
       top_vel: 0.55
     - action: move_base
-      edge_id: Middle_End
+      edge_id: Intermediate_End
       inflation_radius: 0.0
       map_2d: mb_arena
       node: End
@@ -66,7 +66,7 @@
       top_vel: 0.55
     localise_by_topic: ''
     map: mb_arena
-    name: Middle
+    name: Intermediate
     pointset: mb_test1
     pose:
       orientation:
@@ -104,10 +104,10 @@
   node:
     edges:
     - action: move_base
-      edge_id: End_Middle
+      edge_id: End_Intermediate
       inflation_radius: 0.0
       map_2d: mb_arena
-      node: Middle
+      node: Intermediate
       recovery_behaviours_config: ''
       top_vel: 0.55
     localise_by_topic: ''

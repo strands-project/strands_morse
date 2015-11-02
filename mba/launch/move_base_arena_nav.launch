@@ -7,6 +7,6 @@
       <arg name="map" value="$(find strands_morse)/mba/maps/$(arg env).yaml"/>
   </include>
   
-  <node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="-11 -2.5 0.1 0 0 3.141592 0 /world /map 100"/>
+  <!--<node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="-11 -2.5 0.1 0 0 3.141592 0 /world /map 100"/>-->
    
 </launch>

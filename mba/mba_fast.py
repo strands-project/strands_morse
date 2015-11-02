@@ -11,10 +11,10 @@ from strands_sim.builder.robots import Scitosa5
 #robot = Ranger()
 robot = Scitosa5(with_cameras=Scitosa5.WITHOUT_CAMERAS)
 
-# tum_kitchen
 robot.translate(x=0.1, y=0.1, z=0.1)
-#robot.translate(x=1, y=7.62, z=0.0)
-#robot.rotate(0,0,1.57)
+rpose = Pose()
+robot.append(rpose)
+rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id='/world', child_frame_id="/robot")
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
