@@ -34,4 +34,5 @@ robot.battery.properties(DischargingRate=0.0)
 # Set the environment
 model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/move_base_arena.blend')
 env = Environment(model_file,fastmode=True)
-env.aim_camera([1.0470, 0, 0.7854])
+env.set_camera_location([0.0,-2.5,15.0])
+env.set_camera_rotation([0.16742943514, 0.0,0.0])
