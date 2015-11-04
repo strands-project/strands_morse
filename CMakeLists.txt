@@ -143,6 +143,9 @@ install(DIRECTORY aloof
       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
       )
 
+install(DIRECTORY mba
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/groovy/api/catkin/html/adv_user_guide/variables.html
