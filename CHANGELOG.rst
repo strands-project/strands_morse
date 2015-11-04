@@ -19,6 +19,32 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#138 <https://github.com/strands-project/strands_morse/issues/138>`_ from Jailander/move-base-arena
+  adding move_base arena simulation
+* Merge pull request `#140 <https://github.com/strands-project/strands_morse/issues/140>`_ from Jailander/witham_warf
+  adding witham warf simulation
+* changing camera
+* adding drawers to blender simulation
+* adding topological maps for all tests
+* removing static transformation publisher and adding TF publisher on morse script
+* Merge pull request `#1 <https://github.com/strands-project/strands_morse/issues/1>`_ from cdondrup/move-base-arena
+  Adding fast wireframe mode for move base arena
+* Adding fast wireframe mode for move base arena
+* removing from this branch as they are in another pull request
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into move-base-arena
+* adding witham warf simulation
+* splitting topological map into maps per test
+* Merge branch 'edge-mapping' of https://github.com/Jailander/strands_morse into move-base-arena
+* Merge pull request `#139 <https://github.com/strands-project/strands_morse/issues/139>`_ from strands-project/marc-hanheide-patch-2
+  scitos_ptu was missing from deps
+* scitos_ptu was missing from deps
+* adding move_base arena simulation
+* Improved Blender file
+* UOL witham warf simulation
+* Contributors: Christian Dondrup, Jaime Pulido Fentanes, Marc Hanheide
+
 0.1.3 (2015-08-26)
 ------------------
 * Merge pull request `#135 <https://github.com/strands-project/strands_morse/issues/135>`_ from cdondrup/human_summer_school
