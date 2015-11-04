@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#141 <https://github.com/strands-project/strands_morse/issues/141>`_ from Jailander/move-base-arena
+  adding install targets for move_base_arena
+* adding install targets for move_base_arena
+* Contributors: Jaime Pulido Fentanes, Marc Hanheide
+
 0.1.4 (2015-11-04)
 ------------------
 * Merge pull request `#138 <https://github.com/strands-project/strands_morse/issues/138>`_ from Jailander/move-base-arena
