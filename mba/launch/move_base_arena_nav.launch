@@ -1,0 +1,12 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="arena"/> 
+
+  <!-- 2D Navigation -->
+  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+      <arg name="map" value="$(find strands_morse)/mba/maps/$(arg env).yaml"/>
+  </include>
+  
+  <node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /world /map 100"/>
+   
+</launch>

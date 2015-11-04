@@ -1,0 +1,6 @@
+free_thresh: 0.196
+image: arena.pgm
+negate: 0
+occupied_thresh: 0.65
+origin: [-5.199999999999989, -5.1499999999999915, 0.0]
+resolution: 0.05
