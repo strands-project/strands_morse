@@ -1,7 +1,7 @@
 - meta:
     map: mb_arena
     node: End
-    pointset: mb_test15
+    pointset: mb_test17
   node:
     edges:
     - action: move_base
@@ -14,7 +14,7 @@
     localise_by_topic: ''
     map: mb_arena
     name: End
-    pointset: mb_test15
+    pointset: mb_test17
     pose:
       orientation:
         w: 0.680411815643
@@ -47,7 +47,7 @@
 - meta:
     map: mb_arena
     node: Intermediate
-    pointset: mb_test15
+    pointset: mb_test17
   node:
     edges:
     - action: move_base
@@ -67,7 +67,7 @@
     localise_by_topic: ''
     map: mb_arena
     name: Intermediate
-    pointset: mb_test15
+    pointset: mb_test17
     pose:
       orientation:
         w: 0.957811433329
@@ -99,23 +99,23 @@
     yaw_goal_tolerance: 0.1
 - meta:
     map: mb_arena
-    node: ObstacleChair1
-    pointset: mb_test15
+    node: ObstacleWheelChair1
+    pointset: mb_test17
   node:
     edges: []
     localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
     map: mb_arena
-    name: ObstacleChair1
-    pointset: mb_test15
+    name: ObstacleWheelChair1
+    pointset: mb_test17
     pose:
       orientation:
-        w: -3.92198562622e-05
-        x: -3.08270884375e-08
-        y: -2.24808118787e-08
-        z: 1.0
+        w: 0.703993201256
+        x: -3.74890696264e-09
+        y: -2.09700701248e-09
+        z: 0.71020668745
       position:
-        x: -3.43391776085
-        y: 0.310314297676
+        x: -4.58532047272
+        y: 0.945549309254
         z: 3.75545017363e-06
     verts:
     - x: 0.689999997616
@@ -138,102 +138,24 @@
     yaw_goal_tolerance: 0.1
 - meta:
     map: mb_arena
-    node: ObstacleChair2
-    pointset: mb_test15
+    node: ObstacleWheelChair2
+    pointset: mb_test17
   node:
     edges: []
     localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
     map: mb_arena
-    name: ObstacleChair2
-    pointset: mb_test15
+    name: ObstacleWheelChair2
+    pointset: mb_test17
     pose:
       orientation:
-        w: 0.00391417741776
-        x: -2.83708807558e-08
-        y: -3.30899858625e-08
-        z: 0.999992370605
+        w: 0.7113276124
+        x: 5.03664843166e-09
+        y: -5.76680569964e-09
+        z: 0.702860713005
       position:
-        x: -3.43187999725
-        y: 1.0568356514
+        x: -3.43280911446
+        y: 0.979227244854
         z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.1
-- meta:
-    map: mb_arena
-    node: ObstacleChair3
-    pointset: mb_test15
-  node:
-    edges: []
-    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
-    map: mb_arena
-    name: ObstacleChair3
-    pointset: mb_test15
-    pose:
-      orientation:
-        w: -0.0202138125896
-        x: -3.55482647763e-08
-        y: -2.3524556525e-08
-        z: 0.999795675278
-      position:
-        x: -3.43202781677
-        y: 1.74947297573
-        z: 0.0
-    verts:
-    - x: 0.689999997616
-      y: 0.287000000477
-    - x: 0.287000000477
-      y: 0.689999997616
-    - x: -0.287000000477
-      y: 0.689999997616
-    - x: -0.689999997616
-      y: 0.287000000477
-    - x: -0.689999997616
-      y: -0.287000000477
-    - x: -0.287000000477
-      y: -0.689999997616
-    - x: 0.287000000477
-      y: -0.689999997616
-    - x: 0.689999997616
-      y: -0.287000000477
-    xy_goal_tolerance: 0.3
-    yaw_goal_tolerance: 0.1
-- meta:
-    map: mb_arena
-    node: ObstacleChair4
-    pointset: mb_test15
-  node:
-    edges: []
-    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
-    map: mb_arena
-    name: ObstacleChair4
-    pointset: mb_test15
-    pose:
-      orientation:
-        w: -0.0165043473244
-        x: -2.72359876874e-08
-        y: -3.62612055937e-08
-        z: 0.999863743782
-      position:
-        x: -3.42436170578
-        y: 2.54814362526
-        z: 1.38777878078e-17
     verts:
     - x: 0.689999997616
       y: 0.287000000477
@@ -256,7 +178,7 @@
 - meta:
     map: mb_arena
     node: Start
-    pointset: mb_test15
+    pointset: mb_test17
   node:
     edges:
     - action: move_base
@@ -269,7 +191,7 @@
     localise_by_topic: ''
     map: mb_arena
     name: Start
-    pointset: mb_test15
+    pointset: mb_test17
     pose:
       orientation:
         w: -0.000810280607204

@@ -20,22 +20,6 @@ rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id
 # The bateery state is published to /battery
 robot.battery.properties(DischargingRate=0.0)
 
-human=Human()
-human.use_world_camera()
-human.translate(x=20.5, y=30.2, z=0.1)
-human.properties(Object = True)
-motion = MotionVW()
-human.append(motion)
-motion.properties(ControlType = 'Velocity')
-motion.add_stream('ros')
-
-
-pose = Pose()
-human.append(pose)
-
-pose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id='/world', child_frame_id="/human")
-pose.add_stream('ros', frame_id='/world')
-
 for i in range(10):
     exec("""
 chair%i = (PassiveObject(os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/Chair.blend')))
