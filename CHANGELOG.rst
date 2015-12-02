@@ -19,6 +19,17 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+0.1.6 (2015-12-01)
+------------------
+* Merge pull request `#145 <https://github.com/strands-project/strands_morse/issues/145>`_ from cdondrup/indigo-devel
+  Adding more tests to mba environment
+* Adding more test maps.
+  Removing morse human from test simulation.
+* Adding new topo maps for tests with passive objects as obstacles.
+* Adding a wireframe map containing human and a mba test environment which also contains passive objects as obstacles.
+* Adding new obstacle belnd models
+* Contributors: Christian Dondrup, Marc Hanheide
+
 0.1.5 (2015-11-04)
 ------------------
 * Merge pull request `#141 <https://github.com/strands-project/strands_morse/issues/141>`_ from Jailander/move-base-arena
