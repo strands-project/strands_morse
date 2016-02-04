@@ -19,6 +19,23 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#147 <https://github.com/strands-project/strands_morse/issues/147>`_ from cburbridge/patch-2
+  Update simulated laser pose to match real robot.
+* Update simulated laser pose to match real robot.
+  Closes https://github.com/strands-project/strands_morse/issues/143.
+* Merge pull request `#146 <https://github.com/strands-project/strands_morse/issues/146>`_ from Jailander/move-base-arena
+  topological map change
+* switching nodes in mb_test8
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into move-base-arena
+* Merge pull request `#142 <https://github.com/strands-project/strands_morse/issues/142>`_ from Jailander/move-base-arena
+  adding person blender files for witham warf simulation
+* Merge branch 'indigo-devel' of https://github.com/cdondrup/strands_morse into move-base-arena
+* updating models
+* adding person blender files for witham warf simulation
+* Contributors: Chris Burbridge, Jaime Pulido Fentanes, Marc Hanheide
+
 0.1.6 (2015-12-01)
 ------------------
 * Merge pull request `#145 <https://github.com/strands-project/strands_morse/issues/145>`_ from cdondrup/indigo-devel
