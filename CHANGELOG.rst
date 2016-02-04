@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.8 (2016-02-04)
+------------------
 * removed illegal character
 * Contributors: Marc Hanheide
 
