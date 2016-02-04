@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.7 (2016-02-04)
+------------------
 * Merge pull request `#147 <https://github.com/strands-project/strands_morse/issues/147>`_ from cburbridge/patch-2
   Update simulated laser pose to match real robot.
 * Update simulated laser pose to match real robot.
