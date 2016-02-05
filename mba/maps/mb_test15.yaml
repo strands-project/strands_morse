@@ -1,0 +1,301 @@
+- meta:
+    map: mb_arena
+    node: End
+    pointset: mb_test15
+  node:
+    edges:
+    - action: move_base
+      edge_id: End_Intermediate
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: End
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: 0.680411815643
+        x: 0.0
+        y: 0.0
+        z: 0.732829928398
+      position:
+        x: -3.94388151169
+        y: -0.745287954807
+        z: -1.26502364139e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: Intermediate
+    pointset: mb_test15
+  node:
+    edges:
+    - action: move_base
+      edge_id: Intermediate_Start
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Start
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Intermediate_End
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: End
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: Intermediate
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: 0.957811433329
+        x: 0.0
+        y: 0.0
+        z: -0.287397387227
+      position:
+        x: -3.98084453958
+        y: 3.92253493908
+        z: -5.92846050029e-10
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: ObstacleChair1
+    pointset: mb_test15
+  node:
+    edges: []
+    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
+    map: mb_arena
+    name: ObstacleChair1
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: -3.92198562622e-05
+        x: -3.08270884375e-08
+        y: -2.24808118787e-08
+        z: 1.0
+      position:
+        x: -3.43391776085
+        y: 0.310314297676
+        z: 3.75545017363e-06
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: ObstacleChair2
+    pointset: mb_test15
+  node:
+    edges: []
+    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
+    map: mb_arena
+    name: ObstacleChair2
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: 0.00391417741776
+        x: -2.83708807558e-08
+        y: -3.30899858625e-08
+        z: 0.999992370605
+      position:
+        x: -3.43187999725
+        y: 1.0568356514
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: ObstacleChair3
+    pointset: mb_test15
+  node:
+    edges: []
+    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
+    map: mb_arena
+    name: ObstacleChair3
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: -0.0202138125896
+        x: -3.55482647763e-08
+        y: -2.3524556525e-08
+        z: 0.999795675278
+      position:
+        x: -3.43202781677
+        y: 1.74947297573
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: ObstacleChair4
+    pointset: mb_test15
+  node:
+    edges: []
+    localise_by_topic: '{"topic": "/battery_state", "field": "charging", "val": true}'
+    map: mb_arena
+    name: ObstacleChair4
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: -0.0165043473244
+        x: -2.72359876874e-08
+        y: -3.62612055937e-08
+        z: 0.999863743782
+      position:
+        x: -3.42436170578
+        y: 2.54814362526
+        z: 1.38777878078e-17
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: mb_arena
+    node: Start
+    pointset: mb_test15
+  node:
+    edges:
+    - action: move_base
+      edge_id: Start_Intermediate
+      inflation_radius: 0.0
+      map_2d: mb_arena
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: mb_arena
+    name: Start
+    pointset: mb_test15
+    pose:
+      orientation:
+        w: -0.000810280607204
+        x: 0.0
+        y: 0.0
+        z: 0.999999671723
+      position:
+        x: 0.0654996174646
+        y: 4.09914342793
+        z: -1.80098889968e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1

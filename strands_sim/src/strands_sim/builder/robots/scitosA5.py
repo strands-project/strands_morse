@@ -88,7 +88,7 @@ class Scitosa5(Robot):
 
         # Laserscanner
         self.scan = Hokuyo()
-        self.scan.translate(x=0.07, z=0.365)
+        self.scan.translate(x=0.1094, z=0.3848)
         self.append(self.scan)
         self.scan.properties(Visible_arc = False)
         self.scan.properties(laser_range = 30.0)

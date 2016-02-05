@@ -1,0 +1,184 @@
+- meta:
+    map: ''
+    node: Start
+    pointset: mb_test14
+  node:
+    edges:
+    - action: move_base
+      edge_id: Start_Intermediate
+      inflation_radius: 0.0
+      map_2d: ''
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: ''
+    name: Start
+    pointset: mb_test14
+    pose:
+      orientation:
+        w: 0.700831925709
+        x: 0.0
+        y: 0.0
+        z: -0.713326441334
+      position:
+        x: 1.32601123056
+        y: 4.07249029586
+        z: -9.32436766687e-11
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: ''
+    node: Intermediate
+    pointset: mb_test14
+  node:
+    edges:
+    - action: move_base
+      edge_id: Intermediate_Start
+      inflation_radius: 0.0
+      map_2d: ''
+      node: Start
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: move_base
+      edge_id: Intermediate_End
+      inflation_radius: 0.0
+      map_2d: ''
+      node: End
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: ''
+    name: Intermediate
+    pointset: mb_test14
+    pose:
+      orientation:
+        w: 0.704400718212
+        x: 0.0
+        y: 0.0
+        z: -0.709802567959
+      position:
+        x: 1.29281878471
+        y: 0.713767707348
+        z: 1.76478111291e-09
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: ''
+    node: End
+    pointset: mb_test14
+  node:
+    edges:
+    - action: move_base
+      edge_id: End_Intermediate
+      inflation_radius: 0.0
+      map_2d: ''
+      node: Intermediate
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    localise_by_topic: ''
+    map: ''
+    name: End
+    pointset: mb_test14
+    pose:
+      orientation:
+        w: 0.697976266581
+        x: 0.0
+        y: 0.0
+        z: -0.716120891532
+      position:
+        x: 1.2249910039
+        y: -2.75003195965
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
+- meta:
+    map: ''
+    node: ObstacleStaticHuman1
+    pointset: mb_test14
+  node:
+    edges: []
+    localise_by_topic: '{"topic":"/battery_state","field":"charging","val":true}'
+    map: ''
+    name: ObstacleStaticHuman1
+    pointset: mb_test14
+    pose:
+      orientation:
+        w: 0.999962091446
+        x: -3.88923879768e-08
+        y: 2.94407485057e-08
+        z: -0.00871923565865
+      position:
+        x: 1.2249910039
+        y: -2.75003195965
+        z: 0.0
+    verts:
+    - x: 0.689999997616
+      y: 0.287000000477
+    - x: 0.287000000477
+      y: 0.689999997616
+    - x: -0.287000000477
+      y: 0.689999997616
+    - x: -0.689999997616
+      y: 0.287000000477
+    - x: -0.689999997616
+      y: -0.287000000477
+    - x: -0.287000000477
+      y: -0.689999997616
+    - x: 0.287000000477
+      y: -0.689999997616
+    - x: 0.689999997616
+      y: -0.287000000477
+    xy_goal_tolerance: 0.3
+    yaw_goal_tolerance: 0.1
