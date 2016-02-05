@@ -2,11 +2,13 @@
   <arg name="dataset" default="UMIC_FF"/>
   <arg name="mon_nav_config_file" default=""/> 
   <arg name="map" default="$(find strands_morse)/aachen/maps/UMIC_first_floor.yaml"/>
- 
-  
+  <arg name="with_chest_xtion" default="false"/>
+
+
   <!-- 2D Navigation -->
-  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+  <include file="$(find strands_movebase)/launch/movebase.launch">
     <arg name="map" value="$(arg map)"/>
+    <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
   </include>
   
   <!--- Docking -->
