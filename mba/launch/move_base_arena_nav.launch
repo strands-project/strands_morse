@@ -1,10 +1,13 @@
 <launch>
   <!-- declare arg to be passed in -->
   <arg name="env" default="arena"/> 
+  <arg name="with_chest_xtion" default="false"/>
+
 
   <!-- 2D Navigation -->
-  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+  <include file="$(find strands_movebase)/launch/movebase.launch">
       <arg name="map" value="$(find strands_morse)/mba/maps/$(arg env).yaml"/>
+      <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
   </include>
   
   <node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /world /map 100"/>

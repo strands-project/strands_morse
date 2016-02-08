@@ -1,9 +1,12 @@
 <launch>
   <!-- declare arg to be passed in -->
   <arg name="env" default="uol_study_restaurant"/> 
+  <arg name="with_chest_xtion" default="false"/>
+
 
   <!-- 2D Navigation -->
-  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+  <include file="$(find strands_movebase)/launch/movebase.launch">
       <arg name="map" value="$(find strands_morse)/uol/maps/$(arg env).yaml"/>
+      <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
   </include>
 </launch>

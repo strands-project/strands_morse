@@ -1,10 +1,13 @@
 <launch>
   <!-- declare arg to be passed in -->
   <arg name="env" default="uol_bl"/> 
+  <arg name="with_chest_xtion" default="false"/>
+
 
   <!-- 2D Navigation -->
-  <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch">
+  <include file="$(find strands_movebase)/launch/movebase.launch">
       <arg name="map" value="$(find strands_morse)/uol/maps/$(arg env).yaml"/>
+      <arg name="with_chest_xtion" value="$(arg with_chest_xtion)"/>
   </include>
   
   <node name="static_transform_publisher" pkg="tf" type="static_transform_publisher" args="-11 -2.5 0.1 0 0 3.141592 0 /world /map 100"/>
