@@ -1,5 +1,5 @@
 free_thresh: 0.196
-image: nogo.pgm
+image: tsc_nogo.pgm
 negate: 0
 occupied_thresh: 0.65
 origin: [-54.949999999999996, -64.1, 0.0]
