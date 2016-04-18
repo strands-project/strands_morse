@@ -2,12 +2,16 @@
   <arg name="topological_map" default="tsc2015"/>
   <arg name="mon_nav_config_file" default=""/>
   <arg name="with_human_aware" default="true"/>
-
+  <arg name="positionUpdate" default="false"/>
  
   <!-- Door passing and door checking servers -->
   <include file="$(find door_pass)/launch/door_passing.launch"/>
 
-
+  <include file="$(find scitos_docking)/launch/charging.launch">
+    <arg name="positionUpdate"  value="$(arg positionUpdate)"/>
+  </include>
+  
+  
   <!--- Topological Navigation (includes monitored_navigation) -->
   <include file="$(find topological_navigation)/launch/topological_navigation.launch">
     <arg name="map" value="$(arg topological_map)"/>

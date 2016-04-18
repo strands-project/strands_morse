@@ -9,10 +9,11 @@ from morse.builder import *
 from strands_sim.builder.robots import Scitosa5
 
 #robot = Ranger()
-robot = Scitosa5()
+robot = Scitosa5(with_cameras = Scitosa5.WITH_OPENNI)
 
 # tum_kitchen
 robot.translate(x=0.5, y=23.2, z=0.1)
+
 #robot.translate(x=1, y=7.62, z=0.0)
 #robot.rotate(0,0,1.57)
 
