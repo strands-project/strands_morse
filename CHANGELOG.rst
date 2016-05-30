@@ -19,6 +19,50 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#161 <https://github.com/strands-project/strands_morse/issues/161>`_ from hawesie/indigo-devel
+  TSC updates
+* Cleaned up TSC sim for ICAPS tutorial
+* Merge pull request `#160 <https://github.com/strands-project/strands_morse/issues/160>`_ from Jailander/indigo-devel
+  Kitchen Tables and Light improvements
+* Kitchen Tables and Light improvements
+* Merge pull request `#159 <https://github.com/strands-project/strands_morse/issues/159>`_ from Jailander/indigo-devel
+  adding some more static furniture
+* making it possible to use both charging stations in simulation
+* more furniture
+* adding some more static furniture (lighting needs improvement)
+* Addeding correct door pass action.
+* Merge pull request `#157 <https://github.com/strands-project/strands_morse/issues/157>`_ from Jailander/indigo-devel
+  adding some static furniture
+* adding furniture for collaboration area east
+* adding some static furniture
+* Merge pull request `#154 <https://github.com/strands-project/strands_morse/issues/154>`_ from Jailander/indigo-devel
+  adding Docking stations and topological map
+* adding some furniture
+* moving charging stations to new placements
+* adding launch file for navigation
+* adding Docking stations and topological map
+* Merge pull request `#153 <https://github.com/strands-project/strands_morse/issues/153>`_ from Jailander/indigo-devel
+  adding super cool glass panels
+* adding navigation launch files and maps
+* adding super cool glass panels
+* Merge pull request `#152 <https://github.com/strands-project/strands_morse/issues/152>`_ from Jailander/indigo-devel
+  TSC full structure needs furniture
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into indigo-devel
+* TSC full structure needs furniture
+* Merge pull request `#151 <https://github.com/strands-project/strands_morse/issues/151>`_ from Jailander/indigo-devel
+  TSC simulation Part II
+* TSC simulation Part II needs furnitureand one more wing
+* Merge pull request `#150 <https://github.com/strands-project/strands_morse/issues/150>`_ from Jailander/indigo-devel
+  first part of TSC simulation
+* first part of TSC simulation
+* Merge pull request `#149 <https://github.com/strands-project/strands_morse/issues/149>`_ from bfalacerda/indigo-devel
+  use strands_movebase instead of scitos_2d_nav
+* Merge branch 'indigo-devel' of https://github.com/strands-project/strands_morse into indigo-devel
+* use strands_movebase instead of scitos_2d_nav
+* Contributors: Bruno Lacerda, Jaime Pulido Fentanes, Marc Hanheide, Nick Hawes
+
 0.1.8 (2016-02-04)
 ------------------
 * removed illegal character
