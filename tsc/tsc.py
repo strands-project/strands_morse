@@ -40,7 +40,12 @@ docking_station_label2.rotate(1.57,0,1.2617)
 
 
 # Set the environment
-model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/tsc.blend')
+furniture = False
+if furniture:
+	model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/tsc.blend')
+else:
+	model_file=os.path.join(os.path.dirname(os.path.abspath( __file__ )),'data/tsc_no_furniture.blend')
+
 env = Environment(model_file, fastmode=False)
 env.place_camera([15.0, 20.0, 10.0])
 env.aim_camera([0, 0, 0.0])
