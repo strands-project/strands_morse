@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.9 (2016-05-30)
+------------------
 * Merge pull request `#161 <https://github.com/strands-project/strands_morse/issues/161>`_ from hawesie/indigo-devel
   TSC updates
 * Cleaned up TSC sim for ICAPS tutorial
