@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#162 <https://github.com/strands-project/strands_morse/issues/162>`_ from hawesie/indigo-devel
+  Added an option to not run with furniture in the map.
+* Added an option to not run with furniture in the map.
+* Contributors: Nick Hawes
+
 0.1.9 (2016-05-30)
 ------------------
 * Merge pull request `#161 <https://github.com/strands-project/strands_morse/issues/161>`_ from hawesie/indigo-devel
