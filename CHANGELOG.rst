@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.14 (2016-06-06)
+-------------------
 
 0.1.13 (2016-06-06)
 -------------------
