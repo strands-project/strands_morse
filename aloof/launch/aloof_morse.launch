@@ -5,6 +5,8 @@
   <!-- Scitos robot -->
   <include file="$(find strands_morse)/launch/scitos.launch"/>
 
+  <include file="$(find strands_morse)/launch/generate_camera_topics.launch"/>
+
   <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="aloof $(arg env).py"/>
   
 </launch>
