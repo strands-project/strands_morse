@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>strands_morse</name>
-  <version>0.1.14</version>
+  <version>0.1.15</version>
   <description>The strands_morse package</description>
 
   <maintainer email="marc@hanheide.net">Marc Hanheide</maintainer>
