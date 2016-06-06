@@ -1,0 +1,49 @@
+<launch>
+  <!-- declare arg to be passed in -->
+  <arg name="env" default="cropped"/> 
+  <arg name="machine" default="localhost" />
+  <arg name="user" default="" />
+  <arg name="topological_map" default="aloof"/>
+  <arg name="mon_nav_config_file" default=""/>
+  
+  <!-- 2D Navigation -->
+  <!-- <include file="$(find scitos_2d_navigation)/launch/scitos_2d_nav.launch"> -->
+  <!--     <arg name="map" value="$(find strands_morse)/aloof/maps/$(arg env).yaml"/> -->
+  <!-- </include> -->
+
+
+  <machine name="$(arg machine)" address="$(arg machine)" env-loader="$(optenv ROS_ENV_LOADER )" user="$(arg user)" default="true"/>
+
+  <arg name="map" value="$(find strands_morse)/aloof/maps/$(arg env).yaml"/>
+
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+
+  <node name="no_go_map_server" pkg="map_server" type="map_server" args="$(arg map)">
+    <remap from="/map" to="/no_go_map"/>
+  </node>
+
+  <include file="$(find scitos_2d_navigation)/launch/amcl.launch">
+    <arg name="machine"  value="$(arg machine)"/>
+    <arg name="user"  value="$(arg user)"/>
+  </include>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+    <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/move_base_params.yaml" command="load"/> 
+	  <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+	  <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+	  <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/local_costmap_params.yaml" command="load" />
+	  <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/dwa_planner_ros.yaml" command="load" />
+    <!-- <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/base_local_planner_params.yaml" command="load" /> -->
+
+	  <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params/nav_fn_ros.yaml" command="load" /> 
+  </node>
+
+
+  <!--- Topological Navigation (includes monitored_navigation) -->
+  <include file="$(find topological_navigation)/launch/topological_navigation.launch">
+    <arg name="map" value="$(arg topological_map)"/>
+    <arg name="mon_nav_config_file" value="$(arg mon_nav_config_file)"/>
+  </include>
+
+</launch>
