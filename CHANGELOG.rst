@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.1.13 (2016-06-06)
+-------------------
 * Merge pull request `#163 <https://github.com/strands-project/strands_morse/issues/163>`_ from hawesie/indigo-devel
   Adding a newer topological map.
 * Adding a newer topological map.
