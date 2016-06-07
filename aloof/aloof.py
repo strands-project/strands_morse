@@ -189,6 +189,7 @@ class SimSetup():
         west_mug.rotate(0,0,0)
         #west_mug.name = 'mug_1'
 
+
         ## SOUTH ROOM
         table3 = PassiveObject('environments/human_tut/tutorial_scene','Table')
         table3.properties(Object = True, Type = 'Table')
@@ -240,3 +241,4 @@ class SimSetup():
 
 if __name__ == "__main__":
     s = SimSetup()
+
