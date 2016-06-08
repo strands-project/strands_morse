@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#165 <https://github.com/strands-project/strands_morse/issues/165>`_ from bfalacerda/indigo-devel
+  edit slam map for tsc sim
+* edit slam map for tsc sim
+* Contributors: Bruno Lacerda, Nick Hawes
+
 0.1.15 (2016-06-06)
 -------------------
 * Adding camera topics to launch
