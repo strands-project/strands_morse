@@ -473,6 +473,7 @@
     pointset: aaf_WG_HAN_SIM
     tag:
     - InfoTerminal
+    - Start
   node:
     edges:
     - action: han_adapt_speed
@@ -1085,7 +1086,6 @@
     pointset: aaf_WG_HAN_SIM
     tag:
     - walking_group_resting_point
-    - Start
   node:
     edges:
     - action: han_vc_corridor
@@ -2384,10 +2384,10 @@
     pointset: aaf_WG_HAN_SIM
     pose:
       orientation:
-        w: 0.97551637888
-        x: 1.54958428311e-08
-        y: -6.00485661195e-09
-        z: -0.219926759601
+        w: 0.965567111969
+        x: 2.37950210646e-08
+        y: -7.1753119002e-09
+        z: -0.260154277086
       position:
         x: -2.30855584145
         y: -9.11660194397
@@ -4138,7 +4138,6 @@
     pointset: aaf_WG_HAN_SIM
     tag:
     - recording_white_list
-    - walking_group_pause
   node:
     edges:
     - action: han_vc_corridor
@@ -5034,8 +5033,7 @@
     map: aaf_winter
     node: WayPoint65
     pointset: aaf_WG_HAN_SIM
-    tag:
-    - walking_group_pause
+    tag: []
   node:
     edges:
     - action: han_vc_corridor
@@ -5104,7 +5102,6 @@
     pointset: aaf_WG_HAN_SIM
     tag:
     - recording_white_list
-    - walking_group_pause
   node:
     edges:
     - action: han_adapt_speed
@@ -6136,7 +6133,6 @@
     pointset: aaf_WG_HAN_SIM
     tag:
     - recording_white_list
-    - walking_group_pause
   node:
     edges:
     - action: han_adapt_speed
@@ -6165,6 +6161,20 @@
       inflation_radius: 0.0
       map_2d: aaf_winter
       node: WayPoint91
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: han_adapt_speed
+      edge_id: WayPoint86_WayPoint81
+      inflation_radius: 0.0
+      map_2d: aaf_winter
+      node: WayPoint81
+      recovery_behaviours_config: ''
+      top_vel: 0.55
+    - action: han_adapt_speed
+      edge_id: WayPoint86_WayPoint90
+      inflation_radius: 0.0
+      map_2d: aaf_winter
+      node: WayPoint90
       recovery_behaviours_config: ''
       top_vel: 0.55
     localise_by_topic: ''
