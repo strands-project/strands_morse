@@ -6,7 +6,7 @@
   <arg name="wait_reset_bumper_duration" default="0.0"/>
   <arg name="topological_navigation_retries" default="3"/>
   <arg name="topological_map_name" default="basic_map"/>
-  <arg name="map" default="$(find strands_morse)/basic_example/maps/basic_map_gmapping.yaml"/>
+  <arg name="map" default="$(find strands_morse)/basic_example/maps/basic_map.yaml"/>
 
   <!-- 2D Navigation -->
   <include file="$(find strands_movebase)/launch/movebase.launch">
