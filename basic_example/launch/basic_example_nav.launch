@@ -30,4 +30,10 @@
   <node pkg="tf" type="static_transform_publisher" name="env_broadcaster" 
         args="0 0 0 0 0 0 /odom /map 200">
   </node>
+
+  <!-- Needed by the MDP executor to predict traversal times for edges -->
+  <node pkg="fremenserver" type="fremenserver" name="fremenserver" respawn="true"/>
+  <node pkg="topological_navigation" name="execute_policy_server" type="execute_policy_server.py" output="screen" respawn="true"/>
+  <node pkg="topological_navigation" type="topological_prediction.py" name="topological_prediction" output="screen" respawn="true"/>
+
 </launch>
