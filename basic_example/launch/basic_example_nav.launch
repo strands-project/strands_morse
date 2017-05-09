@@ -35,5 +35,4 @@
   <node pkg="fremenserver" type="fremenserver" name="fremenserver" respawn="true"/>
   <node pkg="topological_navigation" name="execute_policy_server" type="execute_policy_server.py" output="screen" respawn="true"/>
   <node pkg="topological_navigation" type="topological_prediction.py" name="topological_prediction" output="screen" respawn="true"/>
-
 </launch>
