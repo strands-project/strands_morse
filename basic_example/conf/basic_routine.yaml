@@ -1,0 +1,80 @@
+# See
+# https://github.com/strands-project/strands_executive_behaviours/tree/hydro-devel/automated_routine/conf/bham_routine.yaml
+# for a more detailed file with more options and descriptions of how to set up
+# tasks
+
+# Time at which the daily routine should start
+start_time:
+  hours: 8
+  minutes: 30
+# Time at which no more tasks should be performed. Once the robot is charging,
+# the night tasks will be performed
+end_time:
+  hours: 17
+  minutes: 30
+# Points on the topological map at which the robot can charge. This should be a list.
+charging_points:
+  - "ChargingPoint1"
+# Seconds with the robot not performing any task before we should consider it as
+# idle, and activate the idle behaviour
+idle_duration: 3600
+# Time window given to a task before it is started (?)
+pre_start_window: 360
+# Specify regular days off, when the robot will do nothing. This should be a
+# list of days of the week.
+days_off:
+  - "Saturday"
+  - "Sunday"
+# Lists of waypoints which can be used when defining where tasks should be performed
+waypoint_lists:
+  cubicles:
+    - "WayPoint9"
+    - "WayPoint10"
+    - "WayPoint11"
+    - "WayPoint12"
+    - "WayPoint13"
+    - "WayPoint14"
+  corridor:
+    - "WayPoint1"
+    - "WayPoint2"
+    - "WayPoint4"
+    - "WayPoint6"
+    - "WayPoint16"
+  rooms:
+    - "WayPoint3"
+    - "WayPoint5"
+    - "WayPoint7"
+# Thresholds which should be used to force the robot to charge at different
+# times during the day. When the battery level (voltage) enters the threshold
+# range, it must charge to 1 volt above the threshold to resume operation. There
+# should be enough charge remaining when the threshold is reached to allow the
+# robot to return to the charging station
+battery_levels:
+  - start_time:
+      hours: 8
+      minutes: 0
+    soft: 25.5
+    hard: 25.5
+  - start_time:
+      hours: 13
+      minutes: 0
+    soft: 25
+    hard: 25
+task_definitions:
+  visit_cubicles:
+    active: "true"
+    waypoints: "cubicles" # go to all waypoints in the cubicles list
+    routine_times:
+      start_time:
+        hours: 8
+        minutes: 30
+      end_time:
+        hours: 17
+        minutes: 0
+      repeat_delta:
+        minutes: 20
+    action: "print_string_action"
+    duration: 10
+    additional_args:
+      - {type: "waypoint"} # print string action requires a target node
+      - {type: "string", value: "This is my string to print"}

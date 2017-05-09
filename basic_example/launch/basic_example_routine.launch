@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="automated_routine" type="automated_routine_node.py" name="automated_routine" output="screen">
+    <rosparam command="load" file="$(find strands_morse)/basic_example/conf/basic_routine.yaml" ns="routine_config"/>
+  </node>
+</launch>
