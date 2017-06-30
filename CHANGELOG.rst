@@ -19,6 +19,32 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* some changes required for kinetic
+* Merge pull request `#170 <https://github.com/strands-project/strands_morse/issues/170>`_ from heuristicus/example
+  Add routine configuration to the example
+* add routine example
+* add stuff to allow routine to run
+* Merge pull request `#169 <https://github.com/strands-project/strands_morse/issues/169>`_ from heuristicus/example
+  Basic example which follows documentation
+* different topological maps for gmapping and png maps
+* add example simulator from documentation
+* Merge pull request `#167 <https://github.com/strands-project/strands_morse/issues/167>`_ from heuristicus/indigo-devel
+  bham simulation works in a more standalone manner
+* update 2d nav to work with topmap in rviz
+* update bham topmap to current format
+* Merge pull request `#166 <https://github.com/strands-project/strands_morse/issues/166>`_ from Jailander/indigo-devel
+  Deployment simulations
+* changes in walking group topological map
+* adding topological maps fo y4 aaf simulation
+* minor chenges in tsc simulation
+* Merge pull request `#164 <https://github.com/strands-project/strands_morse/issues/164>`_ from jayyoung/indigo-devel
+  Updated ALOOF environment
+* Updated ALOOF environment
+* new rooms
+* Contributors: Jaime Pulido Fentanes, Jay, Marc Hanheide, Michal Staniaszek, Nick Hawes
+
 0.1.16 (2016-06-08)
 -------------------
 * Merge pull request `#165 <https://github.com/strands-project/strands_morse/issues/165>`_ from bfalacerda/indigo-devel
