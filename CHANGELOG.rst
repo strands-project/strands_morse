@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+0.2.0 (2017-06-30)
+------------------
 * some changes required for kinetic
 * Merge pull request `#170 <https://github.com/strands-project/strands_morse/issues/170>`_ from heuristicus/example
   Add routine configuration to the example
