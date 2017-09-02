@@ -19,6 +19,13 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#171 <https://github.com/strands-project/strands_morse/issues/171>`_ from bfalacerda/kinetic-devel
+  launch tsc in fast mode
+* launch tsc in fast mode
+* Contributors: Bruno Lacerda, Nick Hawes
+
 0.2.0 (2017-06-30)
 ------------------
 * some changes required for kinetic
