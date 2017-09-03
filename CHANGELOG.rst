@@ -19,6 +19,9 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+
 0.2.1 (2017-09-02)
 ------------------
 * Merge pull request `#171 <https://github.com/strands-project/strands_morse/issues/171>`_ from bfalacerda/kinetic-devel
