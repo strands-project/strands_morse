@@ -1,6 +1,11 @@
 <launch>
+  <arg name="tf_prefix" default="" />
+
   <!-- robot state publisher -->
-  <include file="$(find scitos_description)/launch/scitos_state_publisher.launch"/>
+  <include file="$(find scitos_description)/launch/scitos_state_publisher.launch">
+  	  <arg name="tf_prefix" value="$(arg tf_prefix)" />
+
+  </include>
 
   <!-- scitos node for handling topics and services not provided by MORSE -->
   <include file="$(find strands_morse)/launch/scitos_node.launch"/>

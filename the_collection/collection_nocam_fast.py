@@ -11,7 +11,7 @@ from strands_sim.builder.robots import Scitosa5
 
 for r in range(0,4):
     robot = Scitosa5(with_cameras=Scitosa5.WITHOUT_CAMERAS,
-                     prefix="/robot_%02d" % r)
+                     prefix="robot_%02d" % r)
     robot.translate(x=2.5, y=3 + r, z=0.1)
     robot.battery.properties(DischargingRate=0.01)
 
