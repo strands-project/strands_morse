@@ -1,0 +1,13 @@
+<launch>
+  <arg name="env" default="collection_nocam_fast"/> 
+
+  <!-- Scitos robot -->
+  <include ns="robot_00" file="$(find strands_morse)/launch/scitos.launch"/>
+  <include ns="robot_01" file="$(find strands_morse)/launch/scitos.launch"/>
+  <include ns="robot_02" file="$(find strands_morse)/launch/scitos.launch"/>
+  <include ns="robot_03" file="$(find strands_morse)/launch/scitos.launch"/>
+  <include ns="robot_04" file="$(find strands_morse)/launch/scitos.launch"/>
+
+  <node pkg="strands_morse" type="simulator.sh" respawn="false" name="strands_morse" output="screen" args="the_collection $(arg env).py"/>
+  <!--<node pkg="strands_morse" type="human_pose_simulator.py" respawn="true" name="human_pose_simulator" output="screen"/>-->
+</launch>

@@ -1,6 +1,7 @@
 from morse.builder import *
 from morse.builder.bpymorse import *
 
+
 class Scitosa5(Robot):
     # camera configuration
     WITH_OPENNI = 0
@@ -28,10 +29,20 @@ class Scitosa5(Robot):
     """
     A template robot model for scitosA5
     """
-    def __init__(self, with_cameras = 1):
+    def __init__(self, with_cameras=1, prefix=""):
+        self.motion_topic = prefix + Scitosa5.MOTION_TOPIC
+        self.odometry_topic = prefix + Scitosa5.ODOMETRY_TOPIC
+        self.ptu_topic = prefix + Scitosa5.PTU_TOPIC
+        self.ptu_pose_topic = prefix + Scitosa5.PTU_POSE_TOPIC
+        self.battery_topic = prefix + Scitosa5.BATTERY_TOPIC
+        self.scan_topic = prefix + Scitosa5.SCAN_TOPIC
+        self.videocam_topic = prefix + Scitosa5.VIDEOCAM_TOPIC
+        self.semanticcam_topic = prefix + Scitosa5.SEMANTICCAM_TOPIC
+        self.depthcam_topic = prefix + Scitosa5.DEPTHCAM_TOPIC
+
         if with_cameras == Scitosa5.WITH_OPENNI:
-            Scitosa5.VIDEOCAM_TOPIC        = '/head_xtion/rgb8'
-            Scitosa5.DEPTHCAM_TOPIC        = '/head_xtion/depth/points_raw'
+            self.videocam_topic = '/head_xtion/rgb8'
+            self.depthcam_topic = '/head_xtion/depth/points_raw'
 
         # scitosA5.blend is located in the data/robots directory
         Robot.__init__(self, 'strands_sim/robots/scitos.blend')
@@ -50,7 +61,7 @@ class Scitosa5(Robot):
         self.motion = MotionVW()
         self.append(self.motion)
         self.motion.properties(ControlType = 'Position') # default 'Velocity' causes motion problems
-        self.motion.add_interface('ros', topic= Scitosa5.MOTION_TOPIC)
+        self.motion.add_interface('ros', topic=self.motion_topic)
 
         # Keyboard control
         self.keyboard = Keyboard()
@@ -60,7 +71,7 @@ class Scitosa5(Robot):
         self.append(self.ptu)
         self.ptu.translate(-0.075, 0, 1.585)
         self.ptu.rotate(0, 0, 0)
-        self.ptu.add_interface('ros', topic= Scitosa5.PTU_TOPIC)
+        self.ptu.add_interface('ros', topic=self.ptu_topic)
         self.ptu.properties(Tolerance= 0.00089759763795882463)
 
         ###################################
@@ -70,20 +81,20 @@ class Scitosa5(Robot):
         # PTU pose
         self.ptu_pose = PTUPosture('ptu_pose')
         self.ptu.append(self.ptu_pose)
-        self.ptu_pose.add_interface('ros', topic= Scitosa5.PTU_POSE_TOPIC)
+        self.ptu_pose.add_interface('ros', topic=self.ptu_pose_topic)
 
         # Battery
         self.battery = BatteryStateSensor()
         self.battery.translate(x=0.00,y=0.0,z=0.0)
         self.battery.properties(Range = 0.45)
         self.append(self.battery)
-        self.battery.add_interface('ros', topic= Scitosa5.BATTERY_TOPIC)
+        self.battery.add_interface('ros', topic=self.battery_topic)
         self.battery.properties(DischargingRate=0.01)
 
         # Odometry
         self.odometry = Odometry()
         self.append(self.odometry)
-        self.odometry.add_interface('ros', topic= Scitosa5.ODOMETRY_TOPIC)
+        self.odometry.add_interface('ros', frame_id=prefix+"/odom", child_frame_id=prefix+"/base_footprint", topic=self.odometry_topic)
         #self.odometry.frequency(9.9)
 
         # Laserscanner
@@ -95,7 +106,7 @@ class Scitosa5(Robot):
         self.scan.properties(resolution = 1.0)
         self.scan.properties(scan_window = 180.0)
         self.scan.create_laser_arc()
-        self.scan.add_interface('ros', topic= Scitosa5.SCAN_TOPIC)
+        self.scan.add_interface('ros', topic=self.scan_topic, )
 
         if with_cameras < Scitosa5.WITHOUT_CAMERAS:
             self.videocam = VideoCamera()
@@ -109,7 +120,7 @@ class Scitosa5(Robot):
                 self.videocam.properties(cam_width=640, cam_height=480)
                 self.videocam.frequency(30)
             self.videocam.add_interface('ros',
-                                        topic= Scitosa5.VIDEOCAM_TOPIC,
+                                        topic=self.videocam_topic,
                                         topic_suffix= Scitosa5.VIDEOCAM_TOPIC_SUFFIX,
                                         frame_id= Scitosa5.VIDEOCAM_FRAME_ID)
 
@@ -119,7 +130,7 @@ class Scitosa5(Robot):
             self.semanticcamera.translate(0.00, 0.02, 0.0945)
             self.semanticcamera.rotate(0.0, 0.0, 0.0)
             self.semanticcamera.properties(cam_width=640, cam_height=480, cam_far=2.5, cam_near= 0.8, cam_focal=69.5)
-            self.semanticcamera.add_interface('ros', topic= Scitosa5.SEMANTICCAM_TOPIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
+            self.semanticcamera.add_interface('ros', topic=self.semanticcam_topIC, frame_id= Scitosa5.SEMANTICCAM_FRAME_ID)
 
             if with_cameras < Scitosa5.WITHOUT_DEPTHCAMS:
                 # Depth camera
@@ -144,4 +155,4 @@ class Scitosa5(Robot):
                     bpy.context.scene.render.resolution_y = 128
 
                 self.depthcam.rotate(0, 0, 0)
-                self.depthcam.add_interface('ros', topic= Scitosa5.DEPTHCAM_TOPIC, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
+                self.depthcam.add_interface('ros', topic=self.depthcam_topic, frame_id= Scitosa5.DEPTHCAM_FRAME_ID, tf='False')
