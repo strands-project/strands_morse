@@ -157,6 +157,10 @@ install(DIRECTORY tsc
       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
       )
 
+install(DIRECTORY collection
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/groovy/api/catkin/html/adv_user_guide/variables.html
