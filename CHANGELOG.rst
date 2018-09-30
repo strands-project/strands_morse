@@ -19,6 +19,15 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* Merge pull request `#175 <https://github.com/strands-project/strands_morse/issues/175>`_ from francescodelduchetto/kinetic-devel
+  the collection museum simulation
+* simulation scaled according to real-world measures
+* better lights for simulation
+* the collection museum simulation
+* Contributors: Marc Hanheide, francescodelduchetto
+
 0.2.2 (2017-09-03)
 ------------------
 
