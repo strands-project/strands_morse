@@ -99,6 +99,12 @@ target_link_libraries(generate_rgb
 ## Install ##
 #############
 
+if(CMAKE_HOST_UNIX)
+  catkin_add_env_hooks(90.morse-blender-env SHELLS sh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env_hooks)
+else()
+  message(FATAL_ERROR "Only UNIX builds supported.")
+endif()
+
 install(DIRECTORY launch 
       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
       )
@@ -148,6 +154,10 @@ install(DIRECTORY mba
       )
 
 install(DIRECTORY tsc
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+      )
+
+install(DIRECTORY collection
       DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
       )
 
