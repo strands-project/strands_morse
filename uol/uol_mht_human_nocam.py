@@ -26,7 +26,7 @@ rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
-robot.battery.properties(DischargingRate=1.0)
+#robot.battery.properties(DischargingRate=1.0)
 
 human=Human()
 human.use_world_camera()

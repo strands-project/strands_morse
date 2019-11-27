@@ -16,7 +16,7 @@ robot.translate(x=2.5, y=3.2, z=0.0)
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
-robot.battery.properties(DischargingRate=1.0)
+#robot.battery.properties(DischargingRate=1.0)
 
 # Set the environment
 env = Environment('tum_kitchen/tum_kitchen')

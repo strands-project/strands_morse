@@ -18,7 +18,7 @@ rpose.add_stream('ros', method="morse.middleware.ros.pose.TFPublisher", frame_id
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
-robot.battery.properties(DischargingRate=0.0)
+#robot.battery.properties(DischargingRate=0.0)
 
 #docking_station = PassiveObject('strands_sim/robots/docking_station.blend','dockingStation')
 #docking_station.properties(Object = True)

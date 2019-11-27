@@ -18,7 +18,7 @@ robot.translate(x=2.5, y=3.2, z=0.1)
 
 # Battery discharging rate, in percent per seconds
 # The bateery state is published to /battery
-robot.battery.properties(DischargingRate=0.01)
+#robot.battery.properties(DischargingRate=0.01)
 
 docking_station = PassiveObject('strands_sim/robots/docking_station.blend','dockingStation')
 docking_station.properties(Object = True)
