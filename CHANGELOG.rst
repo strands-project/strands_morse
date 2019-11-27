@@ -19,6 +19,18 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
+Forthcoming
+-----------
+* use the ROS morse
+* Battery instead of BatteryStateSensor for new morse
+* Merge pull request `#173 <https://github.com/strands-project/strands_morse/issues/173>`_ from strands-project/indigo-devel
+  import changes from indigo-devel
+* Merge pull request `#168 <https://github.com/strands-project/strands_morse/issues/168>`_ from heuristicus/indigo-devel
+  add default rviz which actually works
+* no state chain publisher available with base install, seems to work ok without
+* add default rviz which actually works
+* Contributors: Marc Hanheide, Michal Staniaszek, Nick Hawes
+
 0.2.3 (2018-09-30)
 ------------------
 * Merge pull request `#175 <https://github.com/strands-project/strands_morse/issues/175>`_ from francescodelduchetto/kinetic-devel
