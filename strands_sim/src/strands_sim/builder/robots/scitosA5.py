@@ -73,7 +73,7 @@ class Scitosa5(Robot):
         self.ptu_pose.add_interface('ros', topic= Scitosa5.PTU_POSE_TOPIC)
 
         # Battery
-        self.battery = BatteryStateSensor()
+        self.battery = Battery()
         self.battery.translate(x=0.00,y=0.0,z=0.0)
         self.battery.properties(Range = 0.45)
         self.append(self.battery)
