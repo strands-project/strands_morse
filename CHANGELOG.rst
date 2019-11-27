@@ -19,8 +19,8 @@ Changelog for package strands_morse
 * Switch to system python3.
 * Contributors: Chris Burbridge
 
-Forthcoming
------------
+1.0.0 (2019-11-27)
+------------------
 * use the ROS morse
 * Battery instead of BatteryStateSensor for new morse
 * Merge pull request `#173 <https://github.com/strands-project/strands_morse/issues/173>`_ from strands-project/indigo-devel
